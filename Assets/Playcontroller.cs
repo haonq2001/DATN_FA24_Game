@@ -21,6 +21,7 @@ public class Playcontroller : MonoBehaviour
     private bool m_grounded = false;
     private bool m_rolling = false;
     private bool m_isJumping = false; // Theo dõi trạng thái nhảy
+    private float m_jumpTime = 0f; // Thời gian nhảy
     private int m_facingDirection = 1; // 1 = phải, -1 = trái
     private int m_currentAttack = 0;
     private float m_timeSinceAttack = 0.0f;
@@ -102,6 +103,17 @@ public class Playcontroller : MonoBehaviour
             if (m_rollCurrentTime > m_rollDuration)
                 m_rolling = false;
         }
+
+        // Xử lý trạng thái nhảy
+        if (m_isJumping)
+        {
+            m_jumpTime += Time.deltaTime; // Tăng thời gian nhảy
+            if (m_jumpTime >= 2f) // Nếu thời gian nhảy đạt 2 giây
+            {
+                m_isJumping = false; // Đặt trạng thái nhảy về false
+                m_animator.SetTrigger("Fall"); // Kích hoạt hoạt hình rơi
+            }
+        }
     }
 
     private void HandleActions()
@@ -166,6 +178,7 @@ public class Playcontroller : MonoBehaviour
     {
         m_grounded = false; // Đặt trạng thái không còn tiếp đất
         m_isJumping = true; // Đặt trạng thái nhảy
+        m_jumpTime = 0f; // Khởi tạo thời gian nhảy
         m_animator.SetBool("Grounded", m_grounded);
 
         // Giữ hướng nhảy theo hướng di chuyển
