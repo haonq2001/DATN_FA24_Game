@@ -83,4 +83,11 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsGround", false);
         }
     }
+     private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("bay"))
+        {
+            Time.timeScale = 0;
+        }
+    }
 }
