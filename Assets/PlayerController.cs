@@ -13,6 +13,15 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public GameObject bullet;
     public Transform bulletPos;
+    public static bool facingRight = true; // Sử dụng static để truy cập từ script khác
+
+    // Thêm phương thức để cập nhật hướng nhân vật
+    public static void UpdateFacingDirection(bool isFacingRight)
+    {
+        facingRight = isFacingRight;
+        
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -38,10 +47,12 @@ public class PlayerController : MonoBehaviour
         if (moveInput < 0) // Di chuyển sang trái
         {
             spriteRenderer.flipX = true; // Quay sang trái
+           
         }
         else if (moveInput > 0) // Di chuyển sang phải
         {
             spriteRenderer.flipX = false; // Quay sang phải
+
         }
         animator.SetBool("isWalking", moveInput != 0);
         animator.SetBool("isGrounded", isGrounded); // Cập nhật trạng thái mặt đất
@@ -61,7 +72,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             animator.SetTrigger("cast"); // Gọi animation chưởng
-         //   PlayerShoot();
+  
         }
     }
 
