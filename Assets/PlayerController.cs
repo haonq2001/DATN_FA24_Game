@@ -35,10 +35,21 @@ public class PlayerController : MonoBehaviour
         Move();
         Jump();
         Cast();
+        Attack(); 
     }
     public void PlayerShoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
+    }
+  
+        void Attack()
+    {
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            animator.SetTrigger("attack"); // Gọi animation tấn công
+
+        }
     }
     void Move()
     {
@@ -98,7 +109,16 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("bay"))
         {
-            Time.timeScale = 0;
+            animator.SetTrigger("die");
+            StartCoroutine(WaitForDeathAnimation());
         }
+    }
+    IEnumerator WaitForDeathAnimation()
+    {
+        // Đợi 3 giây hoặc thời gian của animation chết
+        yield return new WaitForSeconds(3f);
+
+        // Sau khi chết xong, dừng màn hình
+        Time.timeScale = 0; // Dừng thời gian
     }
 }
