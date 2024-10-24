@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    Rigidbody2D rb;
+    // Rigidbody2D rb;
     // Start is called before the first frame update
+    public float speed = 5f; // Speed of the bullet
+    private int direction; // Direction of the bullet
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 3f); // Destroy bullet after 3 seconds
     }
-  
-    // Update is called once per frame
+
+    public void SetDirection(int dir)
+    {
+        direction = dir; // Set direction: 1 for right, -1 for left
+        Debug.Log("Bullet Direction Set To: " + direction);
+        transform.localScale = new Vector3(dir, 1, 1); // Optionally flip the bullet's scale for visual feedback
+    }
+
     void Update()
     {
-        rb.velocity = new Vector2(-5f, rb.velocity.y);
+        // Move the bullet based on the direction
+        transform.position += new Vector3(direction * speed * Time.deltaTime, 0, 0);
     }
 }
