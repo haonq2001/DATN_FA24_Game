@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: 2983d9cb19b72ea4b968141c55d64017
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 282.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2958a0309520ea4b9ac6069347aa0e0
+      internalID: -83925422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 282.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c81130225c8e941b8b00709d42f2a9
+      internalID: 1844361613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 282.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad16f0357837edd479b69f28ba8bd479
+      internalID: 409694053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 282.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bb2bdc8eba87b49bc527ce0ba0d2ed
+      internalID: -1365683098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 282.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccbdb9cb99b725341a4cfad3d9a6b5df
+      internalID: -448321475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 282.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d30575e23cfc546a6abd0222f048eb
+      internalID: 1514760210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 282.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa203f64afeb7744918f7bcdba4612f
+      internalID: -222607879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9717a1492512af4697cea2f3cd7160d
+      internalID: -1627181685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 188.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df743e1069245b047ae4aab552e47b01
+      internalID: -485519247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 188.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6aa3660eb2a89a4fae5efd0a15c7aa1
+      internalID: -2046965616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 188.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071e647f558c47e4e9abfc84656e74da
+      internalID: 63280485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 188.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e5a797851cab343b1b5d72b6cc2e59
+      internalID: -651966012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 188.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e315a181c4e1d44aeaf560159dc430
+      internalID: 1952082333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 188.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4f6de206be3c44381a86fa1d109d33
+      internalID: -1083389739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324fa3f7d20ae584a9d0c7fbb37e74e4
+      internalID: -1896990557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 94.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d628dcb2267136419518f52e0c32b5f
+      internalID: 1683579945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 94.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae56d73cd5902f4a98ed6d07808df65
+      internalID: 2041843747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 94.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab17ff21203aae84d8d465f41cda29a1
+      internalID: 1858013528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 94.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c489e283a75f9e942a2e60115943f86c
+      internalID: -154390583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 94.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2d55bc794557d4495a66c9ba5dd2ff
+      internalID: -1065306481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 94.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4732bf6e4289d445a0ea28bdba77546
+      internalID: -744507551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305689cd41c6dfe49916a49420d54d26
+      internalID: 623909300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da9b165cbe28bd41a690345130f756d
+      internalID: -1738302617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 0.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be57867330cd05044a741f889aa03195
+      internalID: 1415294801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 0.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6292dd97ee614f74dafa68ea64f8e483
+      internalID: -1712676593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 0.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18b6aab663ac0849bf40f318f73c76e
+      internalID: -237743910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cd39007eee94e4b9ec4316e446fa26
+      internalID: -1688902963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: datrangtri-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 0.75
+        width: 94.42857
+        height: 94.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2892c2799f695bc4abfc9bdbddbcef98
+      internalID: -792797372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      datrangtri-removebg-preview_0: -83925422
+      datrangtri-removebg-preview_1: 1844361613
+      datrangtri-removebg-preview_10: 63280485
+      datrangtri-removebg-preview_11: -651966012
+      datrangtri-removebg-preview_12: 1952082333
+      datrangtri-removebg-preview_13: -1083389739
+      datrangtri-removebg-preview_14: -1896990557
+      datrangtri-removebg-preview_15: 1683579945
+      datrangtri-removebg-preview_16: 2041843747
+      datrangtri-removebg-preview_17: 1858013528
+      datrangtri-removebg-preview_18: -154390583
+      datrangtri-removebg-preview_19: -1065306481
+      datrangtri-removebg-preview_2: 409694053
+      datrangtri-removebg-preview_20: -744507551
+      datrangtri-removebg-preview_21: 623909300
+      datrangtri-removebg-preview_22: -1738302617
+      datrangtri-removebg-preview_23: 1415294801
+      datrangtri-removebg-preview_24: -1712676593
+      datrangtri-removebg-preview_25: -237743910
+      datrangtri-removebg-preview_26: -1688902963
+      datrangtri-removebg-preview_27: -792797372
+      datrangtri-removebg-preview_3: -1365683098
+      datrangtri-removebg-preview_4: -448321475
+      datrangtri-removebg-preview_5: 1514760210
+      datrangtri-removebg-preview_6: -222607879
+      datrangtri-removebg-preview_7: -1627181685
+      datrangtri-removebg-preview_8: -485519247
+      datrangtri-removebg-preview_9: -2046965616
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
