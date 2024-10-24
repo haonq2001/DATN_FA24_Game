@@ -39,7 +39,22 @@ public class PlayerController : MonoBehaviour
     }
     public void PlayerShoot()
     {
-        Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        GameObject newBullet = Instantiate(bullet, bulletPos.position, Quaternion.identity);
+
+        // Get the Bullet script from the bullet GameObject
+        Bullet bulletScript = newBullet.GetComponent<Bullet>();
+
+        Debug.Log("Player Facing Right: " + facingRight); // Debug the facing direction
+
+        // Set direction based on player's facing direction
+        if (!facingRight) // If the player is facing left
+        {
+            bulletScript.SetDirection(-1); // Set direction to left
+        }
+        else // If the player is facing right
+        {
+            bulletScript.SetDirection(1); // Set direction to right
+        }
     }
   
         void Attack()
@@ -55,18 +70,20 @@ public class PlayerController : MonoBehaviour
     {
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-        if (moveInput < 0) // Di chuyển sang trái
-        {
-            spriteRenderer.flipX = true; // Quay sang trái
-           
-        }
-        else if (moveInput > 0) // Di chuyển sang phải
-        {
-            spriteRenderer.flipX = false; // Quay sang phải
 
+        if (moveInput < 0) // Moving left
+        {
+            spriteRenderer.flipX = true; // Flip sprite to face left
+            facingRight = false; // Update facing direction
         }
+        else if (moveInput > 0) // Moving right
+        {
+            spriteRenderer.flipX = false; // Flip sprite to face right
+            facingRight = true; // Update facing direction
+        }
+
         animator.SetBool("isWalking", moveInput != 0);
-        animator.SetBool("isGrounded", isGrounded); // Cập nhật trạng thái mặt đất
+        animator.SetBool("isGrounded", isGrounded); // Update grounded state
     }
 
     void Jump()

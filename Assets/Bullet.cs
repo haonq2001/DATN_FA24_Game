@@ -4,32 +4,26 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    Rigidbody2D rb;
-    float speed = 5f;
-    Vector2 moveDirection; // Vector lưu trữ hướng di chuyển
+    // Rigidbody2D rb;
+    // Start is called before the first frame update
+    public float speed = 5f; // Speed of the bullet
+    private int direction; // Direction of the bullet
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 3f);
-
-        // Lấy hướng quay của nhân vật từ PlayerController
-        bool isFacingRight = PlayerController.facingRight;
-
-        // Thiết lập hướng di chuyển của viên đạn dựa trên hướng quay của nhân vật
-        if (isFacingRight)
-        {
-            moveDirection = Vector2.right;
-            rb.velocity = moveDirection * speed;
-            Debug.Log("Di chuyển sang phải");
-        }
-        else
-        {
-            moveDirection = Vector2.left;
-            rb.velocity = moveDirection * speed;
-            Debug.Log("Di chuyển sang trái");
-        }
+        Destroy(gameObject, 3f); // Destroy bullet after 3 seconds
     }
 
-    // Các phương thức Update và huongdichuyen() khác
+    public void SetDirection(int dir)
+    {
+        direction = dir; // Set direction: 1 for right, -1 for left
+        Debug.Log("Bullet Direction Set To: " + direction);
+        transform.localScale = new Vector3(dir, 1, 1); // Optionally flip the bullet's scale for visual feedback
+    }
+
+    void Update()
+    {
+        // Move the bullet based on the direction
+        transform.position += new Vector3(direction * speed * Time.deltaTime, 0, 0);
+    }
 }
