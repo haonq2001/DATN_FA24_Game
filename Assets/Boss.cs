@@ -11,10 +11,6 @@ public class Boss : MonoBehaviour
     private bool isAttacking = false;
     private Animator animator;
 
-    // public int attackDamage = 10; // Sát thương của boss
-    // public Vector3 attackOffset;
-    // public LayerMask attackMask;
-
     void Start()
     {
         targetPoint = pointB; // Ban đầu hướng đến điểm B
@@ -35,6 +31,7 @@ public class Boss : MonoBehaviour
             }
             else
             {
+                FacePlayer(); // Quay mặt về hướng player
                 Attack();
             }
         }
@@ -72,16 +69,16 @@ public class Boss : MonoBehaviour
     {
         Debug.Log("Boss is attacking!");
         animator.SetBool("attack", true);
-        // Vector3 pos = transform.position;
-        // pos += transform.right * attackOffset.x;
-        // pos += transform.up * attackOffset.y;
+        // Add additional attack logic here if needed
+    }
 
-        // Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
-        // if (colInfo != null)
-        // {
-        //     colInfo.GetComponent<PlayerController>().TakeDamage(attackDamage);
-        // }
-        // Thêm logic tấn công tại đây nếu cần
+    private void FacePlayer()
+    {
+        // Quay mặt về phía player khi tấn công
+        if (player.position.x < transform.position.x)
+            transform.localScale = new Vector3(-1, 1, 1);
+        else
+            transform.localScale = new Vector3(1, 1, 1);
     }
 
     private void OnDisable()
