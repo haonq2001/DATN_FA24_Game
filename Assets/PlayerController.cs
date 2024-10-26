@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public GameObject bullet;
     public Transform bulletPos;
+    //  public int health = 100;
     public static bool facingRight = true; // Sử dụng static để truy cập từ script khác
 
     // Thêm phương thức để cập nhật hướng nhân vật
@@ -83,7 +84,7 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("isWalking", moveInput != 0);
-        animator.SetBool("isGrounded", isGrounded); // Update grounded state
+        animator.SetBool("IsGround", isGrounded); // Update grounded state
     }
 
     void Jump()
@@ -138,4 +139,46 @@ public class PlayerController : MonoBehaviour
         // Sau khi chết xong, dừng màn hình
         Time.timeScale = 0; // Dừng thời gian
     }
+
+    // public void TakeDamage(int damage)
+	// {
+	// 	health -= damage;
+
+	// 	StartCoroutine(DamageAnimation());
+
+	// 	if (health <= 0)
+	// 	{
+	// 		// Die();
+	// 	}
+	// }
+
+	// void Die()
+	// {
+    //     Time.timeScale = 0;
+	// }
+    // IEnumerator DamageAnimation()
+	// {
+	// 	SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
+
+	// 	for (int i = 0; i < 3; i++)
+	// 	{
+	// 		foreach (SpriteRenderer sr in srs)
+	// 		{
+	// 			Color c = sr.color;
+	// 			c.a = 0;
+	// 			sr.color = c;
+	// 		}
+
+	// 		yield return new WaitForSeconds(.1f);
+
+	// 		foreach (SpriteRenderer sr in srs)
+	// 		{
+	// 			Color c = sr.color;
+	// 			c.a = 1;
+	// 			sr.color = c;
+	// 		}
+
+	// 		yield return new WaitForSeconds(.1f);
+	// 	}
+	// }
 }
