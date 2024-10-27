@@ -6,12 +6,12 @@ public class Bullet : MonoBehaviour
 {
     // Rigidbody2D rb;
     // Start is called before the first frame update
-    public float speed = 5f; // Speed of the bullet
+    public float speed = 8f; // Speed of the bullet
     private int direction; // Direction of the bullet
 
     void Start()
     {
-        Destroy(gameObject, 3f); // Destroy bullet after 3 seconds
+        Destroy(gameObject, 5f); // Destroy bullet after 3 seconds
     }
 
     public void SetDirection(int dir)
@@ -25,5 +25,13 @@ public class Bullet : MonoBehaviour
     {
         // Move the bullet based on the direction
         transform.position += new Vector3(direction * speed * Time.deltaTime, 0, 0);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
