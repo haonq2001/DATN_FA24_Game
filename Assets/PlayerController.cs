@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     public Transform bulletPos;
     //  public int health = 100;
     public static bool facingRight = true; // Sử dụng static để truy cập từ script khác
+    private float castCooldown = 2f; // Thời gian hồi chiêu
+    private float lastCastTime = 0f; // Thời gian lần cast trước
+
 
     // Thêm phương thức để cập nhật hướng nhân vật
     public static void UpdateFacingDirection(bool isFacingRight)
@@ -98,10 +101,11 @@ public class PlayerController : MonoBehaviour
     }
     void Cast()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+
+        if (Input.GetKeyDown(KeyCode.Q) && Time.time - lastCastTime >= castCooldown)
         {
-            animator.SetTrigger("cast"); // Gọi animation chưởng
-  
+            animator.SetTrigger("cast");
+            lastCastTime = Time.time; // Cập nhật thời gian lần cast gần nhất
         }
     }
 
