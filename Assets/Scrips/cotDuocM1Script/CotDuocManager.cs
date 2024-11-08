@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class CotDuocManager : MonoBehaviour
 {
-    
     public GameObject ParticleCotDuoc;
     public GameObject btnThapDuoc;
     private bool isCotDuocGan = false;
@@ -34,7 +33,7 @@ public class CotDuocManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other != null && other.CompareTag("Player"))
         {
             isCotDuocGan = true;
             Debug.Log("Nhân vật đang ở gần cột đuốc");
@@ -43,8 +42,7 @@ public class CotDuocManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other == null) return;
-        if (other.gameObject.tag == "Player")
+        if (other != null && other.CompareTag("Player"))
         {
             isCotDuocGan = false;
             btnThapDuoc.SetActive(false);
@@ -60,18 +58,19 @@ public class CotDuocManager : MonoBehaviour
             btnThapDuoc.SetActive(false);
             isThapDuoc = true;
             Debug.Log("Thắp được cột đuốc");
+
             if (CotDuocController.cotDuocInstance != null)
-        {
-            CotDuocController.cotDuocInstance.TangSoNgonDuocDaThap();
-            Debug.Log("Gọi hàm TangSoNgonDuocDaThap từ CotDuoc");
+            {
+                CotDuocController.cotDuocInstance.TangSoNgonDuocDaThap();
+                Debug.Log("Gọi hàm TangSoNgonDuocDaThap từ CotDuoc");
+            }
+            else
+            {
+                Debug.LogWarning("CotDuocController instance không tồn tại!");
+            }
         }
-        else
-        {
-            Debug.LogWarning("CotDuocController instance không tồn tại!");
-        }
-        }
-        
     }
+
 
     // public static CotDuocManager instance;     // Singleton cho quản lý chung
     // public GameObject ParticleCotDuoc;          // Hệ thống hạt lửa cho đuốc
