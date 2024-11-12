@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public float moveSpeed = 2f;
     public float jumpForce = 2f;
     private Rigidbody2D rb;
@@ -163,6 +165,9 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("ngonlua"))
         {
             StartCoroutine(DestroyTorchAfterDelay(collision.gameObject));
+            gameManager.AddScore(); 
+            gameManager.SetScoreText();
+            Debug.Log("Bạn vừa nhận được ngọn đuốc");
         }
     }
 
@@ -173,7 +178,7 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator DestroyTorchAfterDelay(GameObject torch)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
         Destroy(torch);
     }
 
