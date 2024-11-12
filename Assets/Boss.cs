@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
@@ -11,11 +12,21 @@ public class Boss : MonoBehaviour
     private bool isAttacking = false;
     private Animator animator;
 
+
+    public Slider BossHealth;
+    public Image fillImage;
+    public float health = 10;
+
+    public GameObject torchPrefab;  // Biến để tham chiếu đến đối tượng ngọn đuốc
+    public Transform dropPoint;     // Điểm mà ngọn đuốc sẽ rơi ra (ví dụ, phía dưới quái vật)
+
     void Start()
     {
         targetPoint = pointB; // Ban đầu hướng đến điểm B
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>(); // Lấy Animator từ boss
+        BossHealth.maxValue = health;
+        BossHealth.value = health;
     }
 
     void Update()
@@ -86,5 +97,30 @@ public class Boss : MonoBehaviour
         // Đảm bảo tắt mọi animation khi boss ngừng hoạt động
         animator.SetBool("isMoving", false);
         animator.SetBool("attack", false);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet") || collision.CompareTag("Sword"))
+        {
+            BossHealth.value -= 2;
+            if (BossHealth.value < 8)
+            {
+                fillImage.color = Color.yellow;
+            }
+            if (BossHealth.value < 4)
+            {
+                fillImage.color = Color.red;
+            }
+            if (BossHealth.value == 0)
+            {
+                // Rơi ngọn đuốc
+                if (torchPrefab != null && dropPoint != null)
+                {
+                    Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Tạo ngọn đuốc tại vị trí dropPoint
+                }
+
+                Destroy(gameObject);  // Hủy quái vật
+            }
+        }
     }
 }

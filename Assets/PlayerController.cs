@@ -4,90 +4,115 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float moveSpeed = 2f;
     public float jumpForce = 2f;
-    private  Rigidbody2D rb;
+    private Rigidbody2D rb;
     private bool isGrounded;
-    private SpriteRenderer spriteRenderer; // Biến để tham chiếu SpriteRenderer
+    private SpriteRenderer spriteRenderer;
     private Animator animator;
     public GameObject bullet;
     public Transform bulletPos;
-    //  public int health = 100;
-    public static bool facingRight = true; // Sử dụng static để truy cập từ script khác
-    private float castCooldown = 2f; // Thời gian hồi chiêu
-    private float lastCastTime = 0f; // Thời gian lần cast trước
-
-
-    // Thêm phương thức để cập nhật hướng nhân vật
-    public static void UpdateFacingDirection(bool isFacingRight)
-    {
-        facingRight = isFacingRight;
-        
-    }
+    public static bool facingRight = true;
+    private float castCooldown = 2f;
+    private float lastCastTime = 0f;
+    public GameObject swordCollider;
+    public GameObject swordCollider1;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Lấy tham chiếu SpriteRenderer
-        animator = GetComponent<Animator>(); // Lấy tham chiếu Animator
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+
+        swordCollider.SetActive(false);
+        swordCollider1.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
         Jump();
         Cast();
-        Attack(); 
+        Attack();
+        Attack1();
+
+        // Kiểm tra nhấn phím Space để bắn đạn
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    PlayerShoot();
+        //}
     }
+
     public void PlayerShoot()
     {
         GameObject newBullet = Instantiate(bullet, bulletPos.position, Quaternion.identity);
-
-        // Get the Bullet script from the bullet GameObject
         Bullet bulletScript = newBullet.GetComponent<Bullet>();
 
-        Debug.Log("Player Facing Right: " + facingRight); // Debug the facing direction
+        Debug.Log("Player Facing Right: " + facingRight);
 
-        // Set direction based on player's facing direction
-        if (!facingRight) // If the player is facing left
+        if (!facingRight)
         {
-            bulletScript.SetDirection(-1); // Set direction to left
+            bulletScript.SetDirection(-1);
         }
-        else // If the player is facing right
+        else
         {
-            bulletScript.SetDirection(1); // Set direction to right
+            bulletScript.SetDirection(1);
         }
     }
-  
-        void Attack()
-    {
 
+    void Attack()
+    {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            animator.SetTrigger("attack"); // Gọi animation tấn công
-
+            animator.SetTrigger("attack");
         }
     }
+
+    void Attack1()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            animator.SetTrigger("strike");
+        }
+    }
+
+    public void ShowSword()
+    {
+        swordCollider.SetActive(true);
+    }
+
+    public void HideSword()
+    {
+        swordCollider.SetActive(false);
+    }
+    public void ShowSword1()
+    {
+        swordCollider1.SetActive(true);
+    }
+
+    public void HideSword1()
+    {
+        swordCollider1.SetActive(false);
+    }
+
     void Move()
     {
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-        if (moveInput < 0) // Moving left
+        if (moveInput < 0)
         {
-            spriteRenderer.flipX = true; // Flip sprite to face left
-            facingRight = false; // Update facing direction
+            spriteRenderer.flipX = true;
+            facingRight = false;
         }
-        else if (moveInput > 0) // Moving right
+        else if (moveInput > 0)
         {
-            spriteRenderer.flipX = false; // Flip sprite to face right
-            facingRight = true; // Update facing direction
+            spriteRenderer.flipX = false;
+            facingRight = true;
         }
 
         animator.SetBool("isWalking", moveInput != 0);
-        animator.SetBool("IsGround", isGrounded); // Update grounded state
+        animator.SetBool("IsGround", isGrounded);
     }
 
     void Jump()
@@ -95,23 +120,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            isGrounded = false;  // Đặt isGrounded thành false ngay khi nhảy
-            animator.SetTrigger("Jump"); // Gọi animation nhảy
+            isGrounded = false;
+            animator.SetTrigger("Jump");
         }
     }
+
     void Cast()
     {
-
         if (Input.GetKeyDown(KeyCode.Q) && Time.time - lastCastTime >= castCooldown)
         {
             animator.SetTrigger("cast");
-            lastCastTime = Time.time; // Cập nhật thời gian lần cast gần nhất
+            lastCastTime = Time.time;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Kiểm tra va chạm với mặt đất để xác định trạng thái isGrounded
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
@@ -126,63 +150,70 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
             animator.SetBool("IsGround", false);
         }
+       
     }
-     private void OnTriggerEnter2D(Collider2D other)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("bay"))
+        if (collision.gameObject.CompareTag("bay"))
         {
             animator.SetTrigger("die");
             StartCoroutine(WaitForDeathAnimation());
         }
+        if (collision.gameObject.CompareTag("ngonlua"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
+
     IEnumerator WaitForDeathAnimation()
     {
-        // Đợi 3 giây hoặc thời gian của animation chết
         yield return new WaitForSeconds(3f);
-
-        // Sau khi chết xong, dừng màn hình
-        Time.timeScale = 0; // Dừng thời gian
+        Time.timeScale = 0;
     }
 
+
+
+
     // public void TakeDamage(int damage)
-	// {
-	// 	health -= damage;
+    // {
+    // 	health -= damage;
 
-	// 	StartCoroutine(DamageAnimation());
+    // 	StartCoroutine(DamageAnimation());
 
-	// 	if (health <= 0)
-	// 	{
-	// 		// Die();
-	// 	}
-	// }
+    // 	if (health <= 0)
+    // 	{
+    // 		// Die();
+    // 	}
+    // }
 
-	// void Die()
-	// {
+    // void Die()
+    // {
     //     Time.timeScale = 0;
-	// }
+    // }
     // IEnumerator DamageAnimation()
-	// {
-	// 	SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
+    // {
+    // 	SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
 
-	// 	for (int i = 0; i < 3; i++)
-	// 	{
-	// 		foreach (SpriteRenderer sr in srs)
-	// 		{
-	// 			Color c = sr.color;
-	// 			c.a = 0;
-	// 			sr.color = c;
-	// 		}
+    // 	for (int i = 0; i < 3; i++)
+    // 	{
+    // 		foreach (SpriteRenderer sr in srs)
+    // 		{
+    // 			Color c = sr.color;
+    // 			c.a = 0;
+    // 			sr.color = c;
+    // 		}
 
-	// 		yield return new WaitForSeconds(.1f);
+    // 		yield return new WaitForSeconds(.1f);
 
-	// 		foreach (SpriteRenderer sr in srs)
-	// 		{
-	// 			Color c = sr.color;
-	// 			c.a = 1;
-	// 			sr.color = c;
-	// 		}
+    // 		foreach (SpriteRenderer sr in srs)
+    // 		{
+    // 			Color c = sr.color;
+    // 			c.a = 1;
+    // 			sr.color = c;
+    // 		}
 
-	// 		yield return new WaitForSeconds(.1f);
-	// 	}
-	// }
+    // 		yield return new WaitForSeconds(.1f);
+    // 	}
+    // }
 }
