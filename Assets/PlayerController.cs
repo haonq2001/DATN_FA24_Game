@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("ngonlua"))
         {
-            Destroy(collision.gameObject);
+            StartCoroutine(DestroyTorchAfterDelay(collision.gameObject));
         }
     }
 
@@ -171,7 +171,11 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Time.timeScale = 0;
     }
-
+    IEnumerator DestroyTorchAfterDelay(GameObject torch)
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(torch);
+    }
 
 
 
