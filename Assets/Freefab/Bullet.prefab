@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7430902730027963084}
   - component: {fileID: 3948791921957274173}
   - component: {fileID: 4738179351604123010}
-  - component: {fileID: 9152364844570668386}
+  - component: {fileID: 5953000119342500219}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -150,7 +150,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6, y: 0.33}
+    oldSize: {x: 1.2, y: 0.66}
     newSize: {x: 0.8, y: 0.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -182,7 +182,7 @@ PolygonCollider2D:
       - {x: 0.22999999, y: -0.13499999}
       - {x: 0.295, y: -0.074999996}
   m_UseDelaunayMesh: 0
---- !u!114 &9152364844570668386
+--- !u!114 &5953000119342500219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8426518105582470125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90db5ba750f2c1245b56dde4e0e0c7c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 88c2ec826ecc34142a832157074d090e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tocdodan: 0.02
+  speed: 8
