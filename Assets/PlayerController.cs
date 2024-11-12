@@ -77,10 +77,36 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("strike");
         }
     }
+    private void UpdateSwordColliderPosition()
+    {
+        // Kiểm tra hướng nhân vật
+        if (facingRight)
+        {
+            // Nếu hướng phải, đặt swordCollider bên phải
+            swordCollider.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+            swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        }
+        else
+        {
+            // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+                                                                       // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        }
+    }
+
 
     public void ShowSword()
     {
         swordCollider.SetActive(true);
+
+        UpdateSwordColliderPosition();
+        swordCollider1.SetActive(false);
+
     }
 
     public void HideSword()
@@ -90,6 +116,8 @@ public class PlayerController : MonoBehaviour
     public void ShowSword1()
     {
         swordCollider1.SetActive(true);
+        UpdateSwordColliderPosition();
+        swordCollider.SetActive(false);
     }
 
     public void HideSword1()
@@ -106,12 +134,14 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = true;
             facingRight = false;
-        }
+        UpdateSwordColliderPosition();
+    }
         else if (moveInput > 0)
         {
             spriteRenderer.flipX = false;
             facingRight = true;
-        }
+        UpdateSwordColliderPosition();
+    }
 
         animator.SetBool("isWalking", moveInput != 0);
         animator.SetBool("IsGround", isGrounded);
