@@ -9,6 +9,8 @@ TagManager:
   - bay
   - Ene
   - Enemy
+  - Sword
+  - ngonlua
   layers:
   - Default
   - TransparentFX
