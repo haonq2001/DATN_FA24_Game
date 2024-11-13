@@ -1,9 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< HEAD
 
 public class PlayerController : MonoBehaviour
 {
+=======
+using UnityEngine.SceneManagement;
+
+public class PlayerController : MonoBehaviour
+{
+    public GameManager gameManager;
+
+>>>>>>> parent of fb8f8c0 (button ki nang nv)
     public float moveSpeed = 2f;
     public float jumpForce = 2f;
     private Rigidbody2D rb;
@@ -18,6 +27,12 @@ public class PlayerController : MonoBehaviour
     public GameObject swordCollider;
     public GameObject swordCollider1;
 
+<<<<<<< HEAD
+=======
+    public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
+
+
+>>>>>>> parent of fb8f8c0 (button ki nang nv)
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -75,6 +90,31 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("strike");
         }
     }
+<<<<<<< HEAD
+=======
+    private void UpdateSwordColliderPosition()
+    {
+        // Kiểm tra hướng nhân vật
+        if (facingRight)
+        {
+            // Nếu hướng phải, đặt swordCollider bên phải
+            swordCollider.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+            swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        }
+        else
+        {
+            // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+                                                                       // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        }
+    }
+
+>>>>>>> parent of fb8f8c0 (button ki nang nv)
 
     public void ShowSword()
     {
