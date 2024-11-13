@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public float moveSpeed = 2f;
     public float jumpForce = 2f;
     private Rigidbody2D rb;
@@ -17,6 +20,9 @@ public class PlayerController : MonoBehaviour
     private float lastCastTime = 0f;
     public GameObject swordCollider;
     public GameObject swordCollider1;
+
+    public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
+
 
     void Start()
     {
@@ -75,10 +81,36 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("strike");
         }
     }
+    private void UpdateSwordColliderPosition()
+    {
+        // Kiểm tra hướng nhân vật
+        if (facingRight)
+        {
+            // Nếu hướng phải, đặt swordCollider bên phải
+            swordCollider.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+            swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        }
+        else
+        {
+            // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+                                                                       // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        }
+    }
+
 
     public void ShowSword()
     {
         swordCollider.SetActive(true);
+
+        UpdateSwordColliderPosition();
+        swordCollider1.SetActive(false);
+
     }
 
     public void HideSword()
@@ -88,6 +120,8 @@ public class PlayerController : MonoBehaviour
     public void ShowSword1()
     {
         swordCollider1.SetActive(true);
+        UpdateSwordColliderPosition();
+        swordCollider.SetActive(false);
     }
 
     public void HideSword1()
@@ -104,12 +138,14 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = true;
             facingRight = false;
-        }
+        UpdateSwordColliderPosition();
+    }
         else if (moveInput > 0)
         {
             spriteRenderer.flipX = false;
             facingRight = true;
-        }
+        UpdateSwordColliderPosition();
+    }
 
         animator.SetBool("isWalking", moveInput != 0);
         animator.SetBool("IsGround", isGrounded);
@@ -163,6 +199,20 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("ngonlua"))
         {
             StartCoroutine(DestroyTorchAfterDelay(collision.gameObject));
+            gameManager.AddScore(); 
+            gameManager.SetScoreText();
+            torchCount++;
+            Debug.Log("Bạn vừa nhận được ngọn đuốc");
+            // Gọi hàm trong CotDuocManager để bật panel settings
+            CotDuocManager cotDuocManager = FindObjectOfType<CotDuocManager>();
+            if (cotDuocManager != null)
+            {
+                cotDuocManager.ActivatePanel();  // Bật panel settings
+            }
+        }
+        if (collision.gameObject.CompareTag("quaman"))
+        {
+            SceneManager.LoadSceneAsync(3);
         }
     }
 
@@ -173,7 +223,7 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator DestroyTorchAfterDelay(GameObject torch)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
         Destroy(torch);
     }
 
