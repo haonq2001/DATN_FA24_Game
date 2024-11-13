@@ -5,25 +5,11 @@ using UnityEngine.UI;
 
 public class CotDuocManager : MonoBehaviour
 {
-    public PlayerController playerController;  // Tham chiếu đến PlayerController
-    public GameManager gameManager;
-
     public GameObject ParticleCotDuoc;
     public GameObject btnThapDuoc;
     private bool isCotDuocGan = false;
     private Button btnThapDuocComponent;
     private bool isThapDuoc = false;
-    public GameObject panelSettings; // Panel settings để bật khi có ngọn đuốc
-
-    // Hàm để bật panel khi nhận ngọn đuốc
-    public void ActivatePanel()
-    {
-        if (panelSettings != null && !panelSettings.activeSelf)
-        {
-            panelSettings.SetActive(true);
-            Debug.Log("Panel settings đã được bật!");
-        }
-    }
 
     void Start()
     {
@@ -34,12 +20,6 @@ public class CotDuocManager : MonoBehaviour
         if (btnThapDuocComponent != null)
         {
             btnThapDuocComponent.onClick.AddListener(ThapDuoc);
-        }
-
-        // Lấy PlayerController nếu chưa được gán
-        if (playerController == null)
-        {
-            playerController = FindObjectOfType<PlayerController>();
         }
     }
 
@@ -53,23 +33,16 @@ public class CotDuocManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !isThapDuoc)
+        if (other != null && other.CompareTag("Player"))
         {
             isCotDuocGan = true;
             Debug.Log("Nhân vật đang ở gần cột đuốc");
-
-            // Bật nút thắp đuốc nếu cần
-            if (playerController.torchCount > 0)
-            {
-                btnThapDuoc.SetActive(true);
-            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Kiểm tra xem đối tượng có null không trước khi truy cập
-        if (other != null && other.CompareTag("Player" ) && !isThapDuoc)
+        if (other != null && other.CompareTag("Player"))
         {
             isCotDuocGan = false;
             btnThapDuoc.SetActive(false);
@@ -78,18 +51,14 @@ public class CotDuocManager : MonoBehaviour
     }
 
     public void ThapDuoc()
-    {  // Kiểm tra số ngọn lửa của người chơi trước khi thắp đuốc
-        if (!isThapDuoc && isCotDuocGan && playerController.torchCount > 0)
+    {
+        if (!isThapDuoc && isCotDuocGan)
         {
-            gameManager.BlockScore();
-             gameManager.SetScoreText();
-            playerController.torchCount--;  // Giảm số ngọn lửa khi thắp đuốc
             ParticleCotDuoc.SetActive(true);
             btnThapDuoc.SetActive(false);
             isThapDuoc = true;
             Debug.Log("Thắp được cột đuốc");
 
-            // Cập nhật số ngọn lửa
             if (CotDuocController.cotDuocInstance != null)
             {
                 CotDuocController.cotDuocInstance.TangSoNgonDuocDaThap();
@@ -100,12 +69,7 @@ public class CotDuocManager : MonoBehaviour
                 Debug.LogWarning("CotDuocController instance không tồn tại!");
             }
         }
-        else if (playerController.torchCount <= 0)
-        {
-            Debug.Log("Không đủ ngọn lửa để thắp đuốc");
-        }
     }
-    
 
 
     // public static CotDuocManager instance;     // Singleton cho quản lý chung
