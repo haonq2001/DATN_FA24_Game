@@ -1,22 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+<<<<<<< HEAD
 
+public class PlayerController : MonoBehaviour
+{
+=======
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public GameManager gameManager;
 
-    public Slider playerHealth;
-    public Image fillImage;
-    public Slider playerMana;
-    public Image fillImagemana;
-
-
-
-
+>>>>>>> parent of fb8f8c0 (button ki nang nv)
     public float moveSpeed = 2f;
     public float jumpForce = 2f;
     private Rigidbody2D rb;
@@ -30,13 +26,13 @@ public class PlayerController : MonoBehaviour
     private float lastCastTime = 0f;
     public GameObject swordCollider;
     public GameObject swordCollider1;
+
+<<<<<<< HEAD
+=======
     public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
-    public int health = 10;
-    public int mana = 10;
 
 
-    public Image[] buttonImages; // Biến để tham chiếu đến Image của button
-
+>>>>>>> parent of fb8f8c0 (button ki nang nv)
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,66 +41,24 @@ public class PlayerController : MonoBehaviour
 
         swordCollider.SetActive(false);
         swordCollider1.SetActive(false);
-
-        playerHealth.maxValue = health;
-        playerHealth.value = health;
-        playerMana.maxValue = mana;
-        playerMana.value = mana;
-
     }
 
     void Update()
     {
         Move();
         Jump();
+        Cast();
         Attack();
-
+        Attack1();
 
         // Kiểm tra nhấn phím Space để bắn đạn
         //if (Input.GetKeyDown(KeyCode.Space))
         //{
         //    PlayerShoot();
         //}
-        if (playerMana.value > 0) {
-            Attack1();
-            Cast();
-            Attack3();
-        }
-        else
-        {
-            Debug.Log("Không đủ năng lượng để sử dụng kĩ năng");
-        }
-
-
-        // Kiểm tra mana và cập nhật tất cả các button
-        foreach (Image buttonImage in buttonImages)
-        {
-            UpdateButton(buttonImage);
-        }
     }
 
-
-
-
-    void UpdateButton(Image button)
-    {
-        if (playerMana.value <= 0)
-        {
-            Color color = button.color;  // Truy cập thuộc tính color của Image
-            color.a = 0.5f; // Làm mờ button
-            button.color = color;
-            button.GetComponent<Button>().interactable = false; // Tắt button
-        }
-        else
-        {
-            Color color = button.color;  // Truy cập thuộc tính color của Image
-            color.a = 1f; // Đặt lại độ sáng
-            button.color = color;
-            button.GetComponent<Button>().interactable = true; // Bật lại button
-        }
-    }
-
-        public void PlayerShoot()
+    public void PlayerShoot()
     {
         GameObject newBullet = Instantiate(bullet, bulletPos.position, Quaternion.identity);
         Bullet bulletScript = newBullet.GetComponent<Bullet>();
@@ -128,105 +82,16 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("attack");
         }
     }
-    public void buttonattack()
-    {
-        animator.SetTrigger("attack");
-    }
 
     void Attack1()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
             animator.SetTrigger("strike");
-            playerMana.value-= 1;
-            
-        }
-       
-       
-    }
-    void Attack3()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            animator.SetTrigger("block");
-            playerMana.value -= 1;
-
         }
     }
-        public void buttonattack1()
-    {
-        if (playerMana.value > 0)
-        {
-            animator.SetTrigger("strike");
-            playerMana.value -= 1;
-        }
-        else
-        {
-            Debug.Log("Không đủ mana để sử dụng kĩ năng!");
-        }
-    }
-    public void buttonattack2()
-    {
-        if (playerMana.value > 0 && Time.time - lastCastTime >= castCooldown)
-        {
-            animator.SetTrigger("cast");
-            playerMana.value -= 2;
-            lastCastTime = Time.time;
-
-            // Làm mờ button và chạy cooldown
-            StartCoroutine(DisableButtonForCooldown(buttonImages[2]));
-        }
-        else
-        {
-          //  Debug.Log("Không đủ mana để sử dụng kĩ năng!");
-        }
-    }
-
-    IEnumerator DisableButtonForCooldown(Image button)
-    {
-        if (button == null)
-        {
-            Debug.LogWarning("Button image không được gán!");
-            yield break;
-        }
-
-        // Tìm Button component từ Image
-        Button buttonComponent = button.GetComponent<Button>();
-        if (buttonComponent == null)
-        {
-            Debug.LogWarning("Không tìm thấy Button component trên Image!");
-            yield break;
-        }
-
-        // Tắt button và làm mờ
-        Color color = button.color;
-        color.a = 0.5f;
-        button.color = color;
-        buttonComponent.interactable = false;
-
-        // Đợi 2 giây
-        yield return new WaitForSeconds(2f);
-
-        // Bật lại button và làm sáng
-        color.a = 1f;
-        button.color = color;
-        buttonComponent.interactable = true;
-
-        Debug.Log("Button đã trở lại bình thường sau 2 giây");
-    }
-
-    public void buttonattack3()
-    {
-        if (playerMana.value > 0)
-        {
-            animator.SetTrigger("block");
-            playerMana.value -= 1;
-        }
-        else
-        {
-            Debug.Log("Không đủ mana để sử dụng kĩ năng!");
-        }
-    }
+<<<<<<< HEAD
+=======
     private void UpdateSwordColliderPosition()
     {
         // Kiểm tra hướng nhân vật
@@ -249,14 +114,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+>>>>>>> parent of fb8f8c0 (button ki nang nv)
 
     public void ShowSword()
     {
         swordCollider.SetActive(true);
-
-        UpdateSwordColliderPosition();
-        swordCollider1.SetActive(false);
-
     }
 
     public void HideSword()
@@ -266,8 +128,6 @@ public class PlayerController : MonoBehaviour
     public void ShowSword1()
     {
         swordCollider1.SetActive(true);
-        UpdateSwordColliderPosition();
-        swordCollider.SetActive(false);
     }
 
     public void HideSword1()
@@ -284,14 +144,12 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = true;
             facingRight = false;
-        UpdateSwordColliderPosition();
-    }
+        }
         else if (moveInput > 0)
         {
             spriteRenderer.flipX = false;
             facingRight = true;
-        UpdateSwordColliderPosition();
-    }
+        }
 
         animator.SetBool("isWalking", moveInput != 0);
         animator.SetBool("IsGround", isGrounded);
@@ -312,7 +170,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && Time.time - lastCastTime >= castCooldown)
         {
             animator.SetTrigger("cast");
-            playerMana.value -= 2;
             lastCastTime = Time.time;
         }
     }
@@ -346,20 +203,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("ngonlua"))
         {
             StartCoroutine(DestroyTorchAfterDelay(collision.gameObject));
-            gameManager.AddScore(); 
-            gameManager.SetScoreText();
-            torchCount++;
-            Debug.Log("Bạn vừa nhận được ngọn đuốc");
-            // Gọi hàm trong CotDuocManager để bật panel settings
-            CotDuocManager cotDuocManager = FindObjectOfType<CotDuocManager>();
-            if (cotDuocManager != null)
-            {
-                cotDuocManager.ActivatePanel();  // Bật panel settings
-            }
-        }
-        if (collision.gameObject.CompareTag("quaman"))
-        {
-            SceneManager.LoadSceneAsync(3);
         }
     }
 
@@ -370,7 +213,7 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator DestroyTorchAfterDelay(GameObject torch)
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1f);
         Destroy(torch);
     }
 
