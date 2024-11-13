@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     {
         score++;
     }
+    public void BlockScore()
+    {
+        score--;
+    }
     public void SetScoreText()
     {
         scoreText.text = "" + score.ToString("n0");

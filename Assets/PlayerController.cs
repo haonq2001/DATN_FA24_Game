@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class PlayerController : MonoBehaviour
     private float lastCastTime = 0f;
     public GameObject swordCollider;
     public GameObject swordCollider1;
+
+    public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
+
 
     void Start()
     {
@@ -197,7 +201,18 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(DestroyTorchAfterDelay(collision.gameObject));
             gameManager.AddScore(); 
             gameManager.SetScoreText();
+            torchCount++;
             Debug.Log("Bạn vừa nhận được ngọn đuốc");
+            // Gọi hàm trong CotDuocManager để bật panel settings
+            CotDuocManager cotDuocManager = FindObjectOfType<CotDuocManager>();
+            if (cotDuocManager != null)
+            {
+                cotDuocManager.ActivatePanel();  // Bật panel settings
+            }
+        }
+        if (collision.gameObject.CompareTag("quaman"))
+        {
+            SceneManager.LoadSceneAsync(3);
         }
     }
 
