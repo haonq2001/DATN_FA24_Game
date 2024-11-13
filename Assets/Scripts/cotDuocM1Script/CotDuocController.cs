@@ -7,7 +7,6 @@ public class CotDuocController : MonoBehaviour
     public static CotDuocController cotDuocInstance;
     private int soNgonDuocDaThap = 0; // Số ngọn đuốc đã thắp
     public Animator doorAnimator;      // Animator của cánh cửa
-
     // private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở
 
     private void Awake()
