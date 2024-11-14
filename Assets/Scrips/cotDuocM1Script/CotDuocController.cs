@@ -10,7 +10,9 @@ public class CotDuocController : MonoBehaviour
 
 
 
+
     private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở
+
 
 
     // private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở

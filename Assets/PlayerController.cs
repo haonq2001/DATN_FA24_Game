@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 
 public class PlayerController : MonoBehaviour
@@ -34,11 +36,19 @@ public class PlayerController : MonoBehaviour
     private float lastCastTime = 0f;
     public GameObject swordCollider;
     public GameObject swordCollider1;
+
     public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
     public int health = 10;
     public int mana = 10;
 
     public Image[] buttonImages; // Biến để tham chiếu đến Image của button
+
+
+
+
+    public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
+
+
 
     void Start()
     {
@@ -157,6 +167,7 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
         public void buttonattack1()
     {
         if (playerMana.value > 0)
@@ -334,6 +345,9 @@ public class PlayerController : MonoBehaviour
 
 
 
+
+
+
     private void UpdateSwordColliderPosition()
     {
         // Kiểm tra hướng nhân vật
@@ -355,6 +369,7 @@ public class PlayerController : MonoBehaviour
             swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
         }
     }
+
 
 
 
