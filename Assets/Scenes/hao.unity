@@ -15073,7 +15073,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 
+
   m_LocalPosition: {x: -2.5758123, y: -1.77773, z: -10}
+
+
+  m_LocalPosition: {x: -2.5708528, y: -1.77779, z: -10}
 
 
   m_LocalPosition: {x: -2.5708528, y: -1.77779, z: -10}
@@ -16177,6 +16181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
+
+
 
 
 
@@ -18721,6 +18728,9 @@ RectTransform:
 
 
 
+
+
+
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -18740,6 +18750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e9ef404466b3f46a257b3b988b4626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
+
+
 
 
 
@@ -40257,8 +40270,11 @@ MonoBehaviour:
   jumpForce: 7
 
 
+
   moveSpeed: 10
   jumpForce: 10
+
+
 
 
 
@@ -40268,6 +40284,9 @@ MonoBehaviour:
   swordCollider1: {fileID: 1523575284}
 
   torchCount: 0
+
+
+
 
 
 
@@ -41687,6 +41706,9 @@ Transform:
 
 
 
+
+
+
 --- !u!1 &2094982840
 GameObject:
   m_ObjectHideFlags: 0
@@ -42087,6 +42109,9 @@ SceneRoots:
   - {fileID: 126303406}
 
   - {fileID: 1767643656}
+
+
+
 
   - {fileID: 722399667}
   - {fileID: 536804304}
