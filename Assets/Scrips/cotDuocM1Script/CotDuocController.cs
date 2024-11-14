@@ -7,19 +7,9 @@ public class CotDuocController : MonoBehaviour
     public static CotDuocController cotDuocInstance;
     private int soNgonDuocDaThap = 0; // Số ngọn đuốc đã thắp
     public Animator doorAnimator;      // Animator của cánh cửa
-
-
-
+    public GameObject border;          // Thêm biến border
 
     private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở
-
-
-
-    // private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở
-
-    private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở
-
-
 
     private void Awake()
     {
@@ -31,19 +21,19 @@ public class CotDuocController : MonoBehaviour
         else
         {
             Debug.LogWarning("Đã có một instance của CotDuocController, đối tượng này sẽ không được sử dụng.");
-             Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
     void Start()
-{     broder.SetActive(false);
-    if (cotDuocInstance == null)
     {
-        cotDuocInstance = this;
-        Debug.Log("cotDuocInstance được khởi tạo trong Start.");
+        border.SetActive(false); // Đảm bảo border được tắt ban đầu
+        if (cotDuocInstance == null)
+        {
+            cotDuocInstance = this;
+            Debug.Log("cotDuocInstance được khởi tạo trong Start.");
+        }
     }
-}
-
 
     public void TangSoNgonDuocDaThap()
     {
@@ -56,12 +46,12 @@ public class CotDuocController : MonoBehaviour
         {
             // isDoorOpened = true;
             doorAnimator.SetBool("OpenDoor", true);
-           
             Debug.Log("Đủ 5 ngọn đuốc - mở cửa");
         }
     }
-    public void quaman()
+
+    public void Quaman()
     {
-        broder.SetActive(true);
+        border.SetActive(true); // Kích hoạt border
     }
 }
