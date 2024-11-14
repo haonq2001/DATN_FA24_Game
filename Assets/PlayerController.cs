@@ -43,9 +43,6 @@ public class PlayerController : MonoBehaviour
     public Image[] buttonImages; // Biến để tham chiếu đến Image của button
 
 
-    public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
-
-
 
     void Start()
     {
@@ -237,29 +234,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Không đủ mana để sử dụng kĩ năng!");
         }
     }
-    private void UpdateSwordColliderPosition()
-    {
-        // Kiểm tra hướng nhân vật
-        if (facingRight)
-        {
-            // Nếu hướng phải, đặt swordCollider bên phải
-            swordCollider.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
-            swordCollider.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-            swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
-            swordCollider1.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-        }
-        else
-        {
-            // Nếu hướng trái, đặt swordCollider bên trái
-            swordCollider.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
-            swordCollider.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-                                                                       // Nếu hướng trái, đặt swordCollider bên trái
-            swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
-            swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-        }
-    }
-
-
 
     private void UpdateSwordColliderPosition()
     {
@@ -282,6 +256,31 @@ public class PlayerController : MonoBehaviour
             swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
         }
     }
+
+
+
+    private void UpdateSwordColliderPosition()
+    {
+        // Kiểm tra hướng nhân vật
+        if (facingRight)
+        {
+            // Nếu hướng phải, đặt swordCollider bên phải
+            swordCollider.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+            swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        }
+        else
+        {
+            // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+                                                                       // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        }
+    }
+
 
 
 
