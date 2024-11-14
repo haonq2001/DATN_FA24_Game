@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
  //   public GameManager gameManager;
+
+
 
 
     public float moveSpeed = 2f;
@@ -24,7 +25,9 @@ public class PlayerController : MonoBehaviour
     public GameObject swordCollider;
     public GameObject swordCollider1;
 
+
     public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
+
 
 
     void Start()
@@ -85,6 +88,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     private void UpdateSwordColliderPosition()
     {
         // Kiểm tra hướng nhân vật
@@ -106,6 +110,7 @@ public class PlayerController : MonoBehaviour
             swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
         }
     }
+
 
 
     public void ShowSword()

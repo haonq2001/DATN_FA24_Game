@@ -15086,6 +15086,8 @@ Transform:
 
   m_LocalPosition: {x: 1.5245781, y: -1.8243098, z: -10}
 
+
+  m_LocalPosition: {x: -2.5758123, y: -1.77773, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16185,6 +16187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
 
 
 
@@ -18742,6 +18745,7 @@ RectTransform:
 
 
 
+
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -18770,6 +18774,7 @@ MonoBehaviour:
 
   playerController: {fileID: 0}
   gameManager: {fileID: 0}
+
   ParticleCotDuoc: {fileID: 1056055386}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
@@ -39001,6 +39006,7 @@ PrefabInstance:
 
 
 
+
 --- !u!1 &1715094650
 GameObject:
   m_ObjectHideFlags: 0
@@ -40295,12 +40301,16 @@ MonoBehaviour:
 
 
 
+
+  moveSpeed: 10
+  jumpForce: 10
   bullet: {fileID: 8426518105582470125, guid: 5d20224687f984a4485ff0c69e2a5b1d, type: 3}
   bulletPos: {fileID: 1204645123}
   swordCollider: {fileID: 1147940144}
   swordCollider1: {fileID: 1523575284}
 
   torchCount: 0
+
 
 
 
@@ -41729,6 +41739,7 @@ Transform:
 
 
 
+
 --- !u!1 &2094982840
 GameObject:
   m_ObjectHideFlags: 0
@@ -42130,9 +42141,6 @@ SceneRoots:
 
   - {fileID: 1767643656}
 
-
-
-
   - {fileID: 722399667}
   - {fileID: 536804304}
   - {fileID: 1813485646}
@@ -42151,5 +42159,3 @@ SceneRoots:
 
   - {fileID: 1767643656}
   - {fileID: 2094982841}
-
-
