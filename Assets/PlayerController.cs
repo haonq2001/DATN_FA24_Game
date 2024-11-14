@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -39,10 +38,7 @@ public class PlayerController : MonoBehaviour
     public int health = 10;
     public int mana = 10;
 
-
     public Image[] buttonImages; // Biến để tham chiếu đến Image của button
-
-
 
     void Start()
     {
@@ -158,6 +154,7 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("block");
             playerMana.value -= 1;
 
+
         }
     }
         public void buttonattack1()
@@ -235,6 +232,83 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+        }
+    }
+        public void buttonattack1()
+    {
+        if (playerMana.value > 0)
+        {
+            animator.SetTrigger("strike");
+            playerMana.value -= 1;
+        }
+        else
+        {
+            Debug.Log("Không đủ mana để sử dụng kĩ năng!");
+        }
+    }
+    public void buttonattack2()
+    {
+        if (playerMana.value > 0 && Time.time - lastCastTime >= castCooldown)
+        {
+            animator.SetTrigger("cast");
+            playerMana.value -= 2;
+            lastCastTime = Time.time;
+
+            // Làm mờ button và chạy cooldown
+            StartCoroutine(DisableButtonForCooldown(buttonImages[2]));
+        }
+        else
+        {
+          //  Debug.Log("Không đủ mana để sử dụng kĩ năng!");
+        }
+    }
+
+    IEnumerator DisableButtonForCooldown(Image button)
+    {
+        if (button == null)
+        {
+            Debug.LogWarning("Button image không được gán!");
+            yield break;
+        }
+
+        // Tìm Button component từ Image
+        Button buttonComponent = button.GetComponent<Button>();
+        if (buttonComponent == null)
+        {
+            Debug.LogWarning("Không tìm thấy Button component trên Image!");
+            yield break;
+        }
+
+        // Tắt button và làm mờ
+        Color color = button.color;
+        color.a = 0.5f;
+        button.color = color;
+        buttonComponent.interactable = false;
+
+        // Đợi 2 giây
+        yield return new WaitForSeconds(2f);
+
+        // Bật lại button và làm sáng
+        color.a = 1f;
+        button.color = color;
+        buttonComponent.interactable = true;
+
+        Debug.Log("Button đã trở lại bình thường sau 2 giây");
+    }
+
+    public void buttonattack3()
+    {
+        if (playerMana.value > 0)
+        {
+            animator.SetTrigger("block");
+            playerMana.value -= 1;
+        }
+        else
+        {
+            Debug.Log("Không đủ mana để sử dụng kĩ năng!");
+        }
+    }
     private void UpdateSwordColliderPosition()
     {
         // Kiểm tra hướng nhân vật
@@ -259,6 +333,7 @@ public class PlayerController : MonoBehaviour
 
 
 
+
     private void UpdateSwordColliderPosition()
     {
         // Kiểm tra hướng nhân vật
@@ -280,6 +355,7 @@ public class PlayerController : MonoBehaviour
             swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
         }
     }
+
 
 
 

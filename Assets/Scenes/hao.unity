@@ -123,9 +123,13 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 
+
 --- !u!1 &715631301
 
 --- !u!1 &48695751
+
+--- !u!1 &1657712042
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +137,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+
   - component: {fileID: 715631304}
   - component: {fileID: 715631303}
   - component: {fileID: 715631302}
@@ -14972,6 +14977,11 @@ GameObject:
   - component: {fileID: 131580011}
   - component: {fileID: 131580010}
   - component: {fileID: 131580013}
+
+  - component: {fileID: 1657712045}
+  - component: {fileID: 1657712044}
+  - component: {fileID: 1657712043}
+
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14979,27 +14989,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
+
+--- !u!81 &1657712043
+
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715631301}
+  m_GameObject: {fileID: 1657712042}
   m_Enabled: 1
+
 --- !u!20 &715631303
 
   m_GameObject: {fileID: 131580009}
   m_Enabled: 1
 --- !u!20 &131580011
+
+--- !u!20 &1657712044
+
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 
+
   m_GameObject: {fileID: 715631301}
 
   m_GameObject: {fileID: 131580009}
+
+  m_GameObject: {fileID: 1657712042}
+
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -15049,9 +15071,13 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 
+
 --- !u!4 &715631304
 
 --- !u!4 &131580012
+
+
+--- !u!4 &1657712045
 
 Transform:
   m_ObjectHideFlags: 0
@@ -15059,7 +15085,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 
+
   m_GameObject: {fileID: 715631301}
+
+  m_GameObject: {fileID: 1657712042}
+
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 
@@ -42156,6 +42186,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
 
+
   - {fileID: 715631304}
 
   - {fileID: 131580012}
@@ -42187,3 +42218,6 @@ SceneRoots:
 
   - {fileID: 1767643656}
   - {fileID: 2094982841}
+
+  - {fileID: 1657712045}
+
