@@ -9,6 +9,7 @@ public class CotDuocController : MonoBehaviour
     public Animator doorAnimator;      // Animator của cánh cửa
     public GameObject border;          // Thêm biến border
 
+
     private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở
 
     private void Awake()
@@ -26,6 +27,9 @@ public class CotDuocController : MonoBehaviour
     }
 
     void Start()
+{
+    if (cotDuocInstance == null)
+
     {
         border.SetActive(false); // Đảm bảo border được tắt ban đầu
         if (cotDuocInstance == null)
@@ -50,8 +54,10 @@ public class CotDuocController : MonoBehaviour
         }
     }
 
+
     public void Quaman()
     {
         border.SetActive(true); // Kích hoạt border
     }
+
 }

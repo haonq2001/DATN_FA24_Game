@@ -124,11 +124,15 @@ NavMeshSettings:
   m_NavMeshData: {fileID: 0}
 
 
+
 --- !u!1 &715631301
 
 --- !u!1 &48695751
 
 --- !u!1 &1657712042
+
+
+--- !u!1 &48695751
 
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,9 +142,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
 
+
   - component: {fileID: 715631304}
   - component: {fileID: 715631303}
   - component: {fileID: 715631302}
+
+
 
   - component: {fileID: 48695752}
   - component: {fileID: 48695753}
@@ -14978,9 +14985,12 @@ GameObject:
   - component: {fileID: 131580010}
   - component: {fileID: 131580013}
 
+
   - component: {fileID: 1657712045}
   - component: {fileID: 1657712044}
   - component: {fileID: 1657712043}
+
+
 
   m_Layer: 0
   m_Name: Main Camera
@@ -14991,13 +15001,18 @@ GameObject:
   m_IsActive: 1
 
 
+
 --- !u!81 &1657712043
+
+
+--- !u!81 &131580010
 
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 1657712042}
   m_Enabled: 1
 
@@ -15009,6 +15024,11 @@ AudioListener:
 
 --- !u!20 &1657712044
 
+
+  m_GameObject: {fileID: 131580009}
+  m_Enabled: 1
+--- !u!20 &131580011
+
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15016,11 +15036,15 @@ Camera:
   m_PrefabAsset: {fileID: 0}
 
 
+
   m_GameObject: {fileID: 715631301}
 
   m_GameObject: {fileID: 131580009}
 
   m_GameObject: {fileID: 1657712042}
+
+
+  m_GameObject: {fileID: 131580009}
 
   m_Enabled: 1
   serializedVersion: 2
@@ -15051,7 +15075,11 @@ Camera:
   field of view: 60
   orthographic: 1
 
+
   orthographic size: 5
+
+  orthographic size: 8.45
+
 
   orthographic size: 8.45
 
@@ -15072,6 +15100,7 @@ Camera:
   m_StereoSeparation: 0.022
 
 
+
 --- !u!4 &715631304
 
 --- !u!4 &131580012
@@ -15079,11 +15108,15 @@ Camera:
 
 --- !u!4 &1657712045
 
+
+--- !u!4 &131580012
+
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
 
 
   m_GameObject: {fileID: 715631301}
@@ -15099,9 +15132,12 @@ Transform:
   m_LocalPosition: {x: 1.5245781, y: -1.8243098, z: -10}
 >>>>>>> parent of 904fcfb (UI)
 
+
+
   m_GameObject: {fileID: 131580009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+
 
 
 
@@ -15121,6 +15157,14 @@ Transform:
   m_LocalPosition: {x: -2.5758123, y: -1.77773, z: -10}
 
   m_LocalPosition: {x: -2.5758123, y: -1.77773, z: -10}
+
+
+  m_LocalPosition: {x: -2.5758123, y: -1.77773, z: -10}
+
+  m_LocalPosition: {x: -2.5708528, y: -1.77779, z: -10}
+
+  m_LocalPosition: {x: 1.5245781, y: -1.8243098, z: -10}
+
 
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15325,6 +15369,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 
+
 --- !u!1001 &175390999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15425,6 +15470,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5280708166134673323, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
   m_PrefabInstance: {fileID: 175390999}
   m_PrefabAsset: {fileID: 0}
+
+
 
 
 --- !u!1 &237716670
@@ -15558,11 +15605,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 
+
   playerController: {fileID: 1813485649}
   gameManager: {fileID: 2094982842}
   ParticleCotDuoc: {fileID: 1056055386}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
+
+  ParticleCotDuoc: {fileID: 1056055386}
+  btnThapDuoc: {fileID: 423299412}
+
 
   ParticleCotDuoc: {fileID: 1056055386}
   btnThapDuoc: {fileID: 423299412}
@@ -15749,6 +15801,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 
+
 --- !u!1001 &264543933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15882,6 +15935,8 @@ Rigidbody2D:
   m_Constraints: 7
 
 
+
+
 --- !u!1 &290831360
 GameObject:
   m_ObjectHideFlags: 0
@@ -15967,6 +16022,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 
+
 --- !u!1 &294172493
 GameObject:
   m_ObjectHideFlags: 0
@@ -15998,6 +16054,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 264543935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
+
 
 
 --- !u!1 &298575004
@@ -16084,6 +16142,9 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+
+
+
 
 
 --- !u!1001 &318362543
@@ -16222,6 +16283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
+
+
 
 
 
@@ -16452,6 +16516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 
+
 --- !u!1001 &355217374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16588,6 +16653,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
+
 
 
 --- !u!1 &355422433
@@ -17098,6 +17165,7 @@ RectTransform:
   m_SizeDelta: {x: 70, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 
+
 --- !u!1 &429466765
 GameObject:
   m_ObjectHideFlags: 0
@@ -17129,6 +17197,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 175391000}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
+
 
 
 --- !u!1 &447223118
@@ -17252,7 +17322,11 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 1}
 
 
+
   m_AnchoredPosition: {x: 40, y: -106}
+
+  m_AnchoredPosition: {x: 50, y: -50}
+
 
   m_AnchoredPosition: {x: 50, y: -50}
 
@@ -17603,7 +17677,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 
+
   m_LocalPosition: {x: -9.44, y: -3.34, z: -10}
+
+  m_LocalPosition: {x: -13.6, y: -5.78, z: -10}
+
 
   m_LocalPosition: {x: -13.6, y: -5.78, z: -10}
 
@@ -17640,7 +17718,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 
+
   m_LocalPosition: {x: 16.72, y: 6.08, z: 0.08773351}
+
+  m_LocalPosition: {x: 17.2, y: 5.84, z: 0.08773351}
+
 
   m_LocalPosition: {x: 17.2, y: 5.84, z: 0.08773351}
 
@@ -17762,6 +17844,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
 
 --- !u!1 &563843041
 GameObject:
@@ -17917,6 +18000,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07470322, y: 2.1498356}
   m_EdgeRadius: 0
+
+
 
 
 --- !u!1 &625836883
@@ -18256,6 +18341,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 
+
 --- !u!1001 &669049962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18392,6 +18478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
+
 
 
 --- !u!1 &681533855
@@ -18538,9 +18626,13 @@ PrefabInstance:
       propertyPath: player
       value: 
 
+
       objectReference: {fileID: 0}
 
       objectReference: {fileID: 1813485646}
+
+
+      objectReference: {fileID: 0}
 
     - target: {fileID: 3041243898845089687, guid: 0ede83aef61ff4140a66e5a42b7615d3, type: 3}
       propertyPath: dropPoint
@@ -18771,6 +18863,7 @@ RectTransform:
 
 
 
+
   - {fileID: 1360036290}
   - {fileID: 2047977194}
 
@@ -18784,6 +18877,11 @@ RectTransform:
 
 
 
+
+
+
+  - {fileID: 1360036290}
+  - {fileID: 2047977194}
 
 
   m_Father: {fileID: 0}
@@ -18813,6 +18911,7 @@ MonoBehaviour:
 
 
 
+
   playerController: {fileID: 0}
   gameManager: {fileID: 0}
 
@@ -18821,6 +18920,13 @@ MonoBehaviour:
   ParticleCotDuoc: {fileID: 1056055386}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
+
+  ParticleCotDuoc: {fileID: 1056055386}
+  btnThapDuoc: {fileID: 423299412}
+
+
+  playerController: {fileID: 0}
+  gameManager: {fileID: 0}
 
   ParticleCotDuoc: {fileID: 1056055386}
   btnThapDuoc: {fileID: 423299412}
@@ -23887,6 +23993,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 
+
 --- !u!1001 &768837990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23990,6 +24097,8 @@ PrefabInstance:
       addedObject: {fileID: 1756273393}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
+
+
 
 
 --- !u!1 &791716834
@@ -24339,8 +24448,11 @@ GameObject:
   - component: {fileID: 874667337}
   - component: {fileID: 874667338}
 
+
   - component: {fileID: 874667339}
   - component: {fileID: 874667340}
+
+
 
 
   m_Layer: 0
@@ -24418,6 +24530,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 
+
 --- !u!114 &874667339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24480,6 +24593,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5285714, y: 2.9714286}
   m_EdgeRadius: 0
+
+
 
 
 --- !u!1 &881540884
@@ -24574,11 +24689,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 
+
   playerController: {fileID: 1813485649}
   gameManager: {fileID: 2094982842}
   ParticleCotDuoc: {fileID: 85306527}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
+
+  ParticleCotDuoc: {fileID: 85306527}
+  btnThapDuoc: {fileID: 423299412}
+
 
   ParticleCotDuoc: {fileID: 85306527}
   btnThapDuoc: {fileID: 423299412}
@@ -25315,11 +25435,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 
+
   playerController: {fileID: 1813485649}
   gameManager: {fileID: 2094982842}
   ParticleCotDuoc: {fileID: 742688531}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
+
+  ParticleCotDuoc: {fileID: 742688531}
+  btnThapDuoc: {fileID: 423299412}
+
 
   ParticleCotDuoc: {fileID: 742688531}
   btnThapDuoc: {fileID: 423299412}
@@ -30687,6 +30812,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
 
+
     - - {x: 2.2838116, y: -0.46250343}
       - {x: 1.9777956, y: 0.04054308}
       - {x: 1.3652754, y: 0.02613306}
@@ -30702,6 +30828,8 @@ PolygonCollider2D:
       - {x: 2.445713, y: -1.5567875}
       - {x: 2.5527782, y: -1.1372924}
 
+
+
     - - {x: 2.617731, y: -0.35119677}
       - {x: 2.1385708, y: 0.25078917}
       - {x: 1.497159, y: 0.47135925}
@@ -30715,6 +30843,9 @@ PolygonCollider2D:
       - {x: 2.1139803, y: -1.6496205}
       - {x: 2.8291016, y: -1.5938897}
       - {x: 2.9361677, y: -1.1620274}
+
+
+
 
   m_UseDelaunayMesh: 0
 --- !u!1 &1151689920
@@ -36365,7 +36496,11 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
 
+
   m_Offset: {x: 28.95514, y: 0.39794028}
+
+  m_Offset: {x: 26.542868, y: 0.39794028}
+
 
   m_Offset: {x: 26.542868, y: 0.39794028}
 
@@ -36379,6 +36514,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+
 
   m_Size: {x: 63.562103, y: 0.20411944}
   m_EdgeRadius: 0
@@ -36458,6 +36594,9 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.9319668, y: 12.954165}
+
+  m_Size: {x: 68.38665, y: 0.20411944}
+
 
   m_Size: {x: 68.38665, y: 0.20411944}
 
@@ -36578,8 +36717,12 @@ Transform:
   m_LocalScale: {x: 0.26577175, y: 0.26577175, z: 0.26577175}
   m_ConstrainProportionsScale: 0
 
+
   m_Children:
   - {fileID: 1310101181}
+
+  m_Children: []
+
 
   m_Children: []
 
@@ -36620,7 +36763,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 1344067127}
 
+
   broder: {fileID: 1310101180}
+
+
 
 
 --- !u!212 &1344067129
@@ -36761,11 +36907,14 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 
 
+
 --- !u!224 &1360036290 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7244522046073417076, guid: 53f6446445fbd6c4da7c0018d9d9d0c2, type: 3}
   m_PrefabInstance: {fileID: 2050700953}
   m_PrefabAsset: {fileID: 0}
+
+
 
 
 
@@ -36796,7 +36945,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 
+
   m_LocalPosition: {x: -0.5, y: 0.48, z: 0.021778338}
+
+  m_LocalPosition: {x: -0.39, y: 0.91, z: 0.021778338}
+
 
   m_LocalPosition: {x: -0.39, y: 0.91, z: 0.021778338}
 
@@ -37065,11 +37218,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 
+
   playerController: {fileID: 1813485649}
   gameManager: {fileID: 2094982842}
   ParticleCotDuoc: {fileID: 60524490}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
+
+  ParticleCotDuoc: {fileID: 60524490}
+  btnThapDuoc: {fileID: 423299412}
+
 
   ParticleCotDuoc: {fileID: 60524490}
   btnThapDuoc: {fileID: 423299412}
@@ -37295,6 +37453,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 
+
 --- !u!1001 &1486246623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37426,6 +37585,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+
+
 
 
 --- !u!1 &1489999514
@@ -37752,8 +37913,11 @@ Transform:
   - {fileID: 1715094651}
   - {fileID: 1079281958}
 
+
   - {fileID: 569310232}
   - {fileID: 563843042}
+
+
 
 
   - {fileID: 525403644}
@@ -37786,7 +37950,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 
+
   m_LocalPosition: {x: -24.15, y: -11.7, z: 0.08773351}
+
+  m_LocalPosition: {x: -24.09, y: -11.58, z: 0.08773351}
+
 
   m_LocalPosition: {x: -24.09, y: -11.58, z: 0.08773351}
 
@@ -38001,8 +38169,13 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
 
+
     - - {x: 3.0194407, y: -1.1645064}
       - {x: 2.965063, y: -1.054009}
+
+    - - {x: 3.067338, y: -1.0002866}
+      - {x: 2.9171658, y: -0.9582143}
+
 
     - - {x: 3.067338, y: -1.0002866}
       - {x: 2.9171658, y: -0.9582143}
@@ -38013,6 +38186,7 @@ PolygonCollider2D:
       - {x: 1.7615852, y: -0.9515643}
       - {x: 1.5807972, y: -0.9451368}
       - {x: 1.548193, y: -0.9765525}
+
 
       - {x: 1.0327373, y: -1.0059689}
       - {x: 1.0469599, y: -1.2039685}
@@ -38131,6 +38305,8 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
 
+
+
       - {x: 1.5457282, y: -1.0651602}
       - {x: 1.5546541, y: -1.2642655}
       - {x: 1.546867, y: -1.407615}
@@ -38146,6 +38322,9 @@ PrefabInstance:
       - {x: 3.2217522, y: -1.2169452}
       - {x: 3.20819, y: -1.1641426}
   m_UseDelaunayMesh: 0
+
+
+
 
 --- !u!1 &1546178243
 GameObject:
@@ -38941,6 +39120,9 @@ Transform:
 
 
 
+
+
+
 --- !u!1001 &1696120770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39046,6 +39228,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71ea9c50535a860448e0652b6bf48aae, type: 3}
+
+
+
 
 
 
@@ -39635,6 +39820,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 
+
 --- !u!1 &1756273392
 GameObject:
   m_ObjectHideFlags: 0
@@ -39666,6 +39852,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1916626407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
+
 
 
 --- !u!1 &1758003468
@@ -39925,17 +40113,23 @@ PrefabInstance:
     - target: {fileID: 5774294300632542707, guid: 796344091aa2f654bb726aedc00e4e92, type: 3}
       propertyPath: m_LocalPosition.x
 
+
       value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 5774294300632542707, guid: 796344091aa2f654bb726aedc00e4e92, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.6
 
+
+
       value: 8.36
       objectReference: {fileID: 0}
     - target: {fileID: 5774294300632542707, guid: 796344091aa2f654bb726aedc00e4e92, type: 3}
       propertyPath: m_LocalPosition.y
       value: -7.93
+
+
+
 
       objectReference: {fileID: 0}
     - target: {fileID: 5774294300632542707, guid: 796344091aa2f654bb726aedc00e4e92, type: 3}
@@ -40151,11 +40345,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 
+
   playerController: {fileID: 1813485649}
   gameManager: {fileID: 2094982842}
   ParticleCotDuoc: {fileID: 1151689920}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
+
+  ParticleCotDuoc: {fileID: 1151689920}
+  btnThapDuoc: {fileID: 423299412}
+
 
   ParticleCotDuoc: {fileID: 1151689920}
   btnThapDuoc: {fileID: 423299412}
@@ -40243,7 +40442,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 
+
   m_LocalPosition: {x: -9.44, y: -3.34, z: 0}
+
+  m_LocalPosition: {x: -13.6, y: -5.78, z: 0}
+
 
   m_LocalPosition: {x: -13.6, y: -5.78, z: 0}
 
@@ -40335,28 +40538,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 
 
+
+  moveSpeed: 10
+  jumpForce: 10
+
+
   gameManager: {fileID: 2094982842}
   moveSpeed: 7
   jumpForce: 7
 
 
 
+
+  moveSpeed: 10
+  jumpForce: 10
+
+
+
+
+
+
+
+
   moveSpeed: 10
   jumpForce: 10
 
 
-
-
-
-
-
-
-  moveSpeed: 10
-  jumpForce: 10
   bullet: {fileID: 8426518105582470125, guid: 5d20224687f984a4485ff0c69e2a5b1d, type: 3}
   bulletPos: {fileID: 1204645123}
   swordCollider: {fileID: 1147940144}
   swordCollider1: {fileID: 1523575284}
+
 
 
   torchCount: 0
@@ -40369,6 +40581,10 @@ MonoBehaviour:
 
 
 
+
+
+
+  torchCount: 0
 
 
 --- !u!50 &1813485650
@@ -40439,7 +40655,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
 
+
   m_SortingOrder: 2
+
+  m_SortingOrder: 0
+
 
   m_SortingOrder: 0
 
@@ -41043,11 +41263,14 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 
+
 --- !u!4 &1916626407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7819113977777164469, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
   m_PrefabInstance: {fileID: 768837990}
   m_PrefabAsset: {fileID: 0}
+
+
 
 
 --- !u!1 &1944164306
@@ -41472,6 +41695,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 
 
+
 --- !u!224 &2047977194 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2654995655836233986, guid: 71ea9c50535a860448e0652b6bf48aae, type: 3}
@@ -41582,6 +41806,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53f6446445fbd6c4da7c0018d9d9d0c2, type: 3}
+
+
 
 
 --- !u!1 &2052785712
@@ -41795,6 +42021,9 @@ Transform:
 
 
 
+
+
+
 --- !u!1 &2094982840
 GameObject:
   m_ObjectHideFlags: 0
@@ -41805,7 +42034,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2094982841}
 
+
   - component: {fileID: 2094982842}
+
+
 
   m_Layer: 0
   m_Name: GameManager
@@ -41829,6 +42061,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
 --- !u!114 &2094982842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41843,6 +42076,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorengonlua: {fileID: 453080764}
   scoreText: {fileID: 382885728}
+
+
 
 --- !u!1 &2110653816
 GameObject:
@@ -42181,13 +42416,19 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 
+
+
+
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
 
 
+
   - {fileID: 715631304}
+
+
 
   - {fileID: 131580012}
   - {fileID: 2110653818}
@@ -42196,8 +42437,13 @@ SceneRoots:
   - {fileID: 126303406}
 
 
+
   - {fileID: 1767643656}
 
+
+
+
+  - {fileID: 1767643656}
 
 
   - {fileID: 722399667}
@@ -42208,6 +42454,7 @@ SceneRoots:
   - {fileID: 1505535816}
   - {fileID: 1494817605}
   - {fileID: 682094001}
+
 
   - {fileID: 264543933}
   - {fileID: 1486246623}
@@ -42220,4 +42467,8 @@ SceneRoots:
   - {fileID: 2094982841}
 
   - {fileID: 1657712045}
+
+
+  - {fileID: 1767643656}
+  - {fileID: 2094982841}
 

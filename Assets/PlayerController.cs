@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
+
 
 
 
 public class PlayerController : MonoBehaviour
 {
     public GameManager gameManager;
+
     public Slider playerHealth;
     public Image fillImage;
     public Slider playerMana;
     public Image fillImagemana;
+
+
 
     public float moveSpeed = 2f;
     public float jumpForce = 2f;
@@ -30,11 +36,17 @@ public class PlayerController : MonoBehaviour
     public GameObject swordCollider;
     public GameObject swordCollider1;
 
+
+
+
+
     public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
-    public int health = 10;
-    public int mana = 10;
+
 
     public Image[] buttonImages; // Biến để tham chiếu đến Image của button
+
+
+
 
     void Start()
     {
@@ -45,17 +57,22 @@ public class PlayerController : MonoBehaviour
         swordCollider.SetActive(false);
         swordCollider1.SetActive(false);
 
+
         playerHealth.maxValue = health;
         playerHealth.value = health;
         playerMana.maxValue = mana;
         playerMana.value = mana;
+
+
     }
 
     void Update()
     {
         Move();
         Jump();
+        Cast();
         Attack();
+
 
         if (playerMana.value > 0) {
             Attack1();
@@ -91,6 +108,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+        Attack1();
+
+        // Kiểm tra nhấn phím Space để bắn đạn
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    PlayerShoot();
+        //}
+    }
+
+
     public void PlayerShoot()
     {
         GameObject newBullet = Instantiate(bullet, bulletPos.position, Quaternion.identity);
@@ -121,6 +149,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             animator.SetTrigger("strike");
+
             playerMana.value -= 1;
         }
     }
@@ -200,6 +229,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+        }
+    }
+
+
     private void UpdateSwordColliderPosition()
     {
         if (facingRight)
@@ -218,11 +252,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     public void ShowSword()
     {
         swordCollider.SetActive(true);
         UpdateSwordColliderPosition();
         swordCollider1.SetActive(false);
+
+
+
+    public void ShowSword()
+    {
+        swordCollider.SetActive(true);
+
     }
 
     public void HideSword()
@@ -233,8 +275,6 @@ public class PlayerController : MonoBehaviour
     public void ShowSword1()
     {
         swordCollider1.SetActive(true);
-        UpdateSwordColliderPosition();
-        swordCollider.SetActive(false);
     }
 
     public void HideSword1()
@@ -251,13 +291,19 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = true;
             facingRight = false;
+
             UpdateSwordColliderPosition();
+
+
         }
         else if (moveInput > 0)
         {
             spriteRenderer.flipX = false;
             facingRight = true;
+
             UpdateSwordColliderPosition();
+
+
         }
 
         animator.SetBool("isWalking", moveInput != 0);
@@ -279,7 +325,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && Time.time - lastCastTime >= castCooldown)
         {
             animator.SetTrigger("cast");
-            playerMana.value -= 2;
             lastCastTime = Time.time;
         }
     }
@@ -312,7 +357,10 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Torch"))
         {
+
             torchCount++;
+
+
             Destroy(collision.gameObject);
         }
     }
@@ -322,4 +370,52 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Time.timeScale = 0;
     }
+
+
+
+
+
+
+    // public void TakeDamage(int damage)
+    // {
+    // 	health -= damage;
+
+    // 	StartCoroutine(DamageAnimation());
+
+    // 	if (health <= 0)
+    // 	{
+    // 		// Die();
+    // 	}
+    // }
+
+    // void Die()
+    // {
+    //     Time.timeScale = 0;
+    // }
+    // IEnumerator DamageAnimation()
+    // {
+    // 	SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
+
+    // 	for (int i = 0; i < 3; i++)
+    // 	{
+    // 		foreach (SpriteRenderer sr in srs)
+    // 		{
+    // 			Color c = sr.color;
+    // 			c.a = 0;
+    // 			sr.color = c;
+    // 		}
+
+    // 		yield return new WaitForSeconds(.1f);
+
+    // 		foreach (SpriteRenderer sr in srs)
+    // 		{
+    // 			Color c = sr.color;
+    // 			c.a = 1;
+    // 			sr.color = c;
+    // 		}
+
+    // 		yield return new WaitForSeconds(.1f);
+    // 	}
+    // }
+
 }
