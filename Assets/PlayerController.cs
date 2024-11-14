@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public float moveSpeed = 2f;
     public float jumpForce = 2f;
     private Rigidbody2D rb;
@@ -17,6 +20,11 @@ public class PlayerController : MonoBehaviour
     private float lastCastTime = 0f;
     public GameObject swordCollider;
     public GameObject swordCollider1;
+
+
+    public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
+
+
 
     void Start()
     {
@@ -75,6 +83,30 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("strike");
         }
     }
+
+    private void UpdateSwordColliderPosition()
+    {
+        // Kiểm tra hướng nhân vật
+        if (facingRight)
+        {
+            // Nếu hướng phải, đặt swordCollider bên phải
+            swordCollider.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+            swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        }
+        else
+        {
+            // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+                                                                       // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        }
+    }
+
+
 
     public void ShowSword()
     {
