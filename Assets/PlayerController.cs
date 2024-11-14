@@ -95,11 +95,11 @@ public class PlayerController : MonoBehaviour
         swordCollider1.SetActive(false);
     }
 
-    public void Move()
+    void Move()
     {
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-        
+
         if (moveInput < 0)
         {
             spriteRenderer.flipX = true;
@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("ngonlua"))
         {
-            StartCoroutine(DestroyTorchAfterDelay(collision.gameObject));
+            Destroy(collision.gameObject);
         }
     }
 
@@ -171,11 +171,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Time.timeScale = 0;
     }
-    IEnumerator DestroyTorchAfterDelay(GameObject torch)
-    {
-        yield return new WaitForSeconds(1f);
-        Destroy(torch);
-    }
+
 
 
 
