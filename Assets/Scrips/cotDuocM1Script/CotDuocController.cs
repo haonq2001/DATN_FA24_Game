@@ -27,37 +27,39 @@ public class CotDuocController : MonoBehaviour
     }
 
     void Start()
-{
-    if (cotDuocInstance == null)
-
     {
-        border.SetActive(false); // Đảm bảo border được tắt ban đầu
         if (cotDuocInstance == null)
-        {
-            cotDuocInstance = this;
-            Debug.Log("cotDuocInstance được khởi tạo trong Start.");
+
+        { 
+            border.SetActive(false); // Đảm bảo border được tắt ban đầu
+            if (cotDuocInstance == null)
+            {
+                cotDuocInstance = this;
+                Debug.Log("cotDuocInstance được khởi tạo trong Start.");
+            }
         }
-    }
+    } 
 
-    public void TangSoNgonDuocDaThap()
-    {
-        // if (isDoorOpened) return;
-
-        soNgonDuocDaThap++;
-        Debug.Log("Số ngọn đuốc đã thắp: " + soNgonDuocDaThap);
-
-        if (soNgonDuocDaThap >= 5)
+        public void TangSoNgonDuocDaThap()
         {
-            // isDoorOpened = true;
-            doorAnimator.SetBool("OpenDoor", true);
-            Debug.Log("Đủ 5 ngọn đuốc - mở cửa");
+            // if (isDoorOpened) return;
+
+            soNgonDuocDaThap++;
+            Debug.Log("Số ngọn đuốc đã thắp: " + soNgonDuocDaThap);
+
+            if (soNgonDuocDaThap >= 5)
+            {
+                // isDoorOpened = true;
+                doorAnimator.SetBool("OpenDoor", true);
+                Debug.Log("Đủ 5 ngọn đuốc - mở cửa");
+            }
         }
-    }
 
 
-    public void Quaman()
-    {
-        border.SetActive(true); // Kích hoạt border
-    }
+        public void Quaman()
+        {
+            border.SetActive(true); // Kích hoạt border
+        }
 
+    
 }
