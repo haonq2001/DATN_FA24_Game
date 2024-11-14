@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 
-    public GameManager gameManager;
+ //   public GameManager gameManager;
 
 
     public float moveSpeed = 2f;
@@ -25,9 +25,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-    public int torchCount = 0; 
-
-     // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
 
 
 
