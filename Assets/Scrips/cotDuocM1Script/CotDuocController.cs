@@ -9,6 +9,8 @@ public class CotDuocController : MonoBehaviour
     public Animator doorAnimator;      // Animator của cánh cửa
     private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở
 
+    // private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở
+
     private void Awake()
     {
         if (cotDuocInstance == null)

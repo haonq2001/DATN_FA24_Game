@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public GameManager gameManager;
 
 
+
     public float moveSpeed = 2f;
     public float jumpForce = 2f;
     private Rigidbody2D rb;
@@ -23,7 +24,9 @@ public class PlayerController : MonoBehaviour
     public GameObject swordCollider;
     public GameObject swordCollider1;
 
+
     public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
+
 
 
     void Start()
@@ -83,6 +86,7 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("strike");
         }
     }
+
     private void UpdateSwordColliderPosition()
     {
         // Kiểm tra hướng nhân vật
