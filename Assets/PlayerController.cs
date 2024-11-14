@@ -125,11 +125,11 @@ public class PlayerController : MonoBehaviour
         swordCollider1.SetActive(false);
     }
 
-    public void Move()
+    void Move()
     {
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-        
+
         if (moveInput < 0)
         {
             spriteRenderer.flipX = true;
