@@ -12,6 +12,7 @@ TagManager:
   - Sword
   - ngonlua
   - quaman
+  - vukhi_enemy
   layers:
   - Default
   - TransparentFX

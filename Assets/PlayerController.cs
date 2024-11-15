@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private float lastCastTime = 0f;
     public GameObject swordCollider;
     public GameObject swordCollider1;
+    public GameObject swordCollider2;
     public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
     public int health = 10;
     public int mana = 10;
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
 
         swordCollider.SetActive(false);
         swordCollider1.SetActive(false);
+        swordCollider2.SetActive(false);
 
         playerHealth.maxValue = health;
         playerHealth.value = health;
@@ -67,17 +69,17 @@ public class PlayerController : MonoBehaviour
         playerMana.value = mana;
 
     }
-    void FixeUpdate()
+    void FixedUpdate()
     {
         // lay gia tri tu ban phim
-        moveNgang = Input.GetAxis("Horizontal");
-        moveDoc = Input.GetAxis("Vertical");
+    //    moveNgang = Input.GetAxis("Horizontal");
+    //    moveDoc = Input.GetAxis("Vertical");
+    //
+     //   moveNgang = joystick.Horizontal;
+    //    moveDoc = joystick.Vertical;
 
-        moveNgang = joystick.Horizontal;
-        moveDoc = joystick.Vertical;
-
-        movement = new Vector2(moveNgang, moveDoc)*moveSpeed*Time.deltaTime;
-        rb.MovePosition(rb.position + movement);
+     //   movement = new Vector2(moveNgang, moveDoc)*moveSpeed*Time.deltaTime;
+     //   rb.MovePosition(rb.position + movement);
     }
 
     void Update()
@@ -266,8 +268,10 @@ public class PlayerController : MonoBehaviour
             // Nếu hướng phải, đặt swordCollider bên phải
             swordCollider.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
             swordCollider.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-            swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider1.transform.localPosition.y, swordCollider1.transform.localPosition.z);
             swordCollider1.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+            swordCollider2.transform.localPosition = new Vector3(0.2f, swordCollider2.transform.localPosition.y, swordCollider2.transform.localPosition.z);
+            swordCollider2.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
         }
         else
         {
@@ -275,10 +279,14 @@ public class PlayerController : MonoBehaviour
             swordCollider.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
             swordCollider.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
                                                                         // Nếu hướng trái, đặt swordCollider bên trái
-            swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+            swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider1.transform.localPosition.y, swordCollider1.transform.localPosition.z);
             swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+                                                                         // Nếu hướng trái, đặt swordCollider bên trái
+            swordCollider2.transform.localPosition = new Vector3(-0.2f, swordCollider2.transform.localPosition.y, swordCollider2.transform.localPosition.z);
+            swordCollider2.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
         }
     }
+    
 
 
     public void ShowSword()
@@ -305,8 +313,20 @@ public class PlayerController : MonoBehaviour
     {
         swordCollider1.SetActive(false);
     }
+public void ShowSword2()
+{
+    swordCollider2.SetActive(true);
+    UpdateSwordColliderPosition();
+    swordCollider.SetActive(false);
+    swordCollider1.SetActive(false);
+}
 
-    void Move()
+public void HideSword2()
+{
+    swordCollider2.SetActive(false);
+}
+
+void Move()
     {
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
@@ -371,8 +391,13 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("bay"))
         {
-            animator.SetTrigger("die");
-            StartCoroutine(WaitForDeathAnimation());
+            animator.SetTrigger("dizzy");
+         //   StartCoroutine(WaitForDeathAnimation());
+        }
+        if (collision.gameObject.CompareTag("vukhi_enemy"))
+        {
+            animator.SetTrigger("hurt");
+            //   StartCoroutine(WaitForDeathAnimation());
         }
         if (collision.gameObject.CompareTag("ngonlua"))
         {
