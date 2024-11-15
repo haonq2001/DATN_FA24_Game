@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
+    public GameObject boxvukhi; // Reference to the weapon box
+
     public Transform pointA;
     public Transform pointB;
     public float speed = 2f;
@@ -12,48 +14,59 @@ public class Boss : MonoBehaviour
     private bool isAttacking = false;
     private Animator animator;
 
-
     public Slider BossHealth;
     public Image fillImage;
     public float health = 10;
 
-    public GameObject torchPrefab;  // Biến để tham chiếu đến đối tượng ngọn đuốc
-    public Transform dropPoint;     // Điểm mà ngọn đuốc sẽ rơi ra (ví dụ, phía dưới quái vật)
+    public GameObject torchPrefab;  // Reference to the torch object
+    public Transform dropPoint;     // Point where the torch will drop
 
     void Start()
     {
-        targetPoint = pointB; // Ban đầu hướng đến điểm B
+        targetPoint = pointB; // Initially move towards point B
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        animator = GetComponent<Animator>(); // Lấy Animator từ boss
+        animator = GetComponent<Animator>(); // Get the Animator component
         BossHealth.maxValue = health;
         BossHealth.value = health;
+
+        boxvukhi.SetActive(false); // Initially hide the weapon box
+    }
+
+    public void vukhion()
+    {
+        boxvukhi.SetActive(true); // Show the weapon box
+    }
+
+    public void vukhioff()
+    {
+        boxvukhi.SetActive(false); // Hide the weapon box
     }
 
     void Update()
     {
         if (isAttacking)
         {
-            // Kiểm tra nếu player đã ra khỏi phạm vi tấn công
+            // Check if the player is out of attack range
             if (Vector2.Distance(transform.position, player.position) > attackRange)
             {
                 isAttacking = false;
-                animator.SetBool("attack", false); // Ngừng hiệu ứng tấn công
+                animator.SetBool("attack", false); // Stop attack animation
                 targetPoint = Vector2.Distance(transform.position, pointA.position) < Vector2.Distance(transform.position, pointB.position) ? pointB : pointA;
             }
             else
             {
-                FacePlayer(); // Quay mặt về hướng player
+                FacePlayer(); // Face towards the player
                 Attack();
             }
         }
         else
         {
-            // Di chuyển giữa các điểm và bật animation di chuyển
+            // Move between points and enable movement animation
             MoveBetweenPoints();
             if (Vector2.Distance(transform.position, player.position) < attackRange)
             {
                 isAttacking = true;
-                animator.SetBool("attack", true); // Bật hiệu ứng tấn công
+                animator.SetBool("attack", true); // Start attack animation
             }
         }
     }
@@ -61,19 +74,32 @@ public class Boss : MonoBehaviour
     void MoveBetweenPoints()
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
-        animator.SetBool("isMoving", true); // Bật hiệu ứng di chuyển
+        animator.SetBool("isMoving", true); // Enable movement animation
 
-        // Quay đầu theo hướng di chuyển
+        // Flip the boss based on movement direction
         if (targetPoint.position.x < transform.position.x)
-            transform.localScale = new Vector3(-1, 1, 1);
+        {
+            transform.localScale = new Vector3(-1, 1, 1); // Face left
+            MoveBoxCollider(-0.5f); // Move the box collider to the left
+        }
         else
-            transform.localScale = new Vector3(1, 1, 1);
+        {
+            transform.localScale = new Vector3(1, 1, 1); // Face right
+            MoveBoxCollider(0.5f); // Move the box collider to the right
+        }
 
-        // Đổi hướng khi tới điểm A hoặc B
+        // Change direction when reaching point A or B
         if (Vector2.Distance(transform.position, targetPoint.position) < 0.1f)
         {
             targetPoint = targetPoint == pointA ? pointB : pointA;
         }
+    }
+
+    void MoveBoxCollider(float offset)
+    {
+        // Update the position of the box collider based on the boss's facing direction
+        Vector3 boxPosition = boxvukhi.transform.localPosition;
+        boxvukhi.transform.localPosition = new Vector3(offset, boxPosition.y, boxPosition.z);
     }
 
     private void Attack()
@@ -85,19 +111,20 @@ public class Boss : MonoBehaviour
 
     private void FacePlayer()
     {
-        // Quay mặt về phía player khi tấn công
+        // Face towards the player when attacking
         if (player.position.x < transform.position.x)
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1); // Face left
         else
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1); // Face right
     }
 
     private void OnDisable()
     {
-        // Đảm bảo tắt mọi animation khi boss ngừng hoạt động
+        // Ensure all animations are stopped when the boss is disabled
         animator.SetBool("isMoving", false);
         animator.SetBool("attack", false);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bullet") || collision.CompareTag("Sword"))
@@ -111,15 +138,15 @@ public class Boss : MonoBehaviour
             {
                 fillImage.color = Color.red;
             }
-            if (BossHealth.value == 0)
+            if (BossHealth.value <= 0)
             {
-                // Rơi ngọn đuốc
+                // Drop the torch
                 if (torchPrefab != null && dropPoint != null)
                 {
-                    Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Tạo ngọn đuốc tại vị trí dropPoint
+                    Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Drop the torch at dropPoint
                 }
 
-                Destroy(gameObject);  // Hủy quái vật
+                Destroy(gameObject);  // Destroy the boss
             }
         }
     }
