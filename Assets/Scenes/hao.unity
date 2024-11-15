@@ -138,17 +138,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4100531003571699158, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
   m_PrefabInstance: {fileID: 1593960140}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &27364883 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5536363100577199390, guid: 71ea9c50535a860448e0652b6bf48aae, type: 3}
-  m_PrefabInstance: {fileID: 1696120770}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &28296634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15960,6 +15949,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &228465834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4934684946604694620, guid: 71ea9c50535a860448e0652b6bf48aae, type: 3}
+  m_PrefabInstance: {fileID: 1696120770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &237716670
 GameObject:
   m_ObjectHideFlags: 0
@@ -16090,8 +16090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e9ef404466b3f46a257b3b988b4626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1813485649}
-  gameManager: {fileID: 2094982842}
+  playerController: {fileID: 0}
+  gameManager: {fileID: 0}
   ParticleCotDuoc: {fileID: 1056055386}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
@@ -19643,8 +19643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e9ef404466b3f46a257b3b988b4626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1813485649}
-  gameManager: {fileID: 2094982842}
+  playerController: {fileID: 0}
+  gameManager: {fileID: 0}
   ParticleCotDuoc: {fileID: 527871268465528751, guid: 5a00cee12e2f6a840b5e54d4bee60bca, type: 3}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
@@ -25312,8 +25312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e9ef404466b3f46a257b3b988b4626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1813485649}
-  gameManager: {fileID: 2094982842}
+  playerController: {fileID: 0}
+  gameManager: {fileID: 0}
   ParticleCotDuoc: {fileID: 69052240}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
@@ -25453,8 +25453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e9ef404466b3f46a257b3b988b4626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1813485649}
-  gameManager: {fileID: 2094982842}
+  playerController: {fileID: 0}
+  gameManager: {fileID: 0}
   ParticleCotDuoc: {fileID: 85306527}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
@@ -26475,8 +26475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e9ef404466b3f46a257b3b988b4626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1813485649}
-  gameManager: {fileID: 2094982842}
+  playerController: {fileID: 0}
+  gameManager: {fileID: 0}
   ParticleCotDuoc: {fileID: 742688531}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
@@ -37797,7 +37797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 1344067127}
-  border: {fileID: 1408744692}
+  border: {fileID: 0}
 --- !u!212 &1344067129
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38534,8 +38534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e9ef404466b3f46a257b3b988b4626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1813485649}
-  gameManager: {fileID: 2094982842}
+  playerController: {fileID: 0}
+  gameManager: {fileID: 0}
   ParticleCotDuoc: {fileID: 60524490}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
@@ -42250,8 +42250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e9ef404466b3f46a257b3b988b4626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1813485649}
-  gameManager: {fileID: 2094982842}
+  playerController: {fileID: 0}
+  gameManager: {fileID: 0}
   ParticleCotDuoc: {fileID: 1151689920}
   btnThapDuoc: {fileID: 423299412}
   panelSettings: {fileID: 0}
@@ -42432,7 +42432,7 @@ MonoBehaviour:
   playerHealth: {fileID: 634338971}
   fillImage: {fileID: 825087096}
   playerMana: {fileID: 857273171}
-  fillImagemana: {fileID: 27364883}
+  fillImagemana: {fileID: 228465834}
   moveSpeed: 5
   moveNgang: 0
   moveDoc: 0
@@ -42447,10 +42447,7 @@ MonoBehaviour:
   torchCount: 0
   health: 10
   mana: 10
-  buttonImages:
-  - {fileID: 413274663}
-  - {fileID: 497058861}
-  - {fileID: 583577540}
+  buttonImages: []
 --- !u!50 &1813485650
 Rigidbody2D:
   serializedVersion: 4
