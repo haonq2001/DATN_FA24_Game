@@ -10,7 +10,7 @@ public class CotDuocController : MonoBehaviour
     public GameObject border;          // Thêm biến border
 
 
-    private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở
+   //private bool isDoorOpened = false; // Kiểm tra nếu cánh cửa đã mở
 
     private void Awake()
     {

@@ -15233,7 +15233,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.45
+  orthographic size: 6.3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -15258,7 +15258,7 @@ Transform:
   m_GameObject: {fileID: 131580009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5758123, y: -1.77773, z: -10}
+  m_LocalPosition: {x: -6.4157767, y: -2.5355098, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17870,7 +17870,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1813485646}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 8.45
+    OrthographicSize: 6.3
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -19709,7 +19709,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &742688531
 GameObject:
@@ -37019,7 +37019,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.39206696, y: 1.6513014}
+  m_Offset: {x: -0.32444572, y: 1.6150289}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -37030,7 +37030,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.1018143, y: 0.1353426}
+  m_Size: {x: 4.966572, y: 0.20788765}
   m_EdgeRadius: 0
 --- !u!212 &1170744972
 SpriteRenderer:
@@ -42433,12 +42433,12 @@ MonoBehaviour:
   fillImage: {fileID: 825087096}
   playerMana: {fileID: 857273171}
   fillImagemana: {fileID: 27364883}
-  moveSpeed: 10
+  moveSpeed: 5
   moveNgang: 0
   moveDoc: 0
   movement: {x: 0, y: 0}
   joystick: {fileID: 1318907264}
-  jumpForce: 10
+  jumpForce: 8
   bullet: {fileID: 8426518105582470125, guid: 5d20224687f984a4485ff0c69e2a5b1d, type: 3}
   bulletPos: {fileID: 1204645123}
   swordCollider: {fileID: 1147940144}

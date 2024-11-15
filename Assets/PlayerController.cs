@@ -69,17 +69,18 @@ public class PlayerController : MonoBehaviour
         playerMana.value = mana;
 
     }
-    void FixedUpdate()
+    // bh fix loi xong them chu d vao
+    void FixeUpdate()
     {
         // lay gia tri tu ban phim
-    //    moveNgang = Input.GetAxis("Horizontal");
-    //    moveDoc = Input.GetAxis("Vertical");
-    //
-     //   moveNgang = joystick.Horizontal;
-    //    moveDoc = joystick.Vertical;
+       moveNgang = Input.GetAxis("Horizontal");
+       moveDoc = Input.GetAxis("Vertical");
+    
+       moveNgang = joystick.Horizontal;
+       moveDoc = joystick.Vertical;
 
-     //   movement = new Vector2(moveNgang, moveDoc)*moveSpeed*Time.deltaTime;
-     //   rb.MovePosition(rb.position + movement);
+       movement = new Vector2(moveNgang, moveDoc)*moveSpeed*Time.deltaTime;
+        rb.MovePosition(rb.position + movement);
     }
 
     void Update()
@@ -412,6 +413,29 @@ void Move()
             {
                 cotDuocManager.ActivatePanel();  // Bật panel settings
             }
+
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+
+  
+            playerHealth.value -= 2;
+            print("cham quai, -1 mau");
+            if (playerHealth.value < 8)
+            {
+                fillImage.color = Color.yellow;
+            }
+            if (playerHealth.value < 4)
+            {
+                fillImage.color = Color.red;
+            }
+            if (playerHealth.value == 0)
+            {
+                animator.SetTrigger("die");
+                StartCoroutine(WaitForDeathAnimation());
+                //    audioSource.PlayOneShot(audioClips[1]);
+                // Time.timeScale = 0;
+            };
         }
         if (collision.gameObject.CompareTag("quaman"))
         {
@@ -421,7 +445,7 @@ void Move()
 
     IEnumerator WaitForDeathAnimation()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.5f);
         Time.timeScale = 0;
     }
     IEnumerator DestroyTorchAfterDelay(GameObject torch)
