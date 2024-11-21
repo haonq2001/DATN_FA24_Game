@@ -29,6 +29,17 @@ public class PlayerController : MonoBehaviour
 
 
 
+    // am thanh
+    public List<AudioClip> audioClips;
+    private AudioSource audioSource;
+    public GameObject batnhacnen;
+    public GameObject tatnhacnen;
+    public GameObject batamthanh;
+    public GameObject tatamthanh;
+    public audioManager audioManager;
+
+
+
 
     public float jumpForce = 2f;
     private Rigidbody2D rb;
@@ -68,24 +79,26 @@ public class PlayerController : MonoBehaviour
         playerMana.maxValue = mana;
         playerMana.value = mana;
 
+        audioSource = GetComponent<AudioSource>();
+
     }
     // bh fix loi xong them chu d vao
     void FixeUpdate()
     {
         // lay gia tri tu ban phim
-       moveNgang = Input.GetAxis("Horizontal");
-       moveDoc = Input.GetAxis("Vertical");
-    
-       moveNgang = joystick.Horizontal;
-       moveDoc = joystick.Vertical;
+        moveNgang = Input.GetAxis("Horizontal");
+        moveDoc = Input.GetAxis("Vertical");
 
-       movement = new Vector2(moveNgang, moveDoc)*moveSpeed*Time.deltaTime;
+        moveNgang = joystick.Horizontal;
+        moveDoc = joystick.Vertical;
+
+        movement = new Vector2(moveNgang, moveDoc) * moveSpeed * Time.deltaTime;
         rb.MovePosition(rb.position + movement);
     }
 
     void Update()
     {
-       Move();
+        Move();
         Jump();
         Attack();
 
@@ -203,6 +216,7 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("cast");
             playerMana.value -= 2;
             lastCastTime = Time.time;
+            audioManager.Instance.PlaySFX("bandan");
 
             // Làm mờ button và chạy cooldown
             StartCoroutine(DisableButtonForCooldown(buttonImages[2]));
@@ -287,7 +301,7 @@ public class PlayerController : MonoBehaviour
             swordCollider2.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
         }
     }
-    
+
 
 
     public void ShowSword()
@@ -314,20 +328,20 @@ public class PlayerController : MonoBehaviour
     {
         swordCollider1.SetActive(false);
     }
-public void ShowSword2()
-{
-    swordCollider2.SetActive(true);
-    UpdateSwordColliderPosition();
-    swordCollider.SetActive(false);
-    swordCollider1.SetActive(false);
-}
+    public void ShowSword2()
+    {
+        swordCollider2.SetActive(true);
+        UpdateSwordColliderPosition();
+        swordCollider.SetActive(false);
+        swordCollider1.SetActive(false);
+    }
 
-public void HideSword2()
-{
-    swordCollider2.SetActive(false);
-}
+    public void HideSword2()
+    {
+        swordCollider2.SetActive(false);
+    }
 
-void Move()
+    void Move()
     {
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
@@ -356,6 +370,7 @@ void Move()
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
             animator.SetTrigger("Jump");
+            audioManager.Instance.PlaySFX("jump");
         }
     }
 
@@ -366,6 +381,7 @@ void Move()
             animator.SetTrigger("cast");
             playerMana.value -= 2;
             lastCastTime = Time.time;
+            audioManager.Instance.PlaySFX("bandan");
         }
     }
 
@@ -393,7 +409,7 @@ void Move()
         if (collision.gameObject.CompareTag("bay"))
         {
             animator.SetTrigger("dizzy");
-         //   StartCoroutine(WaitForDeathAnimation());
+            //   StartCoroutine(WaitForDeathAnimation());
         }
         if (collision.gameObject.CompareTag("vukhi_enemy"))
         {
@@ -418,21 +434,25 @@ void Move()
         if (collision.gameObject.CompareTag("Enemy"))
         {
 
-  
-            playerHealth.value -= 2;
-            print("cham quai, -1 mau");
+
+            playerHealth.value -= 1;
+            audioManager.Instance.PlaySFX("matmau");
+        }
+        print("cham quai, -1 mau");
             if (playerHealth.value < 8)
             {
                 fillImage.color = Color.yellow;
-            }
+               
             if (playerHealth.value < 4)
             {
                 fillImage.color = Color.red;
+              
             }
             if (playerHealth.value == 0)
             {
                 animator.SetTrigger("die");
                 StartCoroutine(WaitForDeathAnimation());
+                audioManager.Instance.PlaySFX("chet");
                 //    audioSource.PlayOneShot(audioClips[1]);
                 // Time.timeScale = 0;
             };
@@ -456,45 +476,36 @@ void Move()
 
 
 
-    // public void TakeDamage(int damage)
-    // {
-    // 	health -= damage;
 
-    // 	StartCoroutine(DamageAnimation());
 
-    // 	if (health <= 0)
-    // 	{
-    // 		// Die();
-    // 	}
-    // }
 
-    // void Die()
-    // {
-    //     Time.timeScale = 0;
-    // }
-    // IEnumerator DamageAnimation()
-    // {
-    // 	SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
 
-    // 	for (int i = 0; i < 3; i++)
-    // 	{
-    // 		foreach (SpriteRenderer sr in srs)
-    // 		{
-    // 			Color c = sr.color;
-    // 			c.a = 0;
-    // 			sr.color = c;
-    // 		}
+    public void tatnhacn()
+    {
+        tatnhacnen.SetActive(true);
+        batnhacnen.SetActive(false);
+        audioManager.ToggleMusic();
 
-    // 		yield return new WaitForSeconds(.1f);
 
-    // 		foreach (SpriteRenderer sr in srs)
-    // 		{
-    // 			Color c = sr.color;
-    // 			c.a = 1;
-    // 			sr.color = c;
-    // 		}
+    }
+    public void batnhacn()
+    {
+        tatnhacnen.SetActive(false);
+        batnhacnen.SetActive(true);
+        audioManager.ToggleMusic();
+    }
+    public void batamthanhok()
+    {
+        tatamthanh.SetActive(false);
+        batamthanh.SetActive(true);
+        audioManager.ToggleSFX();
 
-    // 		yield return new WaitForSeconds(.1f);
-    // 	}
-    // }
+    }
+    public void tatamthanhok()
+    {
+        tatamthanh.SetActive(true);
+        batamthanh.SetActive(false);
+        audioManager.ToggleSFX();
+
+    }
 }
