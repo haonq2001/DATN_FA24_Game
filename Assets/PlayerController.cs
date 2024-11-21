@@ -435,15 +435,18 @@ public class PlayerController : MonoBehaviour
         {
 
 
-            playerHealth.value -= 2;
-            print("cham quai, -1 mau");
+            playerHealth.value -= 1;
+            audioManager.Instance.PlaySFX("matmau");
+        }
+        print("cham quai, -1 mau");
             if (playerHealth.value < 8)
             {
                 fillImage.color = Color.yellow;
-            }
+               
             if (playerHealth.value < 4)
             {
                 fillImage.color = Color.red;
+              
             }
             if (playerHealth.value == 0)
             {
