@@ -1,9 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
     public GameObject boxvukhi; // Reference to the weapon box
+    public GameObject thanhmau;
 
     public Transform pointA;
     public Transform pointB;
@@ -147,6 +148,7 @@ public class Boss : MonoBehaviour
                 }
 
                 Destroy(gameObject);  // Destroy the boss
+                Destroy(thanhmau);
             }
         }
     }

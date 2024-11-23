@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ public class boxbay1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       boxbay.SetActive(false);
+        boxbay.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,4 +21,13 @@ public class boxbay1 : MonoBehaviour
     {
         boxbay.SetActive(false);
     }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        animator.SetTrigger("dizzy");
+    //        audioManager.Instance.PlaySFX("bidau");
+    //        //   StartCoroutine(WaitForDeathAnimation());
+    //    }
+    //}
 }

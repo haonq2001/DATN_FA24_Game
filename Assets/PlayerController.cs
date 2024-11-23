@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); // Gán Animator từ component
 
         skill3mo.SetActive(false);
         skill3.SetActive(true);
@@ -170,11 +170,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetTrigger("attack");
+            audioManager.Instance.PlaySFX("skill1");
         }
     }
     public void buttonattack()
     {
         animator.SetTrigger("attack");
+        audioManager.Instance.PlaySFX("skill1");
     }
 
     void Attack1()
@@ -183,6 +185,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("strike");
             playerMana.value -= 1;
+            audioManager.Instance.PlaySFX("kiemchem");
 
         }
 
@@ -194,6 +197,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("block");
             playerMana.value -= 1;
+            audioManager.Instance.PlaySFX("skill2");
 
         }
     }
@@ -203,6 +207,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("strike");
             playerMana.value -= 1;
+            audioManager.Instance.PlaySFX("kiemchem");
         }
         else
         {
@@ -269,6 +274,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("block");
             playerMana.value -= 1;
+            audioManager.Instance.PlaySFX("skill2");
         }
         else
         {
@@ -310,23 +316,29 @@ public class PlayerController : MonoBehaviour
 
         UpdateSwordColliderPosition();
         swordCollider1.SetActive(false);
+        swordCollider2.SetActive(false);
 
     }
 
     public void HideSword()
     {
         swordCollider.SetActive(false);
+        swordCollider1.SetActive(false);
+        swordCollider2.SetActive(false);
     }
     public void ShowSword1()
     {
         swordCollider1.SetActive(true);
         UpdateSwordColliderPosition();
         swordCollider.SetActive(false);
+        swordCollider2.SetActive(false);
     }
 
     public void HideSword1()
     {
         swordCollider1.SetActive(false);
+        swordCollider.SetActive(false);
+        swordCollider2.SetActive(false);
     }
     public void ShowSword2()
     {
@@ -339,6 +351,8 @@ public class PlayerController : MonoBehaviour
     public void HideSword2()
     {
         swordCollider2.SetActive(false);
+        swordCollider.SetActive(false);
+        swordCollider1.SetActive(false);
     }
 
     void Move()
@@ -406,22 +420,46 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("bay"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("trap"))
         {
             animator.SetTrigger("dizzy");
-            //   StartCoroutine(WaitForDeathAnimation());
+            audioManager.Instance.PlaySFX("bidau");
+
         }
+
         if (collision.gameObject.CompareTag("vukhi_enemy"))
         {
             animator.SetTrigger("hurt");
-            //   StartCoroutine(WaitForDeathAnimation());
-        }
+            audioManager.Instance.PlaySFX("bidau");
+            playerHealth.value -= 1;
+            print("cham quai, -1 mau");
+            if (playerHealth.value < 8)
+            {
+                fillImage.color = Color.yellow;
+
+                if (playerHealth.value < 4)
+                {
+                    fillImage.color = Color.red;
+
+                }
+                if (playerHealth.value == 0)
+                {
+                    animator.SetTrigger("die");
+                    StartCoroutine(WaitForDeathAnimation());
+                    audioManager.Instance.PlaySFX("chet");
+                    //    audioSource.PlayOneShot(audioClips[1]);
+                    // Time.timeScale = 0;
+                };
+            } 
+                //   StartCoroutine(WaitForDeathAnimation());
+            }
         if (collision.gameObject.CompareTag("ngonlua"))
         {
             StartCoroutine(DestroyTorchAfterDelay(collision.gameObject));
             gameManager.AddScore();
             gameManager.SetScoreText();
             torchCount++;
+            audioManager.Instance.PlaySFX("anlua");
             Debug.Log("Bạn vừa nhận được ngọn đuốc");
             // Gọi hàm trong CotDuocManager để bật panel settings
             CotDuocManager cotDuocManager = FindObjectOfType<CotDuocManager>();
@@ -431,32 +469,7 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-
-
-            playerHealth.value -= 1;
-            audioManager.Instance.PlaySFX("matmau");
-        }
-        print("cham quai, -1 mau");
-            if (playerHealth.value < 8)
-            {
-                fillImage.color = Color.yellow;
-               
-            if (playerHealth.value < 4)
-            {
-                fillImage.color = Color.red;
-              
-            }
-            if (playerHealth.value == 0)
-            {
-                animator.SetTrigger("die");
-                StartCoroutine(WaitForDeathAnimation());
-                audioManager.Instance.PlaySFX("chet");
-                //    audioSource.PlayOneShot(audioClips[1]);
-                // Time.timeScale = 0;
-            };
-        }
+       
         if (collision.gameObject.CompareTag("quaman"))
         {
             SceneManager.LoadSceneAsync(2);
