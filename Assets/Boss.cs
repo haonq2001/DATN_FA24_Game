@@ -1,9 +1,13 @@
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
     public GameObject boxvukhi; // Reference to the weapon box
+    public GameObject thanhmau;
 
     public Transform pointA;
     public Transform pointB;
@@ -19,8 +23,15 @@ public class Boss : MonoBehaviour
     public float health = 10;
 
     public GameObject torchPrefab;  // Reference to the torch object
-    public Transform dropPoint;     // Point where the torch will drop
+    public Transform dropPoint;
 
+    // Point where the torch will drop
+    private AudioSource audioSource;
+    public GameObject batnhacnen;
+    public GameObject tatnhacnen;
+    public GameObject batamthanh;
+    public GameObject tatamthanh;
+    public audioManager audioManager;
     void Start()
     {
         targetPoint = pointB; // Initially move towards point B
@@ -30,6 +41,8 @@ public class Boss : MonoBehaviour
         BossHealth.value = health;
 
         boxvukhi.SetActive(false); // Initially hide the weapon box
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void vukhion()
@@ -130,6 +143,8 @@ public class Boss : MonoBehaviour
         if (collision.CompareTag("Bullet") || collision.CompareTag("Sword"))
         {
             BossHealth.value -= 2;
+            animator.SetBool("hulk", true);
+            audioManager.Instance.PlaySFX("matmau");
             if (BossHealth.value < 8)
             {
                 fillImage.color = Color.yellow;
@@ -141,13 +156,22 @@ public class Boss : MonoBehaviour
             if (BossHealth.value <= 0)
             {
                 // Drop the torch
-                if (torchPrefab != null && dropPoint != null)
-                {
-                    Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Drop the torch at dropPoint
-                }
+              
+                animator.SetTrigger("die");
+                StartCoroutine(WaitForDeathAnimation());
 
-                Destroy(gameObject);  // Destroy the boss
+               
             }
+        }
+    }
+    IEnumerator WaitForDeathAnimation()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);  // Destroy the boss
+        Destroy(thanhmau);
+        if (torchPrefab != null && dropPoint != null)
+        {
+            Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Drop the torch at dropPoint
         }
     }
 }

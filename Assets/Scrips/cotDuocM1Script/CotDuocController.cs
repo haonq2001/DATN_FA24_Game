@@ -47,7 +47,7 @@ public class CotDuocController : MonoBehaviour
             soNgonDuocDaThap++;
             Debug.Log("Số ngọn đuốc đã thắp: " + soNgonDuocDaThap);
 
-            if (soNgonDuocDaThap >= 5)
+            if (soNgonDuocDaThap >= 6)
             {
                 // isDoorOpened = true;
                 doorAnimator.SetBool("OpenDoor", true);
