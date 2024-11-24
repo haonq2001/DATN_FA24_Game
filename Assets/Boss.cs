@@ -12,7 +12,7 @@ public class Boss : MonoBehaviour
     public Transform pointA;
     public Transform pointB;
     public float speed = 2f;
-    public float attackRange = 2f;
+    public float attackRange = 3f;
     private Transform targetPoint;
     public Transform player;
     private bool isAttacking = false;
