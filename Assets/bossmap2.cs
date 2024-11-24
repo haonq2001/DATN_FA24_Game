@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Boss : MonoBehaviour
+public class bossmap2: MonoBehaviour
 {
     public GameObject boxvukhi; // Reference to the weapon box
     public GameObject thanhmau;
@@ -22,8 +22,9 @@ public class Boss : MonoBehaviour
     public Image fillImage;
     public float health = 10;
 
-    public GameObject torchPrefab;  // Reference to the torch object
-    public Transform dropPoint;
+    //  public GameObject torchPrefab;  // Reference to the torch object
+    // public Transform dropPoint;
+    public GameObject tang2;
 
     // Point where the torch will drop
     private AudioSource audioSource;
@@ -43,6 +44,10 @@ public class Boss : MonoBehaviour
         boxvukhi.SetActive(false); // Initially hide the weapon box
 
         audioSource = GetComponent<AudioSource>();
+
+
+
+        tang2.SetActive(false);
     }
 
     public void vukhion()
@@ -156,11 +161,11 @@ public class Boss : MonoBehaviour
             if (BossHealth.value <= 0)
             {
                 // Drop the torch
-              
+
                 animator.SetTrigger("die");
                 StartCoroutine(WaitForDeathAnimation());
 
-               
+
             }
         }
     }
@@ -169,9 +174,10 @@ public class Boss : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);  // Destroy the boss
         Destroy(thanhmau);
-        if (torchPrefab != null && dropPoint != null)
-        {
-            Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Drop the torch at dropPoint
-        }
+        tang2.SetActive(true);
+     //   if (torchPrefab != null && dropPoint != null)
+     //   {
+     //       Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Drop the torch at dropPoint
+     //   }
     }
 }
