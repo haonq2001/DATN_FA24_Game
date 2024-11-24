@@ -47,7 +47,7 @@ public class bossmap2: MonoBehaviour
 
 
 
-        tang2.SetActive(false);
+     //   tang2.SetActive(false);
     }
 
     public void vukhion()
@@ -174,7 +174,7 @@ public class bossmap2: MonoBehaviour
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);  // Destroy the boss
         Destroy(thanhmau);
-        tang2.SetActive(true);
+      //  tang2.SetActive(true);
      //   if (torchPrefab != null && dropPoint != null)
      //   {
      //       Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Drop the torch at dropPoint

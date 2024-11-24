@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e9ef404466b3f46a257b3b988b4626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 2764136199054488105}
+  playerController: {fileID: 0}
   gameManager: {fileID: 0}
   ParticleCotDuoc: {fileID: 527871268465528751, guid: 5a00cee12e2f6a840b5e54d4bee60bca, type: 3}
   btnThapDuoc: {fileID: 2353373871918525453}
@@ -403,7 +403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 256.00433, y: 256.00015}
+  m_AnchoredPosition: {x: 256.0044, y: 256.00012}
   m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &676426122663711115
@@ -1159,7 +1159,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2764136199054488105}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: buttonattack
         m_Mode: 1
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2764136199054488105}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: buttonattack1
         m_Mode: 1
@@ -1748,13 +1748,11 @@ GameObject:
   - component: {fileID: 5786188510573512429}
   - component: {fileID: 959999664318786644}
   - component: {fileID: 8435476756517092363}
-  - component: {fileID: 2764136199054488105}
   - component: {fileID: 3222544510357325072}
-  - component: {fileID: 6125582483168258047}
   - component: {fileID: 3597885445880567483}
   - component: {fileID: 6491201705857619403}
   m_Layer: 7
-  m_Name: Player
+  m_Name: PlayerMap2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1769,8 +1767,8 @@ Transform:
   m_GameObject: {fileID: 4728386951350308730}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.3, y: -2.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 12, y: -10, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2910065503369608466}
@@ -1859,49 +1857,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2764136199054488105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4728386951350308730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef582e54447a19844acdbf08b8b2abff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skill3: {fileID: 6443739702925203394}
-  skill3mo: {fileID: 1826051468297205995}
-  gameManager: {fileID: 0}
-  playerHealth: {fileID: 2833504361532540542}
-  fillImage: {fileID: 967581291540068065}
-  playerMana: {fileID: 8070331986113428539}
-  fillImagemana: {fileID: 4814689289323424748}
-  moveSpeed: 5
-  moveNgang: 0
-  moveDoc: 0
-  movement: {x: 0, y: 0}
-  joystick: {fileID: 676426122663711108}
-  audioClips: []
-  batnhacnen: {fileID: 0}
-  tatnhacnen: {fileID: 0}
-  batamthanh: {fileID: 0}
-  tatamthanh: {fileID: 0}
-  audioManager: {fileID: 0}
-  jumpForce: 8
-  bullet: {fileID: 8426518105582470125, guid: 5d20224687f984a4485ff0c69e2a5b1d, type: 3}
-  bulletPos: {fileID: 2910065503369608466}
-  swordCollider: {fileID: 49042802308498699}
-  swordCollider1: {fileID: 2620764337272071570}
-  swordCollider2: {fileID: 7853069513825382279}
-  torchCount: 0
-  health: 100
-  mana: 100
-  buttonImages:
-  - {fileID: 7047095415679268762}
-  - {fileID: 9213650657816931499}
-  - {fileID: 653642809171616484}
 --- !u!95 &3222544510357325072
 Animator:
   serializedVersion: 5
@@ -1923,102 +1878,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!82 &6125582483168258047
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4728386951350308730}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.71
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!82 &3597885445880567483
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2596,7 +2455,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2764136199054488105}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: buttonattack2
         m_Mode: 1
@@ -2890,7 +2749,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2764136199054488105}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: buttonattack3
         m_Mode: 1
