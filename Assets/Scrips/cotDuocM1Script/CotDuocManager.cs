@@ -64,6 +64,9 @@ public class CotDuocManager : MonoBehaviour
             {
                 btnThapDuoc.SetActive(true);
             }
+            else {
+                Debug.Log("Không đủ ngọn lửa để thắp đuốc");
+            }
         }
     }
 
@@ -105,10 +108,10 @@ public class CotDuocManager : MonoBehaviour
                     Debug.LogWarning("CotDuocController instance không tồn tại!");
                 }
             }
-            else if (playerController.torchCount <= 0)
-            {
-                Debug.Log("Không đủ ngọn lửa để thắp đuốc");
-            }
+            //else if (playerController.torchCount <= 0)
+            //{
+            //    Debug.Log("Không đủ ngọn lửa để thắp đuốc");
+            //}
         
     }
 

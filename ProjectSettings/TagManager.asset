@@ -13,6 +13,9 @@ TagManager:
   - ngonlua
   - quaman
   - vukhi_enemy
+  - bom
+  - ground1
+  - cauthang
   layers:
   - Default
   - TransparentFX
@@ -21,10 +24,10 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - sword
+  - trap
+  - enemy
   - 
   - 
   - 
