@@ -14,6 +14,17 @@ TagManager:
   - quaman
   - vukhi_enemy
   - bom
+  - ground1
+  - cauthang
+  - ground2
+  - ground3
+  - candauvan
+  - bulletpow
+  - vatphamchiakhoa
+  - ruongkhobau
+  - skillpow
+  - boxmoruong
+  - ruongdamo
   layers:
   - Default
   - TransparentFX
@@ -26,7 +37,7 @@ TagManager:
   - sword
   - trap
   - enemy
-  - 
+  - tang3
   - 
   - 
   - 

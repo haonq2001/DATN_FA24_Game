@@ -1,0 +1,1222 @@
+fileFormatVersion: 2
+guid: d3fc9062fd9e585458a215f918ebb85c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss man2-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 610
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e3a5cfca5884f4c9cab3e2ff469621
+      internalID: 2024855088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 610
+        width: 88
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c409ba03f817654ab9c7efd690e584c
+      internalID: 1818407391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 610
+        width: 127
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c5d5b9c4a8c1e4282e4fc684b10f26
+      internalID: 156441093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 615
+        width: 160
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8460d38ea82a64db0bb853ea559a52
+      internalID: 2026748755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 607
+        width: 141
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fa31e002f94924281ce326f236ad38
+      internalID: -775263255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 605
+        width: 140
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ed33fcf044f9044b04259e041f391c
+      internalID: 65651592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 457
+        width: 72
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3519343345a62184cbab10d69e1da72a
+      internalID: 1888136982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 457
+        width: 77
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de2ef1366f5f3344b54a3a1f2b64b28
+      internalID: 685385760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 455
+        width: 94
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620da65b49f386d41b8c6276b49700d6
+      internalID: 612663404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 455
+        width: 121
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d1e473b39fb5d4a860e951b4fb949f
+      internalID: 2099755827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 455
+        width: 72
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb8a3fc1c9ad5e44833dec295363928
+      internalID: 263614098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 492
+        width: 73
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ac553b58e56bb4794cd56baccfd4c5
+      internalID: -1229535522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 483
+        width: 85
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b5b9cf5b782c14f85d632c0ab76761
+      internalID: 322642449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 504
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b41a3b576477c468695c4911cec446
+      internalID: -2079545846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 507
+        width: 67
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da42bbb8cc8ee9e4fa7903ac04cab447
+      internalID: -944852394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 506
+        width: 62
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362a4298319f1a14e8bbb358bac382f7
+      internalID: -687691991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 504
+        width: 62
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4f3b4080a7afe47a3147f9031e49fb
+      internalID: -470001097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_33
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 307
+        width: 22
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b889bcf2627ba4c80bbaed0c5acf73
+      internalID: -1164771090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_34
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 307
+        width: 34
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e41680ff8059144b028ac818b40069
+      internalID: -2067742339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_35
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 306
+        width: 23
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ce35f07b95cbf4ba2540ab2a82bfe0
+      internalID: 85681481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_36
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 306
+        width: 36
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e79ed3e60fef5408f828af61845992
+      internalID: -1505669256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_38
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 308
+        width: 34
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffe2424e542d05458733a65baf39771
+      internalID: 1232837209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_41
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 304
+        width: 72
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862558e49987ecf4d868dfeaf1eb3a7a
+      internalID: -64117169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_42
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 304
+        width: 87
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1d273895ee3404da4ff3ad3698f0b1
+      internalID: 1936119902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_43
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 304
+        width: 99
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df19ce2854511e341ba8fba3e064649d
+      internalID: 806860215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_44
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 304
+        width: 84
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73744c7e787c35742be6206a2fd095fb
+      internalID: -1216001052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_46
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 304
+        width: 69
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ccb73d8136b81448ef8a124d1b2b5c
+      internalID: 1852465435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_49
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 305
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db317ec5980cb1439d2b396214a920b
+      internalID: -822247763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_54
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 307
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfe5bef2a9b25b4896efd5d6714ec39
+      internalID: 606695324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_55
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 309
+        width: 47
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adac1175453a6e4e80f07a71bee8c08
+      internalID: -238135881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_56
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 155
+        width: 69
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e35760dad5e084429414c529096c7be
+      internalID: -1851760320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_60
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 155
+        width: 115
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab78064a4b6c094f8c357f419c13583
+      internalID: 1076233102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_61
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 152
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c21bce0245f77c4d8dfc563d85df3bd
+      internalID: -525209562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_62
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 155
+        width: 121
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f83cde85d86e4343a35d64f202b9b37
+      internalID: -25381657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_65
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 156
+        width: 136
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1f8f50541afc644ab9f6d1aae72300
+      internalID: -733032621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_66
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 155
+        width: 98
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec7e4c868d7be94493866ac02c25d19
+      internalID: -1209518235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_69
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 178
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ef49843eb54da48b9b811a9322ea93
+      internalID: 423822912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_71
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 193
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c320835e82e8f44f9b3b7df91defed7
+      internalID: 1733194075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_72
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 194
+        width: 49
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b0c47b6a21d4e4c9c66f6074c433db
+      internalID: 210761193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_73
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 194
+        width: 44
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ade154ca64e3464b9820bcbe6bb9fe5
+      internalID: 28606595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_75
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 14
+        width: 115
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea199f2dd54036f4f8bc4502a46e4737
+      internalID: -1212413878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_76
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 11
+        width: 132
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab09b1f15a54f954488ddeea36d4840b
+      internalID: -624906816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_82
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 17
+        width: 134
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da28653acd8bea46987b17f1321c60a
+      internalID: 772418449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_88
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 21
+        width: 129
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255992c41b96f6141bfbe6a579c470fe
+      internalID: -527802495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss man2-Photoroom_114
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 27
+        width: 85
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbb474169f7c2c46a8fdd113cb6df7f
+      internalID: 237092212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss man2-Photoroom_0: 2024855088
+      boss man2-Photoroom_1: 1818407391
+      boss man2-Photoroom_10: 944929194
+      boss man2-Photoroom_100: -551694093
+      boss man2-Photoroom_101: 648463483
+      boss man2-Photoroom_102: -1648087368
+      boss man2-Photoroom_103: 751674420
+      boss man2-Photoroom_104: -742634456
+      boss man2-Photoroom_105: -2100427520
+      boss man2-Photoroom_106: 2056453901
+      boss man2-Photoroom_107: -352654865
+      boss man2-Photoroom_108: 282602938
+      boss man2-Photoroom_109: -1811158328
+      boss man2-Photoroom_11: 1790751314
+      boss man2-Photoroom_110: 1483609704
+      boss man2-Photoroom_111: 686832708
+      boss man2-Photoroom_112: -1683535606
+      boss man2-Photoroom_113: -753792879
+      boss man2-Photoroom_114: 237092212
+      boss man2-Photoroom_115: -423371937
+      boss man2-Photoroom_116: 1309830478
+      boss man2-Photoroom_117: -658760406
+      boss man2-Photoroom_118: 1286918961
+      boss man2-Photoroom_119: 147296020
+      boss man2-Photoroom_12: 1620902351
+      boss man2-Photoroom_120: 1035074069
+      boss man2-Photoroom_121: 1109435520
+      boss man2-Photoroom_122: -1755295705
+      boss man2-Photoroom_123: 431028288
+      boss man2-Photoroom_13: 263614098
+      boss man2-Photoroom_14: -1229535522
+      boss man2-Photoroom_15: -909416117
+      boss man2-Photoroom_16: 322642449
+      boss man2-Photoroom_17: 373150891
+      boss man2-Photoroom_18: -1351466276
+      boss man2-Photoroom_19: -2086814999
+      boss man2-Photoroom_2: 156441093
+      boss man2-Photoroom_20: -2079545846
+      boss man2-Photoroom_21: -274462122
+      boss man2-Photoroom_22: -944852394
+      boss man2-Photoroom_23: -687691991
+      boss man2-Photoroom_24: -470001097
+      boss man2-Photoroom_25: 351225165
+      boss man2-Photoroom_26: 1763713263
+      boss man2-Photoroom_27: 2088326129
+      boss man2-Photoroom_28: -820651228
+      boss man2-Photoroom_29: -1334865804
+      boss man2-Photoroom_3: 2026748755
+      boss man2-Photoroom_30: -899022805
+      boss man2-Photoroom_31: -29545187
+      boss man2-Photoroom_32: 1654934366
+      boss man2-Photoroom_33: -1164771090
+      boss man2-Photoroom_34: -2067742339
+      boss man2-Photoroom_35: 85681481
+      boss man2-Photoroom_36: -1505669256
+      boss man2-Photoroom_37: -1091074748
+      boss man2-Photoroom_38: 1232837209
+      boss man2-Photoroom_39: 892238164
+      boss man2-Photoroom_4: -775263255
+      boss man2-Photoroom_40: -939976334
+      boss man2-Photoroom_41: -64117169
+      boss man2-Photoroom_42: 1936119902
+      boss man2-Photoroom_43: 806860215
+      boss man2-Photoroom_44: -1216001052
+      boss man2-Photoroom_45: -321973733
+      boss man2-Photoroom_46: 1852465435
+      boss man2-Photoroom_47: 957646105
+      boss man2-Photoroom_48: 2113988624
+      boss man2-Photoroom_49: -822247763
+      boss man2-Photoroom_5: 65651592
+      boss man2-Photoroom_50: -1537420812
+      boss man2-Photoroom_51: -1055732353
+      boss man2-Photoroom_52: 1192849714
+      boss man2-Photoroom_53: -575846545
+      boss man2-Photoroom_54: 606695324
+      boss man2-Photoroom_55: -238135881
+      boss man2-Photoroom_56: -1851760320
+      boss man2-Photoroom_57: -1182846409
+      boss man2-Photoroom_58: -523753541
+      boss man2-Photoroom_59: 1809803278
+      boss man2-Photoroom_6: 1888136982
+      boss man2-Photoroom_60: 1076233102
+      boss man2-Photoroom_61: -525209562
+      boss man2-Photoroom_62: -25381657
+      boss man2-Photoroom_63: -368052124
+      boss man2-Photoroom_64: -1581515353
+      boss man2-Photoroom_65: -733032621
+      boss man2-Photoroom_66: -1209518235
+      boss man2-Photoroom_67: -2023935437
+      boss man2-Photoroom_68: -851665545
+      boss man2-Photoroom_69: 423822912
+      boss man2-Photoroom_7: 685385760
+      boss man2-Photoroom_70: -2146813578
+      boss man2-Photoroom_71: 1733194075
+      boss man2-Photoroom_72: 210761193
+      boss man2-Photoroom_73: 28606595
+      boss man2-Photoroom_74: -2074832290
+      boss man2-Photoroom_75: -1212413878
+      boss man2-Photoroom_76: -624906816
+      boss man2-Photoroom_77: 1407753400
+      boss man2-Photoroom_78: -1521138357
+      boss man2-Photoroom_79: 1158211646
+      boss man2-Photoroom_8: 612663404
+      boss man2-Photoroom_80: -784632062
+      boss man2-Photoroom_81: 230549007
+      boss man2-Photoroom_82: 772418449
+      boss man2-Photoroom_83: -1838337100
+      boss man2-Photoroom_84: 1367558850
+      boss man2-Photoroom_85: 1643808527
+      boss man2-Photoroom_86: -1022337279
+      boss man2-Photoroom_87: -1836601589
+      boss man2-Photoroom_88: -527802495
+      boss man2-Photoroom_89: 1178595968
+      boss man2-Photoroom_9: 2099755827
+      boss man2-Photoroom_90: -21651789
+      boss man2-Photoroom_91: -2077828609
+      boss man2-Photoroom_92: 1746825243
+      boss man2-Photoroom_93: 1737665353
+      boss man2-Photoroom_94: 509238308
+      boss man2-Photoroom_95: -1157851783
+      boss man2-Photoroom_96: -393785787
+      boss man2-Photoroom_97: -1403828431
+      boss man2-Photoroom_98: 691555927
+      boss man2-Photoroom_99: -547776788
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

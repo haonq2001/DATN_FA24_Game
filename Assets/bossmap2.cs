@@ -22,8 +22,8 @@ public class bossmap2: MonoBehaviour
     public Image fillImage;
     public float health = 10;
 
-    //  public GameObject torchPrefab;  // Reference to the torch object
-    // public Transform dropPoint;
+      public GameObject vatphamchiakhoa;  // Reference to the torch object
+     public Transform vitriroivatpham;
     public GameObject tang2;
 
     // Point where the torch will drop
@@ -47,7 +47,6 @@ public class bossmap2: MonoBehaviour
 
 
 
-        tang2.SetActive(false);
     }
 
     public void vukhion()
@@ -174,10 +173,10 @@ public class bossmap2: MonoBehaviour
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);  // Destroy the boss
         Destroy(thanhmau);
-        tang2.SetActive(true);
-     //   if (torchPrefab != null && dropPoint != null)
-     //   {
-     //       Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Drop the torch at dropPoint
-     //   }
+      //  tang2.SetActive(true);
+       if (vatphamchiakhoa != null && vitriroivatpham!= null)
+       {
+           Instantiate(vatphamchiakhoa, vitriroivatpham.position, Quaternion.identity);  // Drop the torch at dropPoint
+        }
     }
 }
