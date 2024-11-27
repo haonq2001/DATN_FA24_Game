@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SetScoreText();
-        Cursor.visible  = false;
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.visible  = false;
+      //  Cursor.lockState = CursorLockMode.Locked;
     }
     public void AddScore()
     {
@@ -31,18 +31,20 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameOverUI.activeInHierarchy){
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else{
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        //if(gameOverUI.activeInHierarchy){
+        //    Cursor.visible = true;
+        //    Cursor.lockState = CursorLockMode.None;
+        //}
+        //else{
+        //    Cursor.visible = false;
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //}
     }
 
     public void GameOver(){
+        Time.timeScale = 0;
         gameOverUI.SetActive(true);
+        
     }
 
     public void ReStart(){

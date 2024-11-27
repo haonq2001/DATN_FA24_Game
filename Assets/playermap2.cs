@@ -64,10 +64,10 @@ public class playermap2 : MonoBehaviour
     // am thanh
     public List<AudioClip> audioClips;
     private AudioSource audioSource;
-    public GameObject batnhacnen;
-    public GameObject tatnhacnen;
-    public GameObject batamthanh;
-    public GameObject tatamthanh;
+    //public GameObject batnhacnen;
+    //public GameObject tatnhacnen;
+    //public GameObject batamthanh;
+    //public GameObject tatamthanh;
     public audioManager audioManager;
 
 
@@ -116,6 +116,8 @@ public class playermap2 : MonoBehaviour
         swordCollider1.SetActive(false);
         swordCollider2.SetActive(false);
 
+        playerHealth.interactable = false;
+        playerMana.interactable = false;
         playerHealth.maxValue = health;
     
        playerMana.maxValue = mana; 
@@ -774,6 +776,7 @@ public class playermap2 : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Time.timeScale = 0;
+        gameManager.GameOver();
     }
     IEnumerator DestroyTorchAfterDelay(GameObject torch)
     {
@@ -795,30 +798,30 @@ public class playermap2 : MonoBehaviour
 
 
 
-    public void tatnhacn()
-    {
-        tatnhacnen.SetActive(true);
-        batnhacnen.SetActive(false);
-        audioManager.ToggleMusic();
-    }
-    public void batnhacn()
-    {
-        tatnhacnen.SetActive(false);
-        batnhacnen.SetActive(true);
-        audioManager.ToggleMusic();
-    }
-    public void batamthanhok()
-    {
-        tatamthanh.SetActive(false);
-        batamthanh.SetActive(true);
-        audioManager.ToggleSFX();
+    //public void tatnhacn()
+    //{
+    //    tatnhacnen.SetActive(true);
+    //    batnhacnen.SetActive(false);
+    //    audioManager.ToggleMusic();
+    //}
+    //public void batnhacn()
+    //{
+    //    tatnhacnen.SetActive(false);
+    //    batnhacnen.SetActive(true);
+    //    audioManager.ToggleMusic();
+    //}
+    //public void batamthanhok()
+    //{
+    //    tatamthanh.SetActive(false);
+    //    batamthanh.SetActive(true);
+    //    audioManager.ToggleSFX();
 
-    }
-    public void tatamthanhok()
-    {
-        tatamthanh.SetActive(true);
-        batamthanh.SetActive(false);
-        audioManager.ToggleSFX();
+    //}
+    //public void tatamthanhok()
+    //{
+    //    tatamthanh.SetActive(true);
+    //    batamthanh.SetActive(false);
+    //    audioManager.ToggleSFX();
 
-    }
+    //}
 }
