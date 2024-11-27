@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    public GameObject gameOverUI;
     public GameObject scorengonlua;
     // Start is called before the first frame update
     public TextMeshProUGUI scoreText;
@@ -29,5 +30,21 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void GameOver(){
+        gameOverUI.SetActive(true);
+    }
+
+    public void ReStart(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenu(){
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void Quit(){
+        Application.Quit();
     }
 }
