@@ -46988,7 +46988,7 @@ PrefabInstance:
     - target: {fileID: 909346400511281983, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298541966}
     - target: {fileID: 909346400511281983, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: tatamthanhok
@@ -47008,7 +47008,7 @@ PrefabInstance:
     - target: {fileID: 1779176527155277272, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298541966}
     - target: {fileID: 1779176527155277272, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: tatnhacn
@@ -47020,7 +47020,7 @@ PrefabInstance:
     - target: {fileID: 2534720510138838188, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298541966}
     - target: {fileID: 2534720510138838188, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: batnhacn
@@ -47032,7 +47032,7 @@ PrefabInstance:
     - target: {fileID: 2692539068088215923, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298541966}
     - target: {fileID: 2692539068088215923, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: batamthanhok
