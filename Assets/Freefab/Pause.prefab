@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 48fb7e2320f7a644988ec1d7498d8227, type: 3}
+  m_Sprite: {fileID: 1320479091, guid: e0d3050a1df09cb4ea3a49187255482f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 138993201266909338}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: batnhacn
         m_Mode: 1
@@ -299,8 +299,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: 385}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: 6, y: 336}
+  m_SizeDelta: {x: 156.24, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6296713187268052575
 CanvasRenderer:
@@ -339,8 +339,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -357,8 +357,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b804fa893a1e9794199a19f93c489bb5, type: 3}
+  m_Sprite: {fileID: -104855431, guid: e0d3050a1df09cb4ea3a49187255482f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 138993201266909338}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: tatamthanhok
         m_Mode: 1
@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 6528286991002701392}
   - component: {fileID: 5432300942157536841}
   m_Layer: 5
-  m_Name: Resume (1)
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1114,7 +1114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 342, y: 287}
+  m_AnchoredPosition: {x: 414, y: 371}
   m_SizeDelta: {x: 210, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7684938903303507181
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e08ef86f34dbe104f86297afacf93762, type: 3}
+  m_Sprite: {fileID: 1886303516, guid: 50b2449704624d242ae7c0d831aad72f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1199,7 +1199,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 138993201266909338}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1401f196305a6324db8087afc09a7a34, type: 3}
+  m_Sprite: {fileID: 1874651601, guid: 50b2449704624d242ae7c0d831aad72f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1402,14 +1402,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 64239a2b587f4ad43b882953b1cccae2, type: 3}
+  m_Sprite: {fileID: -719941356, guid: e0d3050a1df09cb4ea3a49187255482f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1674,7 +1674,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 138993201266909338}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: batamthanhok
         m_Mode: 1
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 834140d61c6093241ac56f36d06291e4, type: 3}
+  m_Sprite: {fileID: -170853825, guid: e0d3050a1df09cb4ea3a49187255482f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1945,10 +1945,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 8823074866298374100}
   audioManager: {fileID: 5886081222781612728, guid: b5d526fd3c655cc4ead35406e3cf1917, type: 3}
-  batnhacnen: {fileID: 0}
-  tatnhacnen: {fileID: 0}
-  batamthanh: {fileID: 0}
-  tatamthanh: {fileID: 0}
+  batnhacnen: {fileID: 9126358317859384309}
+  tatnhacnen: {fileID: 3098717522123553610}
+  batamthanh: {fileID: 5000210081521732192}
+  tatamthanh: {fileID: 8299212865782166249}
 --- !u!1 &9126358317859384309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 138993201266909338}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: tatnhacn
         m_Mode: 1

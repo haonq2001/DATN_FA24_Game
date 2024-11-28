@@ -42,7 +42,7 @@ public class playermap2 : MonoBehaviour
     public GameObject skill4mo;
     public GameObject skillpow;
 
-    public GameManager gameManager;
+    public GameManagermap2 gameManager;
 
     public Slider playerHealth;
     public Image fillImage;
@@ -125,6 +125,7 @@ public class playermap2 : MonoBehaviour
         playerMana.value = Mathf.Clamp(mana, 0, playerMana.maxValue);
 
         audioSource = GetComponent<AudioSource>();
+        Time.timeScale = 1;
 
     }
     // bh fix loi xong them chu d vao
@@ -720,14 +721,14 @@ public class playermap2 : MonoBehaviour
                     //    audioSource.PlayOneShot(audioClips[1]);
                     // Time.timeScale = 0;
                 };
-            }        
+            }
         }
         if (collision.gameObject.CompareTag("vatphamchiakhoa"))
         {
             StartCoroutine(DestroyTorchAfterDelay(collision.gameObject));
-       
+
             audioManager.Instance.PlaySFX("anlua");
-                         
+
         }
 
         if (collision.gameObject.CompareTag("ruongkhobau"))
@@ -743,14 +744,120 @@ public class playermap2 : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("skillpow"))
         {
-            
+
             skill4.SetActive(true);
-           skillpow.SetActive(false);
+            skillpow.SetActive(false);
 
         }
+        if (collision.gameObject.CompareTag("vatphamhoihp"))
+        {
+            audioManager.Instance.PlaySFX("anlua");
 
+            GameObject healingItem = collision.gameObject; // Lưu tham chiếu vật phẩm hồi máu
+            Destroy(healingItem); // Hủy vật phẩm ngay lập tức
+
+            if (playerHealth.value < 10) // Chỉ hồi máu nếu chưa đầy
+            {
+                StartCoroutine(HealWithDelay());
+            }
+            else
+            {
+                print("Máu đã đầy");
+            }
+        }
+        if (collision.gameObject.CompareTag("vatphamhoimp"))
+        {
+            audioManager.Instance.PlaySFX("anlua");
+
+            GameObject healingItem = collision.gameObject; // Lưu tham chiếu vật phẩm hồi máu
+            Destroy(healingItem); // Hủy vật phẩm ngay lập tức
+
+            if (playerMana.value < 10) // Chỉ hồi mana nếu chưa đầy
+            {
+                StartCoroutine(ManaWithDelay());
+            }
+            else
+            {
+                print("Mana đã đầy");
+            }
+        }
+
+        // Coroutine để chờ 1 giây rồi cộng máu và phát âm thanh
+        IEnumerator HealWithDelay()
+        {
+            yield return new WaitForSeconds(1f); // Chờ 1 giây
+            audioManager.Instance.PlaySFX("hoimau");
+            // Cộng máu theo mức độ
+            if (playerHealth.value > 8 && playerHealth.value < 10) // Cộng 1 máu
+            {
+                playerHealth.value += 1;
+                print("+1 máu");
+            }
+            else if (playerHealth.value > 7 && playerHealth.value < 9) // Cộng 2 máu
+            {
+                playerHealth.value += 2;
+                print("+2 máu");
+            }
+            else if (playerHealth.value <= 7) // Cộng 3 máu
+            {
+                playerHealth.value += 3;
+                print("+3 máu");
+            }
+
+
+            // Giới hạn HP không vượt quá 10
+            if (playerHealth.value > 10)
+            {
+                playerHealth.value = 10;
+            }
+
+            // Cập nhật màu của fillImage dựa trên HP
+            if (playerHealth.value >= 8)  // HP >= 8, thanh máu màu đỏ
+            {
+                fillImage.color = Color.red;
+            }
+            else if (playerHealth.value < 4)  // HP < 4, thanh máu màu xanh
+            {
+                fillImage.color = Color.green;
+            }
+            else  // HP từ 4 đến dưới 8, thanh máu màu vàng
+            {
+                fillImage.color = Color.yellow;
+            }
+        }
+        IEnumerator ManaWithDelay()
+        {
+            yield return new WaitForSeconds(1f); // Chờ 1 giây
+            audioManager.Instance.PlaySFX("hoimau");
+            // Cộng máu theo mức độ
+            if (playerMana.value > 8 && playerMana.value < 10) // Cộng 1 mmp
+            {
+                playerMana.value += 1;
+                print("+1 mp");
+            }
+            else if (playerMana.value > 7 && playerMana.value < 9) // Cộng 2 máu
+            {
+                playerMana.value += 2;
+                print("+2 mp");
+            }
+            else if (playerMana.value <= 7) // Cộng 3 máu
+            {
+                playerMana.value += 3;
+                print("+3 mp");
+            }
+
+
+            // Giới hạn MP không vượt quá 10
+            if (playerMana.value > 10)
+            {
+                playerMana.value = 10;
+            }
+
+        
+        }
     }
-    void ReceiveKey()
+
+        void ReceiveKey()
     {
         hasReceivedKey = true; // Đánh dấu là đã nhận chìa khóa
         chiakhoa.SetActive(true); // Bật chìa khóa lên
@@ -771,7 +878,7 @@ public class playermap2 : MonoBehaviour
 
         }
     }
-
+   
     IEnumerator WaitForDeathAnimation()
     {
         yield return new WaitForSeconds(0.5f);
