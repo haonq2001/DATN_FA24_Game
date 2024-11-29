@@ -1,0 +1,989 @@
+fileFormatVersion: 2
+guid: acbcc8656f0433c4490bf961f790f082
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 336
+        width: 50
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf352f26a2c14b4d80551588568e59c
+      internalID: -299882202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 335
+        width: 57
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb5e74ce968590418445a3f6d05c9ef
+      internalID: 2019076545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 335
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53023088a686a6418f849d1068b7798
+      internalID: -2093696303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 323
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e445643209579e449ca2bcee302dce9
+      internalID: 355933920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 323
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba0ae105aa83e446a13ed8dd7c58777
+      internalID: -1460658873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 336
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6e213b572669342ac743b702266c85
+      internalID: 1476999974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 336
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be205f2d5bc041441aec2607fef5d5fc
+      internalID: -1157580680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 336
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1565a2f3379a0b4382457fd6349bce3
+      internalID: -658742496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 273
+        width: 46
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14606c9268208b24bbf6232fa1e4b0c8
+      internalID: 1084999550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 273
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b6a3825d651a34990cda17658e44a5
+      internalID: 879269049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 273
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40972b6e9f599a479f1290d5607321c
+      internalID: 574952039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 259
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4c91a5ab997e54ab4c922a9215bd53
+      internalID: 857461441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 259
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe97fc1c56643e64e892f0d41773497d
+      internalID: 1716575473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 284
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4400338fc2b511c48933353551e77f82
+      internalID: 415299189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 284
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbab0dadd3023c74a953b97c3f6eb6e0
+      internalID: 1379576015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 274
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbced5e3fbef3c4ebf41eb205287c40
+      internalID: -1554340995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 221
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b48a9ade87a2e349918e40190ca273c
+      internalID: 708047403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 220
+        width: 56
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aebc96a0673ecb4ba96f5b31500541e
+      internalID: 938552131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 222
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ed2d8b66c865e429b117034e090b2d
+      internalID: 69815640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 183
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf64765975c445746a09f152274f102c
+      internalID: -1846382236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 216
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ae272a5c62de34180ab517d2ba6296
+      internalID: -943936078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 160
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c20ffa7c00be52479ec2b0c9b8ed160
+      internalID: -161136331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 159
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea0746456cd2ed4e8b1c51999d3a39d
+      internalID: -2029227946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 160
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ef3b7d817d5df40a647c481f45d0bf
+      internalID: -1873531111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 106
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a280828afe215445a770e999311b2ec
+      internalID: -583600885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 106
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd6c6dbbe72fc54da5c725941364bda
+      internalID: -2000572449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 106
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4bee0fdfe9f2a40a5e8bc0d82762ce
+      internalID: 1184593060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 107
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910c0718279433d439ed306b1a2c12c8
+      internalID: 1167354585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 107
+        width: 55
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f3e2640bdd31943aa1f42ed90430a8
+      internalID: 179882690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 107
+        width: 54
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fee6dadf1a0a540a5611934c9b540a
+      internalID: 283533390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_30
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 27
+        width: 58
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52f0f075f3ecbd49808b4c38ca82491
+      internalID: -1583449394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_31
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 48
+        width: 57
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1696b20f2cb59ff408a1a1325e2d3c5f
+      internalID: -1497508894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_32
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 27
+        width: 58
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2bf69a1cead2d84cb97fca0093e6217
+      internalID: -1385819162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_33
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 27
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cefc177c5ba3154a98976152ac0c932
+      internalID: -1878235931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_34
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 27
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cf6d8d4f6c09a4d863c6425e5536b4
+      internalID: -971017761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_35
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 27
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d662a94d7a1c07409319d2c60f2d609
+      internalID: -1872967653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_36
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 27
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb193e294a7f2a4bb9dc1eaabcb1437
+      internalID: 1572521163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hangDongman3-removebg-preview_37
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 26
+        width: 57
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38e04d4c6b641740a241c31ac29a1d5
+      internalID: 1050179927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      hangDongman3-removebg-preview_0: -299882202
+      hangDongman3-removebg-preview_1: 2019076545
+      hangDongman3-removebg-preview_10: 574952039
+      hangDongman3-removebg-preview_11: 857461441
+      hangDongman3-removebg-preview_12: 1716575473
+      hangDongman3-removebg-preview_13: 415299189
+      hangDongman3-removebg-preview_14: 1379576015
+      hangDongman3-removebg-preview_15: -1554340995
+      hangDongman3-removebg-preview_16: 708047403
+      hangDongman3-removebg-preview_17: 938552131
+      hangDongman3-removebg-preview_18: 69815640
+      hangDongman3-removebg-preview_19: -1846382236
+      hangDongman3-removebg-preview_2: -2093696303
+      hangDongman3-removebg-preview_20: -943936078
+      hangDongman3-removebg-preview_21: -161136331
+      hangDongman3-removebg-preview_22: -2029227946
+      hangDongman3-removebg-preview_23: -1873531111
+      hangDongman3-removebg-preview_24: -583600885
+      hangDongman3-removebg-preview_25: -2000572449
+      hangDongman3-removebg-preview_26: 1184593060
+      hangDongman3-removebg-preview_27: 1167354585
+      hangDongman3-removebg-preview_28: 179882690
+      hangDongman3-removebg-preview_29: 283533390
+      hangDongman3-removebg-preview_3: 355933920
+      hangDongman3-removebg-preview_30: -1583449394
+      hangDongman3-removebg-preview_31: -1497508894
+      hangDongman3-removebg-preview_32: -1385819162
+      hangDongman3-removebg-preview_33: -1878235931
+      hangDongman3-removebg-preview_34: -971017761
+      hangDongman3-removebg-preview_35: -1872967653
+      hangDongman3-removebg-preview_36: 1572521163
+      hangDongman3-removebg-preview_37: 1050179927
+      hangDongman3-removebg-preview_4: -1460658873
+      hangDongman3-removebg-preview_5: 1476999974
+      hangDongman3-removebg-preview_6: -1157580680
+      hangDongman3-removebg-preview_7: -658742496
+      hangDongman3-removebg-preview_8: 1084999550
+      hangDongman3-removebg-preview_9: 879269049
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
