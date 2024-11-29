@@ -145,4 +145,31 @@ public class quai_kiem : MonoBehaviour
         animator.SetBool("isMoving", false);
         animator.SetBool("attack", false);
     }
+     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") || collision.CompareTag("Sword"))
+        {
+            // BossHealth.value -= 2;
+            animator.SetTrigger("die");
+            // audioManager.Instance.PlaySFX("matmau");
+            // if (BossHealth.value < 8)
+            // {
+            //     fillImage.color = Color.yellow;
+            // }
+            // if (BossHealth.value < 4)
+            // {
+            //     fillImage.color = Color.red;
+            // }
+            // if (BossHealth.value <= 0)
+            // {
+            //     // Drop the torch
+
+            //     animator.SetTrigger("die");
+            //     StartCoroutine(WaitForDeathAnimation());
+
+
+            // }
+        }
+    }
+
 }
