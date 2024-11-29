@@ -23,7 +23,7 @@
 
 
 
-        public float moveSpeed = 2f;
+        public float moveSpeed = 15f;
 
         public float moveNgang;
         public float moveDoc;
@@ -89,18 +89,7 @@
         Time.timeScale = 1;
         }
         // bh fix loi xong them chu d vao
-        void FixeUpdate()
-        {
-            // lay gia tri tu ban phim
-            moveNgang = Input.GetAxis("Horizontal");
-            moveDoc = Input.GetAxis("Vertical");
-
-            moveNgang = joystick.Horizontal;
-            moveDoc = joystick.Vertical;
-
-            movement = new Vector2(moveNgang, moveDoc) * moveSpeed * Time.deltaTime;
-            rb.MovePosition(rb.position + movement);
-        }
+       
 
         void Update()
         {
@@ -363,40 +352,48 @@
         }
 
         void Move()
+    {
+        // Lấy giá trị từ joystick và bàn phím
+        float moveInput = joystick.Horizontal + Input.GetAxis("Horizontal");
+
+        // Ngưỡng để bỏ qua giá trị rất nhỏ từ joystick
+        if (Mathf.Abs(moveInput) > 0.1f)
         {
-            float moveInput = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
+            // Đổi hướng nhân vật
             if (moveInput < 0)
             {
                 spriteRenderer.flipX = true;
                 facingRight = false;
-                UpdateSwordColliderPosition();
             }
             else if (moveInput > 0)
             {
                 spriteRenderer.flipX = false;
                 facingRight = true;
-                UpdateSwordColliderPosition();
             }
 
-            animator.SetBool("isWalking", moveInput != 0);
-            animator.SetBool("IsGround", isGrounded);
+            animator.SetBool("isWalking", isGrounded); // Animation "đi bộ" chỉ kích hoạt nếu đang chạm đất
         }
+        else
+        {
+            // Chỉ dừng vận tốc ngang nếu đang chạm đất
+            if (isGrounded)
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+                animator.SetBool("isWalking", false); // Ngừng animation đi bộ
+            }
+        }
+    }
 
         void Jump()
         {
-            if (Input.GetKeyDown(KeyCode.W) && isGrounded)
-            {
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                isGrounded = false;
-                animator.SetTrigger("Jump");
-              //  isColliderActive = false;
-                //if (boxCollider2D != null)
-                //{
-                //    boxCollider2D.enabled = false;
-                //}
-                audioManager.Instance.PlaySFX("jump");
+           if ((joystick.Vertical > 0.5f || Input.GetButtonDown("Jump")) && isGrounded)
+        {
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            isGrounded = false; // Đặt trạng thái "ở trên không"
+            animator.SetTrigger("Jump");
+            audioManager.Instance.PlaySFX("jump");
             }
         }
 
