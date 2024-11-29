@@ -52,7 +52,7 @@ public class playermap2 : MonoBehaviour
 
 
 
-    public float moveSpeed = 15f;
+    public float moveSpeed = 2f;
 
     public float moveNgang;
     public float moveDoc;
@@ -127,25 +127,23 @@ public class playermap2 : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         Time.timeScale = 1;
 
-
     }
     // bh fix loi xong them chu d vao
     void FixeUpdate()
     {
-        //// lay gia tri tu ban phim
-        //moveNgang = Input.GetAxis("Horizontal");
-        //moveDoc = Input.GetAxis("Vertical");
+        // lay gia tri tu ban phim
+        moveNgang = Input.GetAxis("Horizontal");
+        moveDoc = Input.GetAxis("Vertical");
 
-        //moveNgang = joystick.Horizontal;
-        //moveDoc = joystick.Vertical;
+        moveNgang = joystick.Horizontal;
+        moveDoc = joystick.Vertical;
 
-        //movement = new Vector2(moveNgang, moveDoc) * moveSpeed * Time.deltaTime;
-        //rb.MovePosition(rb.position + movement);
+        movement = new Vector2(moveNgang, moveDoc) * moveSpeed * Time.deltaTime;
+        rb.MovePosition(rb.position + movement);
     }
 
     void Update()
     {
-
         if (isOnGround1) // Kiểm tra nếu đang trên `ground1`
         {
             if (Input.GetKeyDown(KeyCode.W))
@@ -537,46 +535,33 @@ public class playermap2 : MonoBehaviour
     }
     void Move()
     {
-        float moveInput = joystick.Horizontal+ Input.GetAxis("Horizontal");
-        Debug.Log("Joystick Horizontal: " + joystick.Horizontal);
-        if (Mathf.Abs(moveInput) > 0.1f)
-        {
+        float moveInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-            Debug.Log("Velocity: " + rb.velocity);
-            if (moveInput < 0)
-            {
-                spriteRenderer.flipX = true;
-                facingRight = false;
-               UpdateSwordColliderPosition();
-            }
-            else if (moveInput > 0)
-            {
-                spriteRenderer.flipX = false;
-                facingRight = true;
-                UpdateSwordColliderPosition();
-            }
-            if (hasReceivedKey)
-            {
-                UpdateTorchOrientation(); // Cập nhật hướng của chìa khóa
-            }
-
-            animator.SetBool("isWalking", moveInput != 0);
-            animator.SetBool("IsGround", isGrounded);
-        }
-        else
+        if (moveInput < 0)
         {
-            if (isGrounded)
-            {
-                rb.velocity = new Vector2(0, rb.velocity.y);
-                animator.SetBool("isWalking", false); // Ngừng animation đi bộ
-            }
+            spriteRenderer.flipX = true;
+            facingRight = false;
+            UpdateSwordColliderPosition();
         }
+        else if (moveInput > 0)
+        {
+            spriteRenderer.flipX = false;
+            facingRight = true;
+            UpdateSwordColliderPosition();
+        }
+        if (hasReceivedKey)
+        {
+            UpdateTorchOrientation(); // Cập nhật hướng của chìa khóa
+        }
+
+        animator.SetBool("isWalking", moveInput != 0);
+        animator.SetBool("IsGround", isGrounded);
     }
 
     void Jump()
     {
-        if ((joystick.Vertical > 0.5f || Input.GetButtonDown("Jump")) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
