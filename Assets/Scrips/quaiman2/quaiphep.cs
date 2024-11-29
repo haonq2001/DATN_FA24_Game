@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class quaiphep : MonoBehaviour
 {
@@ -21,24 +20,11 @@ public class quaiphep : MonoBehaviour
     public float shootCooldown = 1f; // Thời gian chờ giữa các lần bắn
     private float lastShootTime = 0f; // Thời gian lần bắn gần nhất
 
-    public Slider BossHealth;
-    public Image fillImage;
-    public float health = 10;
-    public GameObject torchPrefab;  // Reference to the torch object
-    public Transform dropPoint;
-    private AudioSource audioSource;
-    public GameObject thanhmau;
-
-
     void Start()
     {
         targetPoint = pointB;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
-        BossHealth.maxValue = health;
-        BossHealth.value = health;
-        BossHealth.interactable = false;
     }
 
     void Update()
@@ -54,8 +40,7 @@ public class quaiphep : MonoBehaviour
             // Nếu đã sẵn sàng bắn
             if (CanShoot())
             {
-                // Shoot(); // Bắn đạn
-                animator.SetBool("attack", true);
+                Shoot(); // Bắn đạn
             }
         }
         else
@@ -89,7 +74,7 @@ public class quaiphep : MonoBehaviour
         return Time.time - lastShootTime >= shootCooldown;
     }
 
-   public void Shoot()
+    void Shoot()
     {
         // Tính hướng bắn
         Vector2 shootDirection = (player.position - firePoint.position).normalized;
@@ -175,41 +160,5 @@ public class quaiphep : MonoBehaviour
     private void OnDisable()
     {
         animator.SetBool("isMoving", false);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Bullet") || collision.CompareTag("Sword"))
-        {
-            BossHealth.value -= 2;
-            animator.SetTrigger("hulk");
-            audioManager.Instance.PlaySFX("matmau");
-            if (BossHealth.value < 8)
-            {
-                fillImage.color = Color.yellow;
-            }
-            if (BossHealth.value < 4)
-            {
-                fillImage.color = Color.red;
-            }
-            if (BossHealth.value <= 0)
-            {
-                // Drop the torch
-
-                animator.SetTrigger("die");
-                StartCoroutine(WaitForDeathAnimation());
-
-
-            }
-        }
-    }
-    IEnumerator WaitForDeathAnimation()
-    {
-        yield return new WaitForSeconds(1f);
-        Destroy(gameObject);  // Destroy the boss
-        Destroy(thanhmau);
-        if (torchPrefab != null && dropPoint != null)
-        {
-            Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Drop the torch at dropPoint
-        }
     }
 }

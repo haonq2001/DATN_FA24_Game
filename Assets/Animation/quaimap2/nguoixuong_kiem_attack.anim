@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: nguoixuongcamkiem_attack
+  m_Name: nguoixuong_kiem_attack
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -22,11 +22,13 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -99584669, guid: 7647e49dfa56f324c98437ef12f9d890, type: 3}
-    - time: 0.2
+    - time: 0.18333334
       value: {fileID: 981096216, guid: 7647e49dfa56f324c98437ef12f9d890, type: 3}
-    - time: 0.56666666
+    - time: 0.35
+      value: {fileID: -178831329, guid: 7647e49dfa56f324c98437ef12f9d890, type: 3}
+    - time: 0.53333336
       value: {fileID: -1797874429, guid: 7647e49dfa56f324c98437ef12f9d890, type: 3}
-    - time: 0.78333336
+    - time: 0.71666664
       value: {fileID: -1532561516, guid: 7647e49dfa56f324c98437ef12f9d890, type: 3}
     attribute: m_Sprite
     path: 
@@ -52,6 +54,7 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: -99584669, guid: 7647e49dfa56f324c98437ef12f9d890, type: 3}
     - {fileID: 981096216, guid: 7647e49dfa56f324c98437ef12f9d890, type: 3}
+    - {fileID: -178831329, guid: 7647e49dfa56f324c98437ef12f9d890, type: 3}
     - {fileID: -1797874429, guid: 7647e49dfa56f324c98437ef12f9d890, type: 3}
     - {fileID: -1532561516, guid: 7647e49dfa56f324c98437ef12f9d890, type: 3}
   m_AnimationClipSettings:
@@ -59,7 +62,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8
+    m_StopTime: 0.7333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,18 +81,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.56666666
-    functionName: vukhion
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.78333336
-    functionName: vukhioff
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

@@ -35,10 +35,10 @@
         // am thanh
         public List<AudioClip> audioClips;
         private AudioSource audioSource;
-   //     public GameObject batnhacnen;
-     //   public GameObject tatnhacnen;
-      //  public GameObject batamthanh;
-     //   public GameObject tatamthanh;
+        public GameObject batnhacnen;
+        public GameObject tatnhacnen;
+        public GameObject batamthanh;
+        public GameObject tatamthanh;
         public audioManager audioManager;
 
 
@@ -77,16 +77,14 @@
             swordCollider.SetActive(false);
             swordCollider1.SetActive(false);
             swordCollider2.SetActive(false);
-          playerHealth.interactable = false;
-           playerMana.interactable = false;
-        playerHealth.maxValue = health;
 
-        playerMana.maxValue = mana;
-        playerHealth.value = Mathf.Clamp(health, 0, playerHealth.maxValue);
-        playerMana.value = Mathf.Clamp(mana, 0, playerMana.maxValue);
+            playerHealth.maxValue = health;
+            playerHealth.value = health;
+            playerMana.maxValue = mana;
+            playerMana.value = mana;
 
-        audioSource = GetComponent<AudioSource>();
-        Time.timeScale = 1;
+            audioSource = GetComponent<AudioSource>();
+
         }
         // bh fix loi xong them chu d vao
         void FixeUpdate()
@@ -503,7 +501,6 @@
         {
             yield return new WaitForSeconds(0.5f);
             Time.timeScale = 0;
-        gameManager.GameOver();
         }
         IEnumerator DestroyTorchAfterDelay(GameObject torch)
         {
@@ -517,32 +514,32 @@
 
 
 
-        //public void tatnhacn()
-        //{
-        //    tatnhacnen.SetActive(true);
-        //    batnhacnen.SetActive(false);
-        //    audioManager.ToggleMusic();
+        public void tatnhacn()
+        {
+            tatnhacnen.SetActive(true);
+            batnhacnen.SetActive(false);
+            audioManager.ToggleMusic();
 
 
-        //}
-        //public void batnhacn()
-        //{
-        //    tatnhacnen.SetActive(false);
-        //    batnhacnen.SetActive(true);
-        //    audioManager.ToggleMusic();
-        //}
-        //public void batamthanhok()
-        //{
-        //    tatamthanh.SetActive(false);
-        //    batamthanh.SetActive(true);
-        //    audioManager.ToggleSFX();
+        }
+        public void batnhacn()
+        {
+            tatnhacnen.SetActive(false);
+            batnhacnen.SetActive(true);
+            audioManager.ToggleMusic();
+        }
+        public void batamthanhok()
+        {
+            tatamthanh.SetActive(false);
+            batamthanh.SetActive(true);
+            audioManager.ToggleSFX();
 
-        //}
-        //public void tatamthanhok()
-        //{
-        //    tatamthanh.SetActive(true);
-        //    batamthanh.SetActive(false);
-        //    audioManager.ToggleSFX();
+        }
+        public void tatamthanhok()
+        {
+            tatamthanh.SetActive(true);
+            batamthanh.SetActive(false);
+            audioManager.ToggleSFX();
 
-        //}
+        }
     }
