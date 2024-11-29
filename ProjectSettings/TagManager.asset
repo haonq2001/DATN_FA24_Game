@@ -25,6 +25,8 @@ TagManager:
   - skillpow
   - boxmoruong
   - ruongdamo
+  - vatphamhoihp
+  - vatphamhoimp
   layers:
   - Default
   - TransparentFX

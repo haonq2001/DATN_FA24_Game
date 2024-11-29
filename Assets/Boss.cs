@@ -39,7 +39,8 @@ public class Boss : MonoBehaviour
         animator = GetComponent<Animator>(); // Get the Animator component
         BossHealth.maxValue = health;
         BossHealth.value = health;
-
+        BossHealth.interactable = false;
+      
         boxvukhi.SetActive(false); // Initially hide the weapon box
 
         audioSource = GetComponent<AudioSource>();

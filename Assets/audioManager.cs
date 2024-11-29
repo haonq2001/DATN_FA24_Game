@@ -16,6 +16,8 @@ public class audioManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            musicSource.mute = PlayerPrefs.GetInt("MusicMuted", 0) == 1;
+            sfxSource.mute = PlayerPrefs.GetInt("SFXMuted", 0) == 1;
         }
         else
         {
@@ -25,6 +27,7 @@ public class audioManager : MonoBehaviour
     public void Start()
     {
         PlayMusic("theme");
+
     }
     public void PlayMusic(string name)
     {
@@ -54,10 +57,29 @@ public class audioManager : MonoBehaviour
     }
     public void ToggleMusic()
     {
-        musicSource.mute = !musicSource.mute;
+        if (musicSource != null)
+        {
+            musicSource.mute = !musicSource.mute;
+            PlayerPrefs.SetInt("MusicMuted", musicSource.mute ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            Debug.LogError("Music source is missing!");
+        }
     }
+
     public void ToggleSFX()
     {
-        sfxSource.mute = !sfxSource.mute;
+        if (sfxSource != null)
+        {
+            sfxSource.mute = !sfxSource.mute;
+            PlayerPrefs.SetInt("SFXMuted", sfxSource.mute ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            Debug.LogError("SFX source is missing!");
+        }
     }
 }
