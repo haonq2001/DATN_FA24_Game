@@ -552,6 +552,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 
 --- !u!1001 &2428381915352724436
 --- !u!1 &1591199359
@@ -1919,6 +1920,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 
 
+=======
+>>>>>>> parent of 8436d99 (Merge branch 'deftcon' into deftchau)
 --- !u!1001 &8599210841798827815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1986,9 +1989,12 @@ SceneRoots:
   - {fileID: 1498809167}
   - {fileID: 1543239272}
   - {fileID: 8599210841798827815}
+<<<<<<< HEAD
 
   - {fileID: 2428381915352724436}
   - {fileID: 2105738238}
   - {fileID: 1870859458}
 
 
+=======
+>>>>>>> parent of 8436d99 (Merge branch 'deftcon' into deftchau)
