@@ -210,13 +210,13 @@ public class playermap2 : MonoBehaviour
             UpdateButton(buttonImage);
         }
         // Di chuyển ngang
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveHorizontal = joystick.Horizontal+ Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveHorizontal * climbSpeed, rb.velocity.y);
 
         // Kiểm tra leo thang
         if (isClimbing)
         {
-            float moveVertical = Input.GetAxis("Vertical"); // Nhấn phím lên/xuống
+            float moveVertical = joystick.Vertical+ Input.GetAxis("Vertical"); // Nhấn phím lên/xuống
             rb.velocity = new Vector2(rb.velocity.x, moveVertical * climbSpeed);
           
             rb.gravityScale = 0; // Vô hiệu hóa trọng lực khi leo thang
