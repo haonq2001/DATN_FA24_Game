@@ -11,6 +11,9 @@ TagManager:
   - Enemy
   - Sword
   - ngonlua
+  - vukhi_enemy
+  - bulletpow
+  - quaman
   layers:
   - Default
   - TransparentFX
@@ -19,11 +22,11 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - sword
+  - trap
+  - enemy
+  - tang3
   - 
   - 
   - 

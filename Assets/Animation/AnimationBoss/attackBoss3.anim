@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: attackBoss3
+  serializedVersion: 7
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 7cbd316302b9cf64f865388324527a84, type: 3}
+    - time: 0.06666667
+      value: {fileID: 21300000, guid: 53da9ee083dcd274caa982c47ac9fb77, type: 3}
+    - time: 0.11666667
+      value: {fileID: 21300000, guid: fe3e0dfa51ac5944ca93021ff8e69673, type: 3}
+    - time: 0.18333334
+      value: {fileID: 21300000, guid: 7a7274a3aa8e27147b4a97ed3ca98f11, type: 3}
+    - time: 0.23333333
+      value: {fileID: 21300000, guid: 97af1723243d9494081bcb15ba125cfa, type: 3}
+    - time: 0.3
+      value: {fileID: 21300000, guid: a65125346fd1a0947a81e3788233f7e3, type: 3}
+    - time: 0.36666667
+      value: {fileID: 21300000, guid: a8c33436432e1674eaa99666c8bdf693, type: 3}
+    - time: 0.43333334
+      value: {fileID: 21300000, guid: a12e04ce7a3b97f42bbb66e6b75f543e, type: 3}
+    - time: 0.48333332
+      value: {fileID: 21300000, guid: 32a76ceb77af798459a45f8bf27e38f5, type: 3}
+    - time: 0.55
+      value: {fileID: 21300000, guid: cf9102d8e22a2dd49ac0cff99c5e3b02, type: 3}
+    - time: 0.6
+      value: {fileID: 21300000, guid: 87f3c5e5eee87734db9b48eb6478098d, type: 3}
+    - time: 0.6666667
+      value: {fileID: 21300000, guid: 1d277e7f322352542beaf625dcbdf366, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+    flags: 2
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: 7cbd316302b9cf64f865388324527a84, type: 3}
+    - {fileID: 21300000, guid: 53da9ee083dcd274caa982c47ac9fb77, type: 3}
+    - {fileID: 21300000, guid: fe3e0dfa51ac5944ca93021ff8e69673, type: 3}
+    - {fileID: 21300000, guid: 7a7274a3aa8e27147b4a97ed3ca98f11, type: 3}
+    - {fileID: 21300000, guid: 97af1723243d9494081bcb15ba125cfa, type: 3}
+    - {fileID: 21300000, guid: a65125346fd1a0947a81e3788233f7e3, type: 3}
+    - {fileID: 21300000, guid: a8c33436432e1674eaa99666c8bdf693, type: 3}
+    - {fileID: 21300000, guid: a12e04ce7a3b97f42bbb66e6b75f543e, type: 3}
+    - {fileID: 21300000, guid: 32a76ceb77af798459a45f8bf27e38f5, type: 3}
+    - {fileID: 21300000, guid: cf9102d8e22a2dd49ac0cff99c5e3b02, type: 3}
+    - {fileID: 21300000, guid: 87f3c5e5eee87734db9b48eb6478098d, type: 3}
+    - {fileID: 21300000, guid: 1d277e7f322352542beaf625dcbdf366, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 0.68333334
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 0.11666667
+    functionName: vukhion
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6666667
+    functionName: vukhioff
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
