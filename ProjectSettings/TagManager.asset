@@ -14,6 +14,19 @@ TagManager:
   - vukhi_enemy
   - bulletpow
   - quaman
+  - ground3
+  - ground2
+  - ground1
+  - candauvan
+  - ruongdamo
+  - skillpow
+  - boxmoruong
+  - ruongkhobau
+  - vatphamchiakhoa
+  - vatphamhoihp
+  - cauthang
+  - vatphamhoimp
+  - bossmap2
   layers:
   - Default
   - TransparentFX

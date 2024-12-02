@@ -19,7 +19,9 @@
         public Image fillImage;
         public Slider playerMana;
         public Image fillImagemana;
-
+    public GameObject boxattack;
+    public GameObject boxskill2;
+    public GameObject boxskill3;
 
 
 
@@ -54,9 +56,9 @@
         public static bool facingRight = true;
         private float castCooldown = 2f;
         private float lastCastTime = 0f;
-        public GameObject swordCollider;
-        public GameObject swordCollider1;
-        public GameObject swordCollider2;
+      //  public GameObject swordCollider;
+     //   public GameObject swordCollider1;
+     //   public GameObject swordCollider2;
         public int torchCount = 0;  // Biến để lưu trữ số ngọn lửa (hoặc đuốc) của người chơi
         public int health = 10;
         public int mana = 10;
@@ -66,6 +68,17 @@
 
         void Start()
         {
+
+
+
+
+
+
+
+
+
+
+
           //  boxCollider2D = GetComponent<PolygonCollider2D>();
             rb = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -74,9 +87,14 @@
             skill3mo.SetActive(false);
             skill3.SetActive(true);
 
-            swordCollider.SetActive(false);
-            swordCollider1.SetActive(false);
-            swordCollider2.SetActive(false);
+        boxattack.SetActive(false);
+        boxskill2.SetActive(false);
+        boxskill3.SetActive(false); 
+
+
+         //   swordCollider.SetActive(false);
+         //   swordCollider1.SetActive(false);
+          //  swordCollider2.SetActive(false);
           playerHealth.interactable = false;
            playerMana.interactable = false;
         playerHealth.maxValue = health;
@@ -167,13 +185,15 @@
             {
                 animator.SetTrigger("attack");
                 audioManager.Instance.PlaySFX("skill1");
-            }
+            boxattack.SetActive(true);
+        }
         }
         public void buttonattack()
         {
             animator.SetTrigger("attack");
             audioManager.Instance.PlaySFX("skill1");
-        }
+        boxattack.SetActive(true);
+    }
 
         void Attack1()
         {
@@ -182,8 +202,9 @@
                 animator.SetTrigger("strike");
                 playerMana.value -= 1;
                 audioManager.Instance.PlaySFX("kiemchem");
+            boxskill2.SetActive(true);
 
-            }
+        }
 
 
         }
@@ -194,6 +215,7 @@
                 animator.SetTrigger("block");
                 playerMana.value -= 1;
                 audioManager.Instance.PlaySFX("skill2");
+               boxskill3.SetActive(true);
 
             }
         }
@@ -204,6 +226,7 @@
                 animator.SetTrigger("strike");
                 playerMana.value -= 1;
                 audioManager.Instance.PlaySFX("kiemchem");
+               boxskill2.SetActive(true);
             }
             else
             {
@@ -271,85 +294,86 @@
                 animator.SetTrigger("block");
                 playerMana.value -= 1;
                 audioManager.Instance.PlaySFX("skill2");
-            }
+            boxskill3.SetActive(true);
+        }
             else
             {
                 Debug.Log("Không đủ mana để sử dụng kĩ năng!");
             }
         }
-        private void UpdateSwordColliderPosition()
-        {
-            // Kiểm tra hướng nhân vật
-            if (facingRight)
-            {
-                // Nếu hướng phải, đặt swordCollider bên phải
-                swordCollider.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
-                swordCollider.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-                swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider1.transform.localPosition.y, swordCollider1.transform.localPosition.z);
-                swordCollider1.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-                swordCollider2.transform.localPosition = new Vector3(0.2f, swordCollider2.transform.localPosition.y, swordCollider2.transform.localPosition.z);
-                swordCollider2.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-            }
-            else
-            {
-                // Nếu hướng trái, đặt swordCollider bên trái
-                swordCollider.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
-                swordCollider.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-                                                                            // Nếu hướng trái, đặt swordCollider bên trái
-                swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider1.transform.localPosition.y, swordCollider1.transform.localPosition.z);
-                swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-                                                                             // Nếu hướng trái, đặt swordCollider bên trái
-                swordCollider2.transform.localPosition = new Vector3(-0.2f, swordCollider2.transform.localPosition.y, swordCollider2.transform.localPosition.z);
-                swordCollider2.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-            }
-        }
+        //private void UpdateSwordColliderPosition()
+        //{
+        //    // Kiểm tra hướng nhân vật
+        //    if (facingRight)
+        //    {
+        //        // Nếu hướng phải, đặt swordCollider bên phải
+        //        swordCollider.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+        //        swordCollider.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        //        swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider1.transform.localPosition.y, swordCollider1.transform.localPosition.z);
+        //        swordCollider1.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        //        swordCollider2.transform.localPosition = new Vector3(0.2f, swordCollider2.transform.localPosition.y, swordCollider2.transform.localPosition.z);
+        //        swordCollider2.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        //    }
+        //    else
+        //    {
+        //        // Nếu hướng trái, đặt swordCollider bên trái
+        //        swordCollider.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
+        //        swordCollider.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        //                                                                    // Nếu hướng trái, đặt swordCollider bên trái
+        //        swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider1.transform.localPosition.y, swordCollider1.transform.localPosition.z);
+        //        swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        //                                                                     // Nếu hướng trái, đặt swordCollider bên trái
+        //        swordCollider2.transform.localPosition = new Vector3(-0.2f, swordCollider2.transform.localPosition.y, swordCollider2.transform.localPosition.z);
+        //        swordCollider2.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+        //    }
+        //}
 
 
 
-        public void ShowSword()
-        {
-            swordCollider.SetActive(true);
+        //public void ShowSword()
+        //{
+        //    swordCollider.SetActive(true);
 
-            UpdateSwordColliderPosition();
-            swordCollider1.SetActive(false);
-            swordCollider2.SetActive(false);
+        //    UpdateSwordColliderPosition();
+        //    swordCollider1.SetActive(false);
+        //    swordCollider2.SetActive(false);
 
-        }
+        //}
 
-        public void HideSword()
-        {
-            swordCollider.SetActive(false);
-            swordCollider1.SetActive(false);
-            swordCollider2.SetActive(false);
-        }
-        public void ShowSword1()
-        {
-            swordCollider1.SetActive(true);
-            UpdateSwordColliderPosition();
-            swordCollider.SetActive(false);
-            swordCollider2.SetActive(false);
-        }
+        //public void HideSword()
+        //{
+        //    swordCollider.SetActive(false);
+        //    swordCollider1.SetActive(false);
+        //    swordCollider2.SetActive(false);
+        //}
+        //public void ShowSword1()
+        //{
+        //    swordCollider1.SetActive(true);
+        //    UpdateSwordColliderPosition();
+        //    swordCollider.SetActive(false);
+        //    swordCollider2.SetActive(false);
+        //}
 
-        public void HideSword1()
-        {
-            swordCollider1.SetActive(false);
-            swordCollider.SetActive(false);
-            swordCollider2.SetActive(false);
-        }
-        public void ShowSword2()
-        {
-            swordCollider2.SetActive(true);
-            UpdateSwordColliderPosition();
-            swordCollider.SetActive(false);
-            swordCollider1.SetActive(false);
-        }
+        //public void HideSword1()
+        //{
+        //    swordCollider1.SetActive(false);
+        //    swordCollider.SetActive(false);
+        //    swordCollider2.SetActive(false);
+        //}
+        //public void ShowSword2()
+        //{
+        //    swordCollider2.SetActive(true);
+        //    UpdateSwordColliderPosition();
+        //    swordCollider.SetActive(false);
+        //    swordCollider1.SetActive(false);
+        //}
 
-        public void HideSword2()
-        {
-            swordCollider2.SetActive(false);
-            swordCollider.SetActive(false);
-            swordCollider1.SetActive(false);
-        }
+        //public void HideSword2()
+        //{
+        //    swordCollider2.SetActive(false);
+        //    swordCollider.SetActive(false);
+        //    swordCollider1.SetActive(false);
+        //}
 
         void Move()
     {
@@ -501,7 +525,8 @@
             yield return new WaitForSeconds(0.5f);
             Time.timeScale = 0;
         gameManager.GameOver();
-        }
+        PlayerPrefs.DeleteAll(); // Xóa dữ liệu lưu
+    }
         IEnumerator DestroyTorchAfterDelay(GameObject torch)
         {
             yield return new WaitForSeconds(0.3f);
@@ -542,4 +567,5 @@
         //    audioManager.ToggleSFX();
 
         //}
+
     }

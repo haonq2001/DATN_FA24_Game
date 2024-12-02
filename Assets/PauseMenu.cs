@@ -8,15 +8,17 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
 
-
+    public GameManager gameManager;
     public audioManager audioManager;
     public GameObject batnhacnen;
     public GameObject tatnhacnen;
     public GameObject batamthanh;
     public GameObject tatamthanh;
+    public GameObject panelexit;
 
     private void Start()
     {
+
         // Kiểm tra xem audioManager.Instance đã được khởi tạo chưa
         if (audioManager.Instance != null)
         {
@@ -43,8 +45,13 @@ public class PauseMenu : MonoBehaviour
 
     public void Home()
     {
-        SceneManager.LoadScene("Main Menu");
-        Time.timeScale = 1;
+        panelexit.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void exitno()
+    {
+        panelexit.SetActive(false);
+        Time.timeScale = 0;
     }
 
     public void Restart()
@@ -64,6 +71,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
+
 
     public void tatnhacn()
     {
