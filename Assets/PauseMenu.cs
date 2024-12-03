@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
-
-    public GameManager gameManager;
+    private GameManagermap2 gameManagermap;
+    private GameManager gameManager;
     public audioManager audioManager;
     public GameObject batnhacnen;
     public GameObject tatnhacnen;

@@ -22,7 +22,15 @@ public class GameManagermap2 : MonoBehaviour
     }
     public void BlockScore()
     {
-        score--;
+        if (score > 0)
+        {
+            score--;
+        }
+        else
+        {
+            score = 0;
+        }
+        
     }
     public void SetScoreText()
     {

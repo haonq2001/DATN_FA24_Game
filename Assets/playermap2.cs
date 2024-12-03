@@ -97,6 +97,11 @@ public class playermap2 : MonoBehaviour
 
     public Image[] buttonImages; // Biến để tham chiếu đến Image của button
 
+
+    public GameObject boxattack;
+    public GameObject boxskill2;
+    public GameObject boxskill3;
+
     void Start()
     {
         chiakhoa.SetActive(false);
@@ -126,6 +131,11 @@ public class playermap2 : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         Time.timeScale = 1;
+
+
+        boxattack.SetActive(false);
+        boxskill2.SetActive(false);
+        boxskill3.SetActive(false);
 
 
     }
@@ -292,6 +302,7 @@ public class playermap2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetTrigger("attack");
+            boxattack.SetActive(true);
             audioManager.Instance.PlaySFX("skill1");
         }
     }
@@ -299,6 +310,7 @@ public class playermap2 : MonoBehaviour
     {
         animator.SetTrigger("attack");
         audioManager.Instance.PlaySFX("skill1");
+        boxattack.SetActive(true);
     }
 
     void Attack1()
@@ -308,6 +320,7 @@ public class playermap2 : MonoBehaviour
             animator.SetTrigger("strike");
             playerMana.value -= 1;
             audioManager.Instance.PlaySFX("kiemchem");
+            boxskill2.SetActive(true);
 
         }
 
@@ -320,6 +333,7 @@ public class playermap2 : MonoBehaviour
             animator.SetTrigger("block");
             playerMana.value -= 1;
             audioManager.Instance.PlaySFX("skill2");
+           boxskill3.SetActive(true);
 
         }
     }
@@ -330,6 +344,7 @@ public class playermap2 : MonoBehaviour
             animator.SetTrigger("strike");
             playerMana.value -= 1;
             audioManager.Instance.PlaySFX("kiemchem");
+            boxskill2.SetActive(true);
         }
         else
         {
@@ -422,6 +437,7 @@ public class playermap2 : MonoBehaviour
             animator.SetTrigger("block");
             playerMana.value -= 1;
             audioManager.Instance.PlaySFX("skill2");
+            boxskill3.SetActive(true);
         }
         else
         {
@@ -430,29 +446,23 @@ public class playermap2 : MonoBehaviour
     }
     private void UpdateSwordColliderPosition()
     {
-        // Kiểm tra hướng nhân vật
-        if (facingRight)
-        {
-            // Nếu hướng phải, đặt swordCollider bên phải
-            swordCollider.transform.localPosition = new Vector3(0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
-            swordCollider.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-            swordCollider1.transform.localPosition = new Vector3(0.2f, swordCollider1.transform.localPosition.y, swordCollider1.transform.localPosition.z);
-            swordCollider1.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-            swordCollider2.transform.localPosition = new Vector3(0.2f, swordCollider2.transform.localPosition.y, swordCollider2.transform.localPosition.z);
-            swordCollider2.transform.localScale = new Vector3(1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
+       
+            // Đổi hướng dựa trên `facingRight`
+            if (facingRight)
+            {
+                // Hướng sang phải
+                boxattack.transform.localPosition = new Vector3(1.0f,   boxattack.transform.localPosition.y, boxattack.transform.localPosition.z);
+                boxattack.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f); // Scale mặc định
+            }
+            else
+            {
+                // Hướng sang trái
+                boxattack.transform.localPosition = new Vector3(-1.0f, boxattack.transform.localPosition.y, boxattack.transform.localPosition.z);
+                boxattack.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f); // Lật đối tượng theo trục X
+           // boxattack.transform.localRotation = Quaternion.Euler(0, 180, -45); // Góc chém từ trên xuống (ngược lại)
         }
-        else
-        {
-            // Nếu hướng trái, đặt swordCollider bên trái
-            swordCollider.transform.localPosition = new Vector3(-0.2f, swordCollider.transform.localPosition.y, swordCollider.transform.localPosition.z);
-            swordCollider.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-                                                                        // Nếu hướng trái, đặt swordCollider bên trái
-            swordCollider1.transform.localPosition = new Vector3(-0.2f, swordCollider1.transform.localPosition.y, swordCollider1.transform.localPosition.z);
-            swordCollider1.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-                                                                         // Nếu hướng trái, đặt swordCollider bên trái
-            swordCollider2.transform.localPosition = new Vector3(-0.2f, swordCollider2.transform.localPosition.y, swordCollider2.transform.localPosition.z);
-            swordCollider2.transform.localScale = new Vector3(-1, 1, 1); // Điều chỉnh hướng Box Collider cho đúng
-        }
+        
+
     }
     public void ShowSword()
     {
@@ -535,6 +545,7 @@ public class playermap2 : MonoBehaviour
             }
         }
     }
+
     void Move()
     {
         float moveInput = joystick.Horizontal+ Input.GetAxis("Horizontal");
@@ -741,6 +752,7 @@ public class playermap2 : MonoBehaviour
         if (collision.gameObject.CompareTag("vatphamchiakhoa"))
         {
             StartCoroutine(DestroyTorchAfterDelay(collision.gameObject));
+         
 
             audioManager.Instance.PlaySFX("anlua");
 
@@ -754,6 +766,9 @@ public class playermap2 : MonoBehaviour
         if (collision.gameObject.CompareTag("ruongdamo"))
         {
             chiakhoa.SetActive(false);
+            gameManager.BlockScore();
+          
+            gameManager.SetScoreText();
 
 
         }
@@ -870,6 +885,10 @@ public class playermap2 : MonoBehaviour
 
         
         }
+        if (collision.gameObject.CompareTag("quaman3"))
+        {
+            SceneManager.LoadSceneAsync(3);
+        }
     }
 
         void ReceiveKey()
@@ -904,6 +923,8 @@ public class playermap2 : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         Destroy(torch);
+        gameManager.AddScore();
+        gameManager.SetScoreText();
         ReceiveKey();
       
     }

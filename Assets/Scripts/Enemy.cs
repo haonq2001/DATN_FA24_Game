@@ -1,9 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    private bool isPaused = false; // Biến để kiểm tra boss có bị dừng hay không
+
+
+
+    public GameObject thanhmau1;
+    public GameObject thanhmau2;
+    public Slider hpboss1;
+    public Slider hpboss2;
+    public Image fillhp;
+    public Image fillhp2;
+    public float hp1 = 10;
+    public float hp2 = 10;
+    
 
     #region Public Variables
     public float attackDistance;
@@ -25,15 +40,30 @@ public class Enemy : MonoBehaviour
     private float intTimer;
     #endregion
 
+    public GameObject tuongda1;
+    public GameObject tuongda2;
+    public GameObject boxtuongda;
+
+    public GameObject hieuungtroi;
+    
+
     void Awake()
     {
         anim = GetComponent<Animator>();
         intTimer = timer;
         SelectTarget();
+        hpboss1.maxValue = hp1;
+
+        hpboss1.value = hp1;
+        hpboss1.interactable = false;
+        hpboss2.maxValue = hp2;
+        hpboss2.value = hp2;
+        hpboss2.interactable = false;
     }
 
     void Update()
     {
+        if (isPaused) return;
         if (!attackMode)
         {
             Move();
@@ -148,4 +178,66 @@ public class Enemy : MonoBehaviour
         }
         transform.eulerAngles = rotation;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bulletpow"))
+        {
+            hieuungtroi.SetActive(true);
+            StartCoroutine(PauseBossForSeconds(3f)); // Tạm dừng boss trong 3 giây
+        }
+            if (collision.CompareTag("Bullet") || collision.CompareTag("Sword"))
+        {
+            hpboss1.value -= 2;
+         //   animator.SetTrigger("hulk");
+            audioManager.Instance.PlaySFX("matmau");
+
+
+            if (hpboss1.value <= 0)
+            {
+                Destroy(thanhmau1);
+                hpboss2.value -= 2;
+
+                if (hpboss2.value <= 0)
+                {
+                    StartCoroutine(WaitForDeathAnimation());
+
+                }
+            }
+        }
+    }
+    IEnumerator WaitForDeathAnimation()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);  // Destroy the boss
+        Destroy(thanhmau2);
+        boxtuongda.SetActive(true);
+        if (tuongda1 != null)
+        {
+            StatueController statueController = tuongda1.GetComponent<StatueController>();
+            if (statueController != null)
+            {
+                statueController.PushUp(); // Gọi hàm đẩy lên
+            }
+
+        }
+        if (tuongda2 != null)
+        {
+            StatueController statueController = tuongda2.GetComponent<StatueController>();
+            if (statueController != null)
+            {
+                statueController.PushUp(); // Gọi hàm đẩy lên
+            }
+
+        }
+    }
+    IEnumerator PauseBossForSeconds(float duration)
+    {
+        isPaused = true; // Dừng boss
+        anim.SetBool("canWalk", false); // Tắt hoạt ảnh đi lại
+        anim.SetBool("Attack", false); // Tắt hoạt ảnh tấn công
+        yield return new WaitForSeconds(duration); // Đợi thời gian được chỉ định
+        isPaused = false; // Tiếp tục boss
+        hieuungtroi.SetActive(false); // Tắt hiệu ứng nếu cần
+    }
+
 }

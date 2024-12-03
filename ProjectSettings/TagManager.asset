@@ -27,11 +27,13 @@ TagManager:
   - cauthang
   - vatphamhoimp
   - bossmap2
+  - boxtuongda
+  - quaman3
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - boxbos
   - Water
   - UI
   - Ground
