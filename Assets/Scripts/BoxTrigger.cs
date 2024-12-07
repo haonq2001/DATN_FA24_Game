@@ -4,7 +4,14 @@ public class BoxTrigger : MonoBehaviour
 {
     public GameObject statue1; // Tượng 1
     public GameObject statue2; // Tượng 2
+    public GameObject khuvucquai;
+    //  public GameObject  khuvucquaiattack;
 
+    private void Start()
+    {
+        khuvucquai.SetActive
+            (false);
+    }
     /// <summary>
     /// Gọi khi một đối tượng khác đi vào Trigger Collider gắn với đối tượng này (2D Physics).
     /// </summary>
@@ -14,6 +21,8 @@ public class BoxTrigger : MonoBehaviour
         // Kiểm tra nếu đối tượng va chạm có thẻ "Player"
         if (other.CompareTag("Player"))
         {
+            khuvucquai.SetActive(true);
+         //   khuvucquaiattack.SetActive(true);
             // Kích hoạt trọng lực cho tượng 1 nếu có
             if (statue1 != null && statue1.GetComponent<Rigidbody2D>() != null)
             {

@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +11,8 @@ public class GameManager : MonoBehaviour
     public PlayerController player;
 
     private int score = 0;
+
+    public List<GameObject> enemies; // Danh sách chứa quái
 
     void Start()
     {
@@ -24,9 +25,9 @@ public class GameManager : MonoBehaviour
         {
             score = 0; // Nếu không có, bắt đầu từ 0
         }
-
         SetScoreText();
-        // Tải trạng thái nếu có
+
+        // Tải vị trí nhân vật
         if (PlayerPrefs.HasKey("PlayerPosX") && PlayerPrefs.HasKey("PlayerPosY") && PlayerPrefs.HasKey("PlayerPosZ"))
         {
             float x = PlayerPrefs.GetFloat("PlayerPosX");
@@ -36,13 +37,18 @@ public class GameManager : MonoBehaviour
             Vector3 savedPosition = new Vector3(x, y, z);
             player.transform.position = savedPosition; // Đặt lại vị trí nhân vật
         }
+
+        // Khôi phục trạng thái quái
+        InitializeEnemies();
+
+        // Nạp lại trạng thái máu và mana
+        LoadPlayerState();
     }
 
     public void AddScore()
     {
         score++;
         PlayerPrefs.SetInt("PlayerScore", score);
-        PlayerPrefs.Save();
         SetScoreText();
     }
 
@@ -50,7 +56,6 @@ public class GameManager : MonoBehaviour
     {
         score--;
         PlayerPrefs.SetInt("PlayerScore", score);
-        PlayerPrefs.Save();
         SetScoreText();
     }
 
@@ -67,8 +72,8 @@ public class GameManager : MonoBehaviour
 
     public void ReStart()
     {
-        PlayerPrefs.DeleteKey("PlayerScore"); // Xóa điểm đã lưu
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.DeleteAll(); // Xóa toàn bộ dữ liệu đã lưu
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Tải lại màn hiện tại
     }
 
     public void MainMenu()
@@ -83,22 +88,63 @@ public class GameManager : MonoBehaviour
 
     void OnApplicationQuit()
     {
-        PlayerPrefs.SetInt("PlayerScore", score);
-        PlayerPrefs.Save();
-        SaveGameState();
+        SaveGameState();  // Lưu tất cả các dữ liệu game
+        SavePlayerState(); // Lưu trạng thái nhân vật
     }
+
+    void SavePlayerState()
+    {
+        PlayerPrefs.SetInt("PlayerHealth", player.health);  // Lưu máu
+        PlayerPrefs.SetInt("PlayerMana", player.mana);      // Lưu mana
+    }
+
+    void LoadPlayerState()
+    {
+        if (PlayerPrefs.HasKey("PlayerHealth"))
+        {
+            player.health = PlayerPrefs.GetInt("PlayerHealth");
+        }
+
+        if (PlayerPrefs.HasKey("PlayerMana"))
+        {
+            player.mana = PlayerPrefs.GetInt("PlayerMana");
+        }
+    }
+
     void SaveGameState()
     {
         // Lưu màn chơi hiện tại
         PlayerPrefs.SetInt("CurrentScene", SceneManager.GetActiveScene().buildIndex);
 
         // Lưu vị trí nhân vật
-        Vector3 playerPosition = player.transform.position; // Giả sử bạn có đối tượng `player`
+        Vector3 playerPosition = player.transform.position;
         PlayerPrefs.SetFloat("PlayerPosX", playerPosition.x);
         PlayerPrefs.SetFloat("PlayerPosY", playerPosition.y);
         PlayerPrefs.SetFloat("PlayerPosZ", playerPosition.z);
 
-        PlayerPrefs.Save(); // Lưu tất cả
+        PlayerPrefs.Save(); // Lưu tất cả dữ liệu
     }
 
+    // Lưu trạng thái quái
+    public void SaveEnemyState(int enemyIndex, bool isDead)
+    {
+        string key = "Enemy" + enemyIndex + "Dead";
+        PlayerPrefs.SetInt(key, isDead ? 1 : 0);  // Lưu trạng thái quái
+    }
+
+    void InitializeEnemies()
+    {
+        for (int i = 0; i < enemies.Count; i++)
+        {
+            string key = "Enemy" + i + "Dead";
+            if (PlayerPrefs.GetInt(key, 0) == 1)
+            {
+                enemies[i].SetActive(false);  // Ẩn quái nếu đã chết
+            }
+            else
+            {
+                enemies[i].SetActive(true);  // Hiện quái nếu chưa chết
+            }
+        }
+    }
 }

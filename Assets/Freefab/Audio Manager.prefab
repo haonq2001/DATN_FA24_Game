@@ -304,7 +304,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - name: theme
-    clip: {fileID: 8300000, guid: aa3e144b476045740a3ec9c6da80c83f, type: 3}
+    clip: {fileID: 8300000, guid: 990b4f7de39058e46b0f442ad3754bb6, type: 3}
+  - name: nhacnenmap2
+    clip: {fileID: 8300000, guid: 08150a9d50b215c4896da31c6c44179a, type: 3}
+  - name: nhacnenmap1
+    clip: {fileID: 8300000, guid: 9516cd08ca159934d9cab759ea35a7f1, type: 3}
   sfxSounds:
   - name: jump
     clip: {fileID: 8300000, guid: bc22dd2a3028ec04bbd4125f469bd903, type: 3}

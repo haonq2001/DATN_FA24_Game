@@ -29,6 +29,8 @@ TagManager:
   - bossmap2
   - boxtuongda
   - quaman3
+  - thephongthu
+  - dungkhien
   layers:
   - Default
   - TransparentFX
@@ -42,7 +44,7 @@ TagManager:
   - trap
   - enemy
   - tang3
-  - 
+  - contin
   - 
   - 
   - 

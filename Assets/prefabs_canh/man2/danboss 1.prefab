@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5993615526511356229}
   - component: {fileID: 2754444050263502042}
   - component: {fileID: 6078125502396290480}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: danboss 1
   m_TagString: vukhi_enemy
   m_Icon: {fileID: 0}

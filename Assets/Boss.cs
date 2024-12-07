@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
+
+
+    private bool hasBeenAttacked = false;
     public GameObject boxvukhi; // Reference to the weapon box
     public GameObject thanhmau;
 
@@ -27,11 +30,9 @@ public class Boss : MonoBehaviour
 
     // Point where the torch will drop
     private AudioSource audioSource;
-    public GameObject batnhacnen;
-    public GameObject tatnhacnen;
-    public GameObject batamthanh;
-    public GameObject tatamthanh;
-    public audioManager audioManager;
+
+
+    public int enemyIndex; // Chỉ số duy nhất của quái
     void Start()
     {
         targetPoint = pointB; // Initially move towards point B
@@ -40,11 +41,36 @@ public class Boss : MonoBehaviour
         BossHealth.maxValue = health;
         BossHealth.value = health;
         BossHealth.interactable = false;
-      
+
         boxvukhi.SetActive(false); // Initially hide the weapon box
 
         audioSource = GetComponent<AudioSource>();
+
+        // Kiểm tra xem có dữ liệu máu quái đã lưu chưa
+        if (PlayerPrefs.HasKey("EnemyHealth" + enemyIndex))
+        {
+            BossHealth.value = PlayerPrefs.GetFloat("EnemyHealth" + enemyIndex); // Tải lại giá trị máu
+        }
+        else
+        {
+            BossHealth.value = health; // Nếu không có dữ liệu, khởi tạo lại giá trị máu mặc định
+        }
+
+        BossHealth.maxValue = health;
+        BossHealth.interactable = false;
+        fillImage.color = Color.green; // Đặt màu mặc định cho thanh máu
+
+        // Kiểm tra trạng thái màu sắc đã lưu
+        if (PlayerPrefs.HasKey("HasBeenAttacked") && PlayerPrefs.GetInt("HasBeenAttacked") == 1)
+        {
+            fillImage.color = Color.red; // Nếu đã bị tấn công và màu vàng đã được lưu, áp dụng màu vàng
+        }
+        else
+        {
+            fillImage.color = Color.red; // Nếu chưa bị tấn công, giữ màu xanh
+        }
     }
+
 
     public void vukhion()
     {
@@ -139,40 +165,89 @@ public class Boss : MonoBehaviour
         animator.SetBool("attack", false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+   private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.CompareTag("Bullet") || collision.CompareTag("Sword"))
     {
-        if (collision.CompareTag("Bullet") || collision.CompareTag("Sword"))
+        BossHealth.value -= 2; // Giảm máu của quái
+        PlayerPrefs.SetFloat("EnemyHealth" + enemyIndex, BossHealth.value); // Lưu trạng thái thanh máu của quái
+        PlayerPrefs.Save();
+
+        animator.SetBool("hulk", true); // Animation bị tấn công
+        audioManager.Instance.PlaySFX("matmau"); // Âm thanh bị trúng đòn
+
+        // Cập nhật màu sắc thanh máu
+        UpdateHealthUI();
+
+        // Lưu trạng thái màu sắc nếu cần
+        if (BossHealth.value < 8 && BossHealth.value >= 4)
         {
-            BossHealth.value -= 2;
-            animator.SetBool("hulk", true);
-            audioManager.Instance.PlaySFX("matmau");
-            if (BossHealth.value < 8)
+            PlayerPrefs.SetInt("HasBeenAttacked", 1);  // Lưu trạng thái bị tấn công (màu vàng)
+            PlayerPrefs.Save();
+        }
+
+        if (BossHealth.value <= 0)
+        {
+            // Khi máu quái = 0, thực hiện hành động chết
+            animator.SetTrigger("die");
+            StartCoroutine(WaitForDeathAnimation()); // Chờ animation chết hoàn thành
+        }
+    }
+}
+
+    private void UpdateHealthUI()
+    {
+        if (BossHealth.value < 4)
+        {
+            fillImage.color = Color.red; // Nếu máu quá thấp, chuyển thanh máu sang màu đỏ
+            hasBeenAttacked = true; // Đánh dấu rằng quái đã bị tấn công
+        }
+        else if (BossHealth.value < 8 && BossHealth.value >= 4)
+        {
+            // Nếu quái đã bị tấn công và máu đang ở mức trung bình, chuyển thanh máu sang màu vàng
+            if (!hasBeenAttacked)
             {
                 fillImage.color = Color.yellow;
             }
-            if (BossHealth.value < 4)
-            {
-                fillImage.color = Color.red;
-            }
-            if (BossHealth.value <= 0)
-            {
-                // Drop the torch
-              
-                animator.SetTrigger("die");
-                StartCoroutine(WaitForDeathAnimation());
-
-               
-            }
+        }
+        else
+        {
+            fillImage.color = Color.red; // Nếu máu đầy, thanh máu màu xanh
+            hasBeenAttacked = false; // Đặt lại trạng thái khi máu đầy
         }
     }
+
+
     IEnumerator WaitForDeathAnimation()
     {
-        yield return new WaitForSeconds(1f);
-        Destroy(gameObject);  // Destroy the boss
-        Destroy(thanhmau);
+        yield return new WaitForSeconds(1f);  // Chờ 1 giây để hoàn thành animation chết
+        Die();  // Xử lý việc xóa quái
+    }
+
+    public void Die()
+    {// Xử lý cái chết của quái
+        gameObject.SetActive(false); // Ẩn quái vật
+        Destroy(thanhmau); // Hủy thanh máu nếu có
+
+        // Lưu trạng thái quái đã chết
+        PlayerPrefs.SetInt("Enemy" + enemyIndex + "Dead", 1); // Lưu trạng thái đã chết
+        PlayerPrefs.Save();
+
+        // Xóa thanh máu khi quái chết
+        PlayerPrefs.DeleteKey("EnemyHealth" + enemyIndex); // Xóa dữ liệu máu của quái khi chết
+
+        // Drop các vật phẩm, như ngọn đuốc
         if (torchPrefab != null && dropPoint != null)
         {
-            Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Drop the torch at dropPoint
+            Instantiate(torchPrefab, dropPoint.position, Quaternion.identity);  // Drop ngọn đuốc tại vị trí dropPoint
         }
+
     }
+
+
+
+
+
+
 }

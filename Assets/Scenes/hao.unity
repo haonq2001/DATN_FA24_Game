@@ -122,6 +122,126 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2104132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104133}
+  - component: {fileID: 2104135}
+  - component: {fileID: 2104134}
+  m_Layer: 0
+  m_Name: dungkhien
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2104133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104132}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.9714285, z: 0}
+  m_LocalScale: {x: 1.6374284, y: 1.6059998, z: 1.4285713}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 180650460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &2104134
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104132}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.014882547, y: 0.013635267}
+  m_Size: {x: 2.5758562, y: 2.6262643}
+  m_Direction: 0
+--- !u!212 &2104135
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104132}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -682980213, guid: cfcab25ed5f53554aaae967870a90b06, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.24, y: 3.18}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &25357538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4100531003571699158, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
@@ -15418,7 +15538,7 @@ Transform:
   m_GameObject: {fileID: 131580009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1699634, y: -2.10089, z: -10}
+  m_LocalPosition: {x: 8, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15671,6 +15791,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3041243898845089687, guid: 0ede83aef61ff4140a66e5a42b7615d3, type: 3}
+      propertyPath: enemyIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041243898845089687, guid: 0ede83aef61ff4140a66e5a42b7615d3, type: 3}
       propertyPath: tatamthanh
       value: 
       objectReference: {fileID: 0}
@@ -15700,7 +15824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9027511306924561053, guid: 0ede83aef61ff4140a66e5a42b7615d3, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8265788441118712482, guid: 0ede83aef61ff4140a66e5a42b7615d3, type: 3}
@@ -15894,7 +16018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 162215094}
   - component: {fileID: 162215095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boxvukhi
   m_TagString: vukhi_enemy
   m_Icon: {fileID: 0}
@@ -16026,12 +16150,12 @@ MonoBehaviour:
   joystick: {fileID: 1025778145}
   audioClips: []
   audioManager: {fileID: 436455215}
-  jumpForce: 6
+  jumpForce: 7
   bullet: {fileID: 8426518105582470125, guid: 5d20224687f984a4485ff0c69e2a5b1d, type: 3}
   bulletPos: {fileID: 1682241004}
   torchCount: 0
-  health: 10
-  mana: 100
+  health: 20
+  mana: 20
   buttonImages:
   - {fileID: 1874699851}
   - {fileID: 668457241}
@@ -16045,7 +16169,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 180650453}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 01a5231915362014ebc23b5d9745805d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -16317,7 +16441,7 @@ Transform:
   m_GameObject: {fileID: 180650453}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14, y: -4, z: 0}
+  m_LocalPosition: {x: 8, y: 1, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16329,6 +16453,7 @@ Transform:
   - {fileID: 185200325}
   - {fileID: 909988517}
   - {fileID: 1196255068}
+  - {fileID: 2104133}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &185200324
@@ -17704,6 +17829,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1080437207585556578, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
+      propertyPath: enemyIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080437207585556578, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
       propertyPath: tatamthanh
       value: 
       objectReference: {fileID: 0}
@@ -17773,7 +17902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5241949903200331736, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5280708166134673323, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18886,7 +19015,7 @@ Transform:
   m_GameObject: {fileID: 490591462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14, y: -4, z: -10}
+  m_LocalPosition: {x: 8, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19525,7 +19654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 593, y: -466}
+  m_AnchoredPosition: {x: 592.2, y: -466}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &561710708
@@ -19593,7 +19722,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 0517fe7af388d214fa43ecb6c7f2cbcc, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -20317,6 +20446,10 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 281726775357086329, guid: 0ede83aef61ff4140a66e5a42b7615d3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 281726775357086329, guid: 0ede83aef61ff4140a66e5a42b7615d3, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -20438,6 +20571,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9027511306924561053, guid: 0ede83aef61ff4140a66e5a42b7615d3, type: 3}
       propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027511306924561053, guid: 0ede83aef61ff4140a66e5a42b7615d3, type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -26226,7 +26363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776070002}
   - component: {fileID: 776070003}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boxvukhi
   m_TagString: vukhi_enemy
   m_Icon: {fileID: 0}
@@ -27127,6 +27264,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5285714, y: 2.9714286}
   m_EdgeRadius: 0
+--- !u!1 &879990166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6142335892243955502, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
+  m_PrefabInstance: {fileID: 1944791127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &881540884
 GameObject:
   m_ObjectHideFlags: 0
@@ -27404,6 +27546,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2139287452480293225, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
+      propertyPath: enemyIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139287452480293225, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
       propertyPath: tatamthanh
       value: 
       objectReference: {fileID: 0}
@@ -27485,7 +27631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7606474089615395111, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7819113977777164469, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34089,7 +34235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1074136068}
   - component: {fileID: 1074136069}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boxvukhi
   m_TagString: vukhi_enemy
   m_Icon: {fileID: 0}
@@ -39586,7 +39732,7 @@ GameObject:
   - component: {fileID: 1196255069}
   m_Layer: 8
   m_Name: skill3
-  m_TagString: Untagged
+  m_TagString: thephongthu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40497,7 +40643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1331510997}
   - component: {fileID: 1331510998}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boxvukhi
   m_TagString: vukhi_enemy
   m_Icon: {fileID: 0}
@@ -42632,6 +42778,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1080437207585556578, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
+      propertyPath: enemyIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080437207585556578, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
       propertyPath: tatamthanh
       value: 
       objectReference: {fileID: 0}
@@ -42701,7 +42851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5241949903200331736, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5280708166134673323, guid: 5981b5b93a5fc874590c29843c94f689, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42753,7 +42903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596784999}
   - component: {fileID: 1596785000}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boxvukhi
   m_TagString: vukhi_enemy
   m_Icon: {fileID: 0}
@@ -43608,7 +43758,7 @@ GameObject:
   - component: {fileID: 1672526341}
   - component: {fileID: 1672526340}
   m_Layer: 0
-  m_Name: background_gpt (2)
+  m_Name: backgro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46538,6 +46688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1941037462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6142335892243955502, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
+  m_PrefabInstance: {fileID: 905836933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1944164306
 GameObject:
   m_ObjectHideFlags: 0
@@ -46663,6 +46818,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2139287452480293225, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
+      propertyPath: enemyIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139287452480293225, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
       propertyPath: tatamthanh
       value: 
       objectReference: {fileID: 0}
@@ -46732,7 +46891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7606474089615395111, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7819113977777164469, guid: bfa104de28a23c24c8e7799b6918795f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46866,7 +47025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1967862556}
   - component: {fileID: 1967862557}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: boxvukhi
   m_TagString: vukhi_enemy
   m_Icon: {fileID: 0}
@@ -47870,6 +48029,13 @@ MonoBehaviour:
   scorengonlua: {fileID: 837177204}
   scoreText: {fileID: 404830483}
   player: {fileID: 180650454}
+  enemies:
+  - {fileID: 682094002}
+  - {fileID: 1868030216}
+  - {fileID: 1941037462}
+  - {fileID: 879990166}
+  - {fileID: 458517173}
+  - {fileID: 1070813066}
 --- !u!1 &2110653816
 GameObject:
   m_ObjectHideFlags: 0
@@ -47881,7 +48047,7 @@ GameObject:
   - component: {fileID: 2110653818}
   - component: {fileID: 2110653817}
   m_Layer: 0
-  m_Name: background_gpt (1)
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48129,6 +48295,18 @@ PrefabInstance:
     - target: {fileID: 4000983942392204123, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721942163070937268, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2094982842}
+    - target: {fileID: 4721942163070937268, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721942163070937268, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6099665597779067510, guid: 56accf90e2870b04d8d7e3941dbf70b5, type: 3}
       propertyPath: m_Name

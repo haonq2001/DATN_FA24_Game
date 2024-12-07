@@ -1,0 +1,418 @@
+fileFormatVersion: 2
+guid: 1f4047d971eecd1409f5b1c26992fd23
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Male3_56
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 199
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc91e2ece9023d4fa0b7ef0d99708c8
+      internalID: 242450971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male3_57
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 199
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbe511a7676369489620eae55c8d9a6
+      internalID: 887556820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male3_58
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 199
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038948e90884b6a4eadfebc1baa6e558
+      internalID: -255152467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male3_59
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 199
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b072bbb1bac57440b463284e7f14971
+      internalID: 1021850242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male3_80
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 55
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90929b6a4de506143a39cf08e34381f0
+      internalID: -1729205240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male3_81
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 55
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce82e16280bb5fa4ca9604cbf654408b
+      internalID: -1105576377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male3_82
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 55
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2509714ea94fad4f9c91bbff19ffeb6
+      internalID: 1146082657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male3_83
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 55
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4811f2efceeea49b126aec8f15868d
+      internalID: -419303312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Male3_0: 2025487312
+      Male3_1: 19649586
+      Male3_10: 1777591079
+      Male3_11: -1397369465
+      Male3_12: 1234011108
+      Male3_13: 1140829898
+      Male3_14: 1117989655
+      Male3_15: -575847989
+      Male3_16: -2014535632
+      Male3_17: -1922718832
+      Male3_18: -1535776586
+      Male3_19: -3279538
+      Male3_2: 1196921396
+      Male3_20: -1542450683
+      Male3_21: 400085692
+      Male3_22: 1715469721
+      Male3_23: -520856486
+      Male3_24: 889481037
+      Male3_25: 376718958
+      Male3_26: -402488906
+      Male3_27: 529504857
+      Male3_28: 711569382
+      Male3_29: 190534872
+      Male3_3: 78889472
+      Male3_30: -769365180
+      Male3_31: -1364627034
+      Male3_32: -1664846195
+      Male3_33: -1418607988
+      Male3_34: -877701660
+      Male3_35: -1013357248
+      Male3_36: 672010699
+      Male3_37: -1007362456
+      Male3_38: -1404162369
+      Male3_39: -1155288721
+      Male3_4: 750962438
+      Male3_40: 513973457
+      Male3_41: -1006633774
+      Male3_42: 2033883027
+      Male3_43: -600496665
+      Male3_44: 383183841
+      Male3_45: -1077702694
+      Male3_46: 817795718
+      Male3_47: -428484300
+      Male3_48: 200449863
+      Male3_49: 1609149404
+      Male3_5: 1573910311
+      Male3_50: 1330859028
+      Male3_51: -1875703041
+      Male3_52: -1767036223
+      Male3_53: -2061297738
+      Male3_54: -1123983993
+      Male3_55: -1790578076
+      Male3_56: 242450971
+      Male3_57: 887556820
+      Male3_58: -255152467
+      Male3_59: 1021850242
+      Male3_6: 805779679
+      Male3_60: -78348236
+      Male3_61: -843843946
+      Male3_62: -455736920
+      Male3_63: -2051908047
+      Male3_64: 1160550756
+      Male3_65: 1757210219
+      Male3_66: 943623380
+      Male3_67: -832551184
+      Male3_68: 229249103
+      Male3_69: -744229604
+      Male3_7: -2050537832
+      Male3_70: 476081680
+      Male3_71: 1575068464
+      Male3_72: -1591437617
+      Male3_73: -2020899443
+      Male3_74: -1932389219
+      Male3_75: -734154282
+      Male3_76: -1929765856
+      Male3_77: 1305867923
+      Male3_78: 854092278
+      Male3_79: 1565652705
+      Male3_8: -800980352
+      Male3_80: -1729205240
+      Male3_81: -1105576377
+      Male3_82: 1146082657
+      Male3_83: -419303312
+      Male3_84: -114566257
+      Male3_85: 162670553
+      Male3_86: 54181404
+      Male3_87: -2027321975
+      Male3_88: 946558770
+      Male3_89: -1522632146
+      Male3_9: 1432950818
+      Male3_90: 1205311030
+      Male3_91: -180277967
+      Male3_92: 150106357
+      Male3_93: -181014639
+      Male3_94: 962374930
+      Male3_95: -427442579
+      Male3_96: 1288942636
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
